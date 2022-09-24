@@ -18,3 +18,9 @@ class TestFetchOcadoPrice:
     )
     def test_fetches_correct_price(self, product_id: int, price: int):
         assert main._fetch_ocado_price(product_id) == price, product_description
+
+
+class TestConvertPenceToPounds:
+
+    def test_conversion(self):
+        assert main._convert_pence_to_pounds(500) == "5.00"

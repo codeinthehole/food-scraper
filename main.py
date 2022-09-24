@@ -1,9 +1,41 @@
+import sys
 import requests
 import bs4
+import datetime
+from decimal import Decimal as D
 
 
-def main():
-    pass
+def main() -> None:
+    """
+    Write a summary of prices to STDOUT.
+    """
+    today = datetime.date.today()
+
+    # Products to track.
+    products: dict[int, str] = {
+        13175011: "Lurpak butter (500g)",
+        23476011: "New York bagels (5)",
+    }
+
+    for product_id, product_description in products.items():
+        price_in_pence = _fetch_ocado_price(product_id)
+
+        # Format line
+        price_in_pounds = _convert_pence_to_pounds(price_in_pence)
+        line = f"{product_id} - {product_description} - £{price_in_pounds}"
+
+        sys.stdout.write(line + "\n")
+
+
+def _convert_pence_to_pounds(pence: int) -> str:
+    """
+    Convert the passed amount in pence to a string in pounds.
+    """
+    amt = pence / 100
+    return f"{amt:.2f}"
+
+
+# Price fetching
 
 
 class UnableToFetchPrice(Exception):
@@ -55,6 +87,9 @@ def _extract_price(content: str) -> int:
         raise UnableToExtractPrice("Couldn't cast price to an int") from e
 
     return int(price_in_pounds * 100)
+
+
+# Core
 
 
 if __name__ == "__main__":
