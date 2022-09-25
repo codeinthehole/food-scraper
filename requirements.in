@@ -1,0 +1,16 @@
+# Application
+requests
+beautifulsoup4
+
+# Linting
+black
+isort
+flake8
+
+# Type hints
+mypy
+types-requests
+types-beautifulsoup4
+
+# testing
+pytest

@@ -1,30 +1,102 @@
-import sys
-import requests
-import bs4
+import copy
 import datetime
-from decimal import Decimal as D
+import json
+import os
+
+import bs4
+import requests
 
 
 def main() -> None:
     """
-    Write a summary of prices to STDOUT.
+    Update a price archive JSON file.
     """
-    today = datetime.date.today()
 
-    # Products to track.
-    products: dict[int, str] = {
-        13175011: "Lurpak butter (500g)",
-        23476011: "New York bagels (5)",
+    # Products to track. This maps Ocado's product ID to a product description.
+    # TODO make this a separate file.
+    products: dict[str, str] = {
+        "13175011": "Lurpak butter (500g)",
+        "23476011": "New York bagels (5)",
     }
 
-    for product_id, product_description in products.items():
-        price_in_pence = _fetch_ocado_price(product_id)
+    # Fetch latest prices.
+    latest_prices = _fetch_product_prices(list(products.keys()))
 
-        # Format line
+    # Update archive file.
+    current_archive = _load_archive()
+    updated_archive = _update_price_archive(
+        price_date=datetime.date.today(),
+        product_prices=latest_prices,
+        price_archive=current_archive,
+    )
+    if updated_archive != current_archive:
+        _save_archive(updated_archive)
+
+
+def _update_price_archive(
+    price_date: datetime.date, product_prices: dict[str, int], price_archive: dict
+) -> dict:
+    """
+    Return an updated version of the price archive.
+    """
+    updated_archive = copy.deepcopy(price_archive)
+    for product_id, price_in_pence in product_prices.items():
         price_in_pounds = _convert_pence_to_pounds(price_in_pence)
-        line = f"{product_id} - {product_description} - £{price_in_pounds}"
+        if product_id not in price_archive:
+            # New product - not currently in archive.
+            updated_archive[product_id] = {
+                "name": "TBD",
+                "prices": [
+                    {
+                        "date": price_date.isoformat(),
+                        "price": price_in_pounds,
+                    }
+                ],
+            }
+        else:
+            # Known product - see if price history needs updated.
+            last_archived_price = price_archive[product_id]["prices"][-1]["price"]
+            if price_in_pounds != last_archived_price:
+                # Price is different from latest record - add a new record.
+                updated_archive[product_id]["prices"].append(
+                    {
+                        "date": price_date.isoformat(),
+                        "price": price_in_pounds,
+                    }
+                )
 
-        sys.stdout.write(line + "\n")
+    return updated_archive
+
+
+# Archive file handling
+
+
+def _load_archive() -> dict:
+    # Format:
+    #
+    # {
+    #     13175011: {
+    #         "name": "xxx",
+    #         "prices": [
+    #             {
+    #                 "date": "2020-09-22":
+    #                 "price": "5.00",
+    #             }
+    #         ]
+    #     }
+    # }
+    filepath = os.path.join(os.path.dirname(__file__), "prices.json")
+    if not os.path.exists(filepath):
+        return {}
+
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+
+def _save_archive(archive: dict) -> None:
+    filepath = os.path.join(os.path.dirname(__file__), "prices.json")
+    with open(filepath, "w") as f:
+        return json.dump(archive, f, indent=4)
 
 
 def _convert_pence_to_pounds(pence: int) -> str:
@@ -38,11 +110,21 @@ def _convert_pence_to_pounds(pence: int) -> str:
 # Price fetching
 
 
+def _fetch_product_prices(product_ids: list[str]) -> dict[str, int]:
+    """
+    Build a dict of prices for the passed product IDs.
+    """
+    product_prices: dict[str, int] = {}
+    for product_id in product_ids:
+        product_prices[product_id] = _fetch_ocado_price(product_id)
+    return product_prices
+
+
 class UnableToFetchPrice(Exception):
     pass
 
 
-def _fetch_ocado_price(product_id: int) -> int:
+def _fetch_ocado_price(product_id: str) -> int:
     """
     Fetch the price of the passed product from Ocado.
 
@@ -60,7 +142,7 @@ def _fetch_ocado_price(product_id: int) -> int:
 
     # Extract price from HTML content.
     try:
-        return _extract_price(response.content)
+        return _extract_price(response.text)
     except UnableToExtractPrice as e:
         raise UnableToFetchPrice from e
 
