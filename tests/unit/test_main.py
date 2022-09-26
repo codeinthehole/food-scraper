@@ -1,3 +1,5 @@
+from unittest import mock
+
 import factory  # type:ignore
 import pytest
 
@@ -34,19 +36,12 @@ class TestArchive:
 
 
 class TestFetchOcadoPrice:
-    @pytest.mark.parametrize(
-        "product_id, price",
-        (
-            ("13175011", 500),
-            ("23476011", 180),
-        ),
-        ids=(
-            "500g of Lurpak",
-            "5 plain NY bagels",
-        ),
-    )
-    def test_fetches_correct_price(self, product_id: str, price: int):
-        assert main._fetch_ocado_price(product_id) == price
+    @mock.patch.object(main.requests, "get")
+    def test_extracts_correct_price(self, get):
+        with open("tests/fixtures/ocado_product.html") as f:
+            get.return_value = mock.Mock(text=f.read())
+
+        assert main._fetch_ocado_price(mock.sentinel.PRODUCT_ID) == 500
 
 
 class TestConvertPenceToPounds:

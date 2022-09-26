@@ -1,8 +1,12 @@
+# Virtualenv
+
 install:
 	pip install pip-tools==6.8
 	pip-sync
 
-check: black isort flake8 mypy test
+# Static analysis
+
+check: black isort flake8 mypy
 
 mypy:
 	mypy .
@@ -16,5 +20,12 @@ isort:
 flake8:
 	flake8
 
-test:
-	pytest -v
+# Testing
+
+test: unit_tests integration_tests
+
+unit_tests:
+	pytest -v tests/unit/
+
+integration_tests:
+	pytest -v tests/integration/
