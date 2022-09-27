@@ -7,7 +7,7 @@ check: black isort flake8 mypy test
 mypy:
 	mypy .
 
-black: 
+black:
 	black --check .
 
 isort:

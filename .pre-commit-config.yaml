@@ -1,0 +1,43 @@
+repos:
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.3.0
+      hooks:
+          # See https://github.com/pre-commit/pre-commit-hooks/blob/main/.pre-commit-hooks.yaml for list of hooks
+          - id: check-yaml
+          - id: end-of-file-fixer
+          - id: trailing-whitespace
+
+    - repo: https://github.com/psf/black
+      rev: 22.8.0
+      hooks:
+          - id: black
+
+    - repo: https://github.com/timothycrosley/isort
+      rev: 5.10.1
+      hooks:
+          - id: isort
+            additional_dependencies: [toml]
+
+    - repo: local
+      hooks:
+          - id: mypy
+            name: mypy
+            language: system
+            types: [python]
+            entry: mypy
+            require_serial: true
+
+          - id: flake8
+            name: flake8
+            language: system
+            types: [python]
+            entry: flake8
+            files: .*
+
+          - id: pytest
+            name: pytest
+            language: system
+            types: [python]
+            entry: pytest
+            files: 'test_.*\.py'
+            require_serial: true
