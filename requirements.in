@@ -12,5 +12,6 @@ mypy
 types-requests
 types-beautifulsoup4
 
-# testing
+# Testing
 pytest
+factory-boy

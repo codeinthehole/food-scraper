@@ -11,9 +11,8 @@ def main() -> None:
     """
     Update a price archive JSON file.
     """
-
-    # Products to track. This maps Ocado's product ID to a product description.
-    # TODO make this a separate file.
+    # Declare products to track. This maps Ocado's product ID to a product description.
+    # TODO make this a separate file that is passed in.
     products: dict[str, str] = {
         "13175011": "Lurpak butter (500g)",
         "23476011": "New York bagels (5)",
@@ -29,8 +28,54 @@ def main() -> None:
         product_prices=latest_prices,
         price_archive=current_archive,
     )
+
+    # If the archive has changed, save it and print out a summary of changes.
     if updated_archive != current_archive:
         _save_archive(updated_archive)
+        print(_change_summary(current_archive, updated_archive))
+
+
+def _change_summary(current_archive, updated_archive) -> str:
+    """
+    Return a summary of the changes.
+    """
+    if current_archive == updated_archive:
+        return ""
+
+    # Build a list of changes.
+    changes = []
+
+    # Look for new products in updated archive.
+    for product_id, product_data in updated_archive.items():
+        if product_id not in current_archive:
+            changes.append("New product: {name}".format(name=product_data["name"]))
+
+    # Look for products with new prices (or removed) updated archive.
+    for product_id, product_data in current_archive.items():
+        if product_id not in updated_archive:
+            changes.append("Remove product: {name}".format(name=product_data["name"]))
+        else:
+            updated_product_data = updated_archive[product_id]
+            # Look for name change.
+            if product_data["name"] != updated_product_data["name"]:
+                changes.append(
+                    "Rename product: {name} to {new_name}".format(
+                        name=product_data["name"], new_name=updated_product_data["name"]
+                    )
+                )
+            # Look for price change.
+            if product_data["prices"] != updated_product_data["prices"]:
+                previous_price = product_data["prices"][-1]["price"]
+                new_price = updated_product_data["prices"][-1]["price"]
+                changes.append(
+                    "Price change for {name}: {old_price} to {new_price}".format(
+                        name=product_data["name"],
+                        old_price=previous_price,
+                        new_price=new_price,
+                    )
+                )
+
+    return "Update price archive\n\n{changes}".format(changes="\n".join(changes))
 
 
 def _update_price_archive(
