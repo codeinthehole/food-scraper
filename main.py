@@ -2,6 +2,7 @@ import copy
 import datetime
 import json
 import os
+from typing import Any
 
 import bs4
 import requests
@@ -13,19 +14,19 @@ def main() -> None:
     """
     # Declare products to track. This maps Ocado's product ID to a product description.
     # TODO make this a separate file that is passed in.
-    products: dict[str, str] = {
-        "13175011": "Lurpak butter (500g)",
-        "23476011": "New York bagels (5)",
+    products: dict[str, dict[str, Any]] = {
+        "13175011": {"name": "Lurpak butter (500g)"},
+        "23476011": {"name": "New York bagels (5)"},
     }
 
-    # Fetch latest prices.
-    latest_prices = _fetch_product_prices(list(products.keys()))
+    # Append latest price to products dict.
+    _fetch_product_prices(products)
 
     # Update archive file.
     current_archive = _load_archive()
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
-        product_prices=latest_prices,
+        products=products,
         price_archive=current_archive,
     )
 
@@ -79,18 +80,18 @@ def _change_summary(current_archive, updated_archive) -> str:
 
 
 def _update_price_archive(
-    price_date: datetime.date, product_prices: dict[str, int], price_archive: dict
+    price_date: datetime.date, products: dict[str, dict[str, Any]], price_archive: dict
 ) -> dict:
     """
     Return an updated version of the price archive.
     """
     updated_archive = copy.deepcopy(price_archive)
-    for product_id, price_in_pence in product_prices.items():
-        price_in_pounds = _convert_pence_to_pounds(price_in_pence)
+    for product_id, product_data in products.items():
+        price_in_pounds = _convert_pence_to_pounds(product_data["price"])
         if product_id not in price_archive:
             # New product - not currently in archive.
             updated_archive[product_id] = {
-                "name": "TBD",
+                "name": product_data["name"],
                 "prices": [
                     {
                         "date": price_date.isoformat(),
@@ -155,14 +156,12 @@ def _convert_pence_to_pounds(pence: int) -> str:
 # Price fetching
 
 
-def _fetch_product_prices(product_ids: list[str]) -> dict[str, int]:
+def _fetch_product_prices(products: dict[str, dict[str, Any]]) -> None:
     """
-    Build a dict of prices for the passed product IDs.
+    Update the passed dict of product data with latest prices.
     """
-    product_prices: dict[str, int] = {}
-    for product_id in product_ids:
-        product_prices[product_id] = _fetch_ocado_price(product_id)
-    return product_prices
+    for product_id, product_data in products.items():
+        product_data["price"] = _fetch_ocado_price(product_id)
 
 
 class UnableToFetchPrice(Exception):
