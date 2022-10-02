@@ -1,0 +1,38 @@
+name: Fetch latest data
+
+on:
+  # Run on each push.
+  push:
+  # Manual button in Github.
+  workflow_dispatch:
+  # Run on a schedule.
+  schedule:
+    - cron: "46 4 * * *"
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+
+      # Will install python version from .python-version
+      - name: Install Python
+        uses: actions/setup-python@v4
+
+      - name: Set-up environment
+        run: |-
+          make install
+
+      - name: Fetch latest data
+        run: |-
+          # Run price fetching and capture change summary (if there is one) into a file.
+          python main.py | tee commit_msg.txt
+
+      - name: Commit and push if it changed
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add prices.json
+          git commit --file commit_msg.txt || exit 0
+          git push
