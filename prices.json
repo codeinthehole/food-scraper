@@ -1,0 +1,20 @@
+{
+    "13175011": {
+        "name": "Lurpak butter (500g)",
+        "prices": [
+            {
+                "date": "2022-10-02",
+                "price": "5.00"
+            }
+        ]
+    },
+    "23476011": {
+        "name": "New York bagels (5)",
+        "prices": [
+            {
+                "date": "2022-10-02",
+                "price": "1.80"
+            }
+        ]
+    }
+}
