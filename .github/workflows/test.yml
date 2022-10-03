@@ -10,12 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out this repo
-        uses: actions/checkout@v2
+      - name: Check out repo
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v3
 
       # Will install python version from .python-version
       - name: Install Python
+        # https://github.com/actions/setup-python
         uses: actions/setup-python@v4
+        with:
+          cache: "pip"
 
       - name: Set-up environment
         run: |-
