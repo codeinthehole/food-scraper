@@ -1,4 +1,4 @@
-name: Fetch latest data
+name: Update price archive
 
 on:
   # Run on each push to master.
@@ -16,13 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repo
-        uses: actions/checkout@v2
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v3
 
-      # Will install python version from .python-version
       - name: Install Python
+        # https://github.com/actions/setup-python
+        # Will install python version from .python-version
         uses: actions/setup-python@v4
+        with:
+          cache: "pip"
 
-      - name: Set-up environment
+      - name: Install Python packages
         run: |-
           make install
 
