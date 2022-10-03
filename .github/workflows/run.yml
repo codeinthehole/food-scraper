@@ -1,8 +1,10 @@
 name: Fetch latest data
 
 on:
-  # Run on each push.
+  # Run on each push to master.
   push:
+    branches:
+      - master
   # Manual button in Github.
   workflow_dispatch:
   # Run on a schedule.
