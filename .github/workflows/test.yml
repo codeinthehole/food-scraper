@@ -1,0 +1,42 @@
+name: Run tests and static analysis
+
+on:
+  # Run on each push.
+  push:
+  # Manual button in Github.
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+
+      # Will install python version from .python-version
+      - name: Install Python
+        uses: actions/setup-python@v4
+
+      - name: Set-up environment
+        run: |-
+          make install
+
+      - name: Check code is formatted with Black
+        run: |-
+          make black
+
+      - name: Check code is formatted with isort
+        run: |-
+          make isort
+
+      - name: Check code passes flake8 validation
+        run: |-
+          make flake8
+
+      - name: Check code passes mypy validation
+        run: |-
+          make mypy
+
+      - name: Check unit tests pass
+        run: |-
+          make unit_tests
