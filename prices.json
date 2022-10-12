@@ -1,20 +1,34 @@
-{
-    "13175011": {
+[
+    {
+        "code": "LURPAK_BUTTER_500G",
         "name": "Lurpak butter (500g)",
-        "prices": [
+        "retailers": [
             {
-                "date": "2022-10-02",
-                "price": "5.00"
+                "retailer": "Ocado",
+                "product_id": "13175011",
+                "prices": [
+                    {
+                        "date": "2022-10-02",
+                        "price": "5.00"
+                    }
+                ]
             }
         ]
     },
-    "23476011": {
+    {
+        "code": "NEW_YORK_BAGELS_5",
         "name": "New York bagels (5)",
-        "prices": [
+        "retailers": [
             {
-                "date": "2022-10-02",
-                "price": "1.80"
+                "retailer": "Ocado",
+                "product_id": "23476011",
+                "prices": [
+                    {
+                        "date": "2022-10-02",
+                        "price": "1.80"
+                    }
+                ]
             }
         ]
     }
-}
+]

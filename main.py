@@ -2,22 +2,64 @@ import copy
 import datetime
 import json
 import os
-from typing import Any
+from typing import TypedDict
 
 import bs4
 import requests
+
+# Data types
+
+
+class RetailerPrice(TypedDict):
+    # In format YYYY-MM-DD
+    date: str
+    # Price is in pence.
+    price: int
+
+
+class ProductRetailer(TypedDict):
+    retailer: str
+    product_id: str
+    prices: list[RetailerPrice]
+
+
+class Product(TypedDict):
+    # Must be unique.
+    code: str
+    name: str
+    retailers: list[ProductRetailer]
 
 
 def main() -> None:
     """
     Update a price archive JSON file.
     """
-    # Declare products to track. This maps Ocado's product ID to a product description.
+    # Declare products to track.
     # TODO make this a separate file that is passed in.
-    products: dict[str, dict[str, Any]] = {
-        "13175011": {"name": "Lurpak butter (500g)"},
-        "23476011": {"name": "New York bagels (5)"},
-    }
+    products: list[Product] = [
+        {
+            "code": "LURPAK_BUTTER_500G",
+            "name": "Lurpak butter (500g)",
+            "retailers": [
+                {
+                    "retailer": "Ocado",
+                    "product_id": "13175011",
+                    "prices": [],
+                }
+            ],
+        },
+        {
+            "code": "NEW_YORK_BAGELS_5",
+            "name": "New York bagels (5)",
+            "retailers": [
+                {
+                    "retailer": "Ocado",
+                    "product_id": "23476011",
+                    "prices": [],
+                }
+            ],
+        },
+    ]
 
     # Append latest price to products dict.
     _fetch_product_prices(products)
@@ -25,7 +67,6 @@ def main() -> None:
     # Update archive file.
     current_archive = _load_archive()
     updated_archive = _update_price_archive(
-        price_date=datetime.date.today(),
         products=products,
         price_archive=current_archive,
     )
@@ -80,13 +121,32 @@ def _change_summary(current_archive, updated_archive) -> str:
 
 
 def _update_price_archive(
-    price_date: datetime.date, products: dict[str, dict[str, Any]], price_archive: dict
+    products: list[Product], price_archive: list[Product]
 ) -> dict:
     """
     Return an updated version of the price archive.
     """
     updated_archive = copy.deepcopy(price_archive)
-    for product_id, product_data in products.items():
+
+    # Keep a list of product codes for easier look-ups.
+    archive_codes = [p["code"] for p in price_archive]
+
+    # Loop over the new products and see if there are any new products or prices to add to the
+    # archive.
+    for product in products:
+        # Is product in archive?
+        try:
+            index = archive_codes.index(product["code"])
+        except ValueError:
+            # Product isn't there - add it.
+            archive_product = copy.deepcopy(product)
+            updated_archive.append(archive_product)
+        else:
+            archive_product = price_archive[index]
+
+        # See if there is a new price to add.
+        # ..
+
         price_in_pounds = _convert_pence_to_pounds(product_data["price"])
         if product_id not in price_archive:
             # New product - not currently in archive.
@@ -117,23 +177,13 @@ def _update_price_archive(
 # Archive file handling
 
 
-def _load_archive() -> dict:
-    # Format:
-    #
-    # {
-    #     13175011: {
-    #         "name": "xxx",
-    #         "prices": [
-    #             {
-    #                 "date": "2020-09-22":
-    #                 "price": "5.00",
-    #             }
-    #         ]
-    #     }
-    # }
+def _load_archive() -> list[Product]:
+    """
+    Load the product archive from file.
+    """
     filepath = os.path.join(os.path.dirname(__file__), "prices.json")
     if not os.path.exists(filepath):
-        return {}
+        return []
 
     with open(filepath, "r") as f:
         return json.load(f)
@@ -156,12 +206,18 @@ def _convert_pence_to_pounds(pence: int) -> str:
 # Price fetching
 
 
-def _fetch_product_prices(products: dict[str, dict[str, Any]]) -> None:
+def _fetch_product_prices(products: list[Product]) -> None:
     """
-    Update the passed dict of product data with latest prices.
+    Update the passed list of product data with retailer prices.
     """
-    for product_id, product_data in products.items():
-        product_data["price"] = _fetch_ocado_price(product_id)
+    price_date = datetime.date.today()
+    for product in products:
+        for retailer_data in product["retailers"]:
+            if retailer_data["retailer"] == "Ocado":
+                price = _fetch_ocado_price(retailer_data["product_id"])
+                retailer_data["prices"].append(
+                    {"date": price_date.isoformat(), "price": price}
+                )
 
 
 class UnableToFetchPrice(Exception):
