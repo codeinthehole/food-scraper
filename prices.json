@@ -20,5 +20,77 @@
                 "price": "1.90"
             }
         ]
+    },
+    "65448011": {
+        "name": "Brown onions (3 pack)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "0.95"
+            }
+        ]
+    },
+    "64861011": {
+        "name": "Royal Gala apples (6 pack)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "1.70"
+            }
+        ]
+    },
+    "44855011": {
+        "name": "Fairtrade bananas (5 pack)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "0.80"
+            }
+        ]
+    },
+    "78914011": {
+        "name": "Semi skimmed milk (4 pints)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "1.55"
+            }
+        ]
+    },
+    "57293011": {
+        "name": "Large free range eggs (6 pack)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "1.50"
+            }
+        ]
+    },
+    "53687011": {
+        "name": "Blueberries (150g)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "1.75"
+            }
+        ]
+    },
+    "47305011": {
+        "name": "Lemons (5 pack)",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "1.20"
+            }
+        ]
+    },
+    "91370011": {
+        "name": "Large garlic",
+        "prices": [
+            {
+                "date": "2022-10-12",
+                "price": "0.65"
+            }
+        ]
     }
 }
