@@ -17,6 +17,14 @@ def main() -> None:
     products: dict[str, dict[str, Any]] = {
         "13175011": {"name": "Lurpak butter (500g)"},
         "23476011": {"name": "New York bagels (5)"},
+        "65448011": {"name": "Brown onions (3 pack)"},
+        "64861011": {"name": "Royal Gala apples (6 pack)"},
+        "44855011": {"name": "Fairtrade bananas (5 pack)"},
+        "78914011": {"name": "Semi skimmed milk (4 pints)"},
+        "57293011": {"name": "Large free range eggs (6 pack)"},
+        "53687011": {"name": "Blueberries (150g)"},
+        "47305011": {"name": "Lemons (5 pack)"},
+        "91370011": {"name": "Large garlic"},
     }
 
     # Append latest price to products dict.
