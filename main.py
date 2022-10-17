@@ -25,6 +25,14 @@ def main() -> None:
         "53687011": {"name": "Blueberries (150g)"},
         "47305011": {"name": "Lemons (5 pack)"},
         "91370011": {"name": "Large garlic"},
+        "96798011": {"name": "Red seedless grapes (500g)"},
+        "240875011": {"name": "Cucumber"},
+        "31833011": {"name": "Cathedral City Cheese (550g)"},
+        "510737011": {"name": "Super seeded loaf (800g)"},
+        "321394011": {"name": "Helda stringless beans (180g)"},
+        "225627011": {"name": "Chicken thigh fillets (450g)"},
+        "32003011": {"name": "Onken biopot natural yoghurt (1kg)"},
+        "98385011": {"name": "Parmigiano reggiano (320g)"},
     }
 
     # Append latest price to products dict.
