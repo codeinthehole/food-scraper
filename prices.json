@@ -96,5 +96,77 @@
                 "price": "0.65"
             }
         ]
+    },
+    "96798011": {
+        "name": "Red seedless grapes (500g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "2.00"
+            }
+        ]
+    },
+    "240875011": {
+        "name": "Cucumber",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "0.65"
+            }
+        ]
+    },
+    "31833011": {
+        "name": "Cathedral City Cheese (550g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "5.40"
+            }
+        ]
+    },
+    "510737011": {
+        "name": "Super seeded loaf (800g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "1.60"
+            }
+        ]
+    },
+    "321394011": {
+        "name": "Helda stringless beans (180g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "1.25"
+            }
+        ]
+    },
+    "225627011": {
+        "name": "Chicken thigh fillets (450g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "3.22"
+            }
+        ]
+    },
+    "32003011": {
+        "name": "Onken biopot natural yoghurt (1kg)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "2.50"
+            }
+        ]
+    },
+    "98385011": {
+        "name": "Parmigiano reggiano (320g)",
+        "prices": [
+            {
+                "date": "2022-10-17",
+                "price": "5.50"
+            }
+        ]
     }
 }
