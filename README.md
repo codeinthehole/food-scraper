@@ -1,6 +1,13 @@
 # Ocado price scraper
 
-A Git-scraper repo for scraping prices of a list of products from Ocado.
+A Git-scraper repo for scraping prices from Ocado.
+
+Once a day, the `main.py` Python script is run via a Github Actions workflow.
+This fetches prices for a defined list of products and, if there are changes,
+updates the `prices.json` file and commits the change to the repo.
+
+To browse historic price changes, look for commits with subject "Update price
+archive".
 
 ## Local development
 
@@ -24,7 +31,7 @@ Check formatting and type annotations with:
 
     make check
 
-See the `makefile` for how the linters are run individually.
+See the `makefile` for how to run the linters individually.
 
 ### Running the application
 
