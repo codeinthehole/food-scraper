@@ -60,6 +60,19 @@ Check formatting and type annotations with:
 
 See the `makefile` for how to run the linters individually.
 
+### Packages
+
+Packages are managed with [`pip-tools`](https://github.com/jazzband/pip-tools).
+To add a new dependency, add it to `requirements.in` and run:
+
+    pip-compile
+
+which will generate a new version of `requirements.txt`. Then run:
+
+    pip-sync
+
+to install `requirements.txt`.
+
 ## Test suite
 
 ### Test suite structure
