@@ -85,7 +85,7 @@ def _change_summary(current_archive, updated_archive) -> str:
                 previous_price = product_data["prices"][-1]["price"]
                 new_price = updated_product_data["prices"][-1]["price"]
                 changes.append(
-                    "Price change for {name}: {old_price} to {new_price}".format(
+                    "Price change for {name}: £{old_price} to £{new_price}".format(
                         name=product_data["name"],
                         old_price=previous_price,
                         new_price=new_price,

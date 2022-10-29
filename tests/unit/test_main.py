@@ -118,4 +118,6 @@ class TestChangeSummary:
 
         summary = main._change_summary(current_archive, updated_archive)
 
-        assert summary == "Update price archive\n\nPrice change for Eggs: 1.50 to 2.50"
+        assert (
+            summary == "Update price archive\n\nPrice change for Eggs: £1.50 to £2.50"
+        )
