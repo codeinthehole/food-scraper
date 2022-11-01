@@ -2,10 +2,12 @@ import copy
 import datetime
 import json
 import os
-from typing import Dict, Optional, TypedDict
+from typing import Dict, List, Optional, TypedDict
 
 import bs4
 import requests
+
+# Types
 
 
 class Product(TypedDict):
@@ -14,6 +16,22 @@ class Product(TypedDict):
 
 
 ProductMap = Dict[str, Product]
+
+
+class PriceChange(TypedDict):
+    date: str
+    price: str
+
+
+class ProductPriceHistory(TypedDict):
+    name: str
+    prices: List[PriceChange]
+
+
+ArchiveProductMap = Dict[str, ProductPriceHistory]
+
+
+# Main function
 
 
 def main() -> None:
@@ -104,11 +122,12 @@ def _change_summary(current_archive, updated_archive) -> str:
 
 
 def _update_price_archive(
-    price_date: datetime.date, products: ProductMap, price_archive: dict
-) -> dict:
+    price_date: datetime.date, products: ProductMap, price_archive: ArchiveProductMap
+) -> ArchiveProductMap:
     """
     Return an updated version of the price archive.
     """
+    # Create a new copy of the archive.
     updated_archive = copy.deepcopy(price_archive)
     for product_id, product_data in products.items():
         assert product_data["price"] is not None
@@ -142,20 +161,11 @@ def _update_price_archive(
 # Archive file handling
 
 
-def _load_archive() -> dict:
-    # Format:
-    #
-    # {
-    #     13175011: {
-    #         "name": "xxx",
-    #         "prices": [
-    #             {
-    #                 "date": "2020-09-22":
-    #                 "price": "5.00",
-    #             }
-    #         ]
-    #     }
-    # }
+def _load_archive() -> ArchiveProductMap:
+    """
+    Return the product archive data structure.
+    """
+    # Archive is stored in a local file.
     filepath = os.path.join(os.path.dirname(__file__), "prices.json")
     if not os.path.exists(filepath):
         return {}
@@ -164,7 +174,10 @@ def _load_archive() -> dict:
         return json.load(f)
 
 
-def _save_archive(archive: dict) -> None:
+def _save_archive(archive: ArchiveProductMap) -> None:
+    """
+    Save the product archive data structure.
+    """
     filepath = os.path.join(os.path.dirname(__file__), "prices.json")
     with open(filepath, "w") as f:
         return json.dump(archive, f, indent=4)
