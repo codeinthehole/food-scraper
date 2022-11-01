@@ -2,10 +2,18 @@ import copy
 import datetime
 import json
 import os
-from typing import Any
+from typing import Dict, Optional, TypedDict
 
 import bs4
 import requests
+
+
+class Product(TypedDict):
+    name: str
+    price: Optional[int]
+
+
+ProductMap = Dict[str, Product]
 
 
 def main() -> None:
@@ -14,25 +22,25 @@ def main() -> None:
     """
     # Declare products to track. This maps Ocado's product ID to a product description.
     # TODO make this a separate file that is passed in.
-    products: dict[str, dict[str, Any]] = {
-        "13175011": {"name": "Lurpak butter (500g)"},
-        "23476011": {"name": "New York bagels (5)"},
-        "65448011": {"name": "Brown onions (3 pack)"},
-        "64861011": {"name": "Royal Gala apples (6 pack)"},
-        "44855011": {"name": "Fairtrade bananas (5 pack)"},
-        "78914011": {"name": "Semi skimmed milk (4 pints)"},
-        "57293011": {"name": "Large free range eggs (6 pack)"},
-        "53687011": {"name": "Blueberries (150g)"},
-        "47305011": {"name": "Lemons (5 pack)"},
-        "91370011": {"name": "Large garlic"},
-        "96798011": {"name": "Red seedless grapes (500g)"},
-        "240875011": {"name": "Cucumber"},
-        "31833011": {"name": "Cathedral City Cheese (550g)"},
-        "510737011": {"name": "Super seeded loaf (800g)"},
-        "321394011": {"name": "Helda stringless beans (180g)"},
-        "225627011": {"name": "Chicken thigh fillets (450g)"},
-        "32003011": {"name": "Onken biopot natural yoghurt (1kg)"},
-        "98385011": {"name": "Parmigiano reggiano (320g)"},
+    products: ProductMap = {
+        "13175011": {"name": "Lurpak butter (500g)", "price": None},
+        "23476011": {"name": "New York bagels (5)", "price": None},
+        "65448011": {"name": "Brown onions (3 pack)", "price": None},
+        "64861011": {"name": "Royal Gala apples (6 pack)", "price": None},
+        "44855011": {"name": "Fairtrade bananas (5 pack)", "price": None},
+        "78914011": {"name": "Semi skimmed milk (4 pints)", "price": None},
+        "57293011": {"name": "Large free range eggs (6 pack)", "price": None},
+        "53687011": {"name": "Blueberries (150g)", "price": None},
+        "47305011": {"name": "Lemons (5 pack)", "price": None},
+        "91370011": {"name": "Large garlic", "price": None},
+        "96798011": {"name": "Red seedless grapes (500g)", "price": None},
+        "240875011": {"name": "Cucumber", "price": None},
+        "31833011": {"name": "Cathedral City Cheese (550g)", "price": None},
+        "510737011": {"name": "Super seeded loaf (800g)", "price": None},
+        "321394011": {"name": "Helda stringless beans (180g)", "price": None},
+        "225627011": {"name": "Chicken thigh fillets (450g)", "price": None},
+        "32003011": {"name": "Onken biopot natural yoghurt (1kg)", "price": None},
+        "98385011": {"name": "Parmigiano reggiano (320g)", "price": None},
     }
 
     # Append latest price to products dict.
@@ -96,13 +104,14 @@ def _change_summary(current_archive, updated_archive) -> str:
 
 
 def _update_price_archive(
-    price_date: datetime.date, products: dict[str, dict[str, Any]], price_archive: dict
+    price_date: datetime.date, products: ProductMap, price_archive: dict
 ) -> dict:
     """
     Return an updated version of the price archive.
     """
     updated_archive = copy.deepcopy(price_archive)
     for product_id, product_data in products.items():
+        assert product_data["price"] is not None
         price_in_pounds = _convert_pence_to_pounds(product_data["price"])
         if product_id not in price_archive:
             # New product - not currently in archive.
@@ -172,7 +181,7 @@ def _convert_pence_to_pounds(pence: int) -> str:
 # Price fetching
 
 
-def _fetch_product_prices(products: dict[str, dict[str, Any]]) -> None:
+def _fetch_product_prices(products: ProductMap) -> None:
     """
     Update the passed dict of product data with latest prices.
     """
