@@ -1,12 +1,12 @@
 import copy
 import datetime
-import json
-import os
-from typing import Dict, List, Optional, TypedDict
+from typing import Dict, Optional, TypedDict
 
 import bs4
 import click
 import requests
+
+from chow import archive
 
 # Types
 
@@ -17,19 +17,6 @@ class Product(TypedDict):
 
 
 ProductMap = Dict[str, Product]
-
-
-class PriceChange(TypedDict):
-    date: str
-    price: str
-
-
-class ProductPriceHistory(TypedDict):
-    name: str
-    prices: List[PriceChange]
-
-
-ArchiveProductMap = Dict[str, ProductPriceHistory]
 
 
 # Main function
@@ -72,7 +59,7 @@ def update_price_archive() -> None:
     _fetch_product_prices(products)
 
     # Update archive file.
-    current_archive = _load_archive()
+    current_archive = archive.load()
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
         products=products,
@@ -81,7 +68,7 @@ def update_price_archive() -> None:
 
     # If the archive has changed, save it and print out a summary of changes.
     if updated_archive != current_archive:
-        _save_archive(updated_archive)
+        archive.save(updated_archive)
         print(_change_summary(current_archive, updated_archive))
 
 
@@ -129,8 +116,10 @@ def _change_summary(current_archive, updated_archive) -> str:
 
 
 def _update_price_archive(
-    price_date: datetime.date, products: ProductMap, price_archive: ArchiveProductMap
-) -> ArchiveProductMap:
+    price_date: datetime.date,
+    products: ProductMap,
+    price_archive: archive.ArchiveProductMap,
+) -> archive.ArchiveProductMap:
     """
     Return an updated version of the price archive.
     """
@@ -163,31 +152,6 @@ def _update_price_archive(
                 )
 
     return updated_archive
-
-
-# Archive file handling
-
-
-def _load_archive() -> ArchiveProductMap:
-    """
-    Return the product archive data structure.
-    """
-    # Archive is stored in a local file.
-    filepath = os.path.join(os.path.dirname(__file__), "prices.json")
-    if not os.path.exists(filepath):
-        return {}
-
-    with open(filepath, "r") as f:
-        return json.load(f)
-
-
-def _save_archive(archive: ArchiveProductMap) -> None:
-    """
-    Save the product archive data structure.
-    """
-    filepath = os.path.join(os.path.dirname(__file__), "prices.json")
-    with open(filepath, "w") as f:
-        return json.dump(archive, f, indent=4)
 
 
 def _convert_pence_to_pounds(pence: int) -> str:
