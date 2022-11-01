@@ -5,6 +5,7 @@ import os
 from typing import Dict, List, Optional, TypedDict
 
 import bs4
+import click
 import requests
 
 # Types
@@ -34,7 +35,13 @@ ArchiveProductMap = Dict[str, ProductPriceHistory]
 # Main function
 
 
-def main() -> None:
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+def update_price_archive() -> None:
     """
     Update a price archive JSON file.
     """
@@ -257,4 +264,4 @@ def _extract_price(content: str) -> int:
 
 
 if __name__ == "__main__":
-    main()
+    cli()

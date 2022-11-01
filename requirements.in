@@ -1,6 +1,7 @@
 # Application
 requests
 beautifulsoup4
+click
 
 # Linting
 black

@@ -33,7 +33,7 @@ jobs:
       - name: Fetch latest data
         run: |-
           # Run price fetching and capture change summary (if there is one) into a file.
-          python main.py | tee commit_msg.txt
+          python main.py update-price-archive | tee commit_msg.txt
 
       - name: Commit and push if it changed
         run: |-
