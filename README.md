@@ -3,8 +3,8 @@
 A Git-scraper repo for scraping prices from Ocado.
 
 Once a day, the `main.py` Python script is run via a Github Actions workflow.
-This fetches prices for a defined list of products and, if there are changes,
-updates the `prices.json` file and commits the change to the repo.
+This fetches prices for a list of products (`products.json`) and, if there are
+changes, updates the `prices.json` file and commits the change to the repo.
 
 To browse historic price changes, look for commits with subject "Update price
 archive".
@@ -37,7 +37,7 @@ See the `makefile` for how to run the linters individually.
 
 Execute the price fetching script with:
 
-    python main.py update-price-archive
+    python main.py update-price-archive products.json
 
 which will update a local `prices.json` file.
 
