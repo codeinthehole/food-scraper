@@ -3,7 +3,7 @@ from unittest import mock
 import factory  # type:ignore
 import pytest
 
-import main
+from chow.usecases import price_fetching
 
 # Factories
 
@@ -36,12 +36,12 @@ class TestArchive:
 
 
 class TestFetchOcadoPrice:
-    @mock.patch.object(main.requests, "get")
+    @mock.patch.object(price_fetching.requests, "get")
     def test_extracts_correct_price(self, get):
         with open("tests/fixtures/ocado_product.html") as f:
             get.return_value = mock.Mock(text=f.read())
 
-        assert main._fetch_ocado_price(mock.sentinel.PRODUCT_ID) == 500
+        assert price_fetching._fetch_ocado_price(mock.sentinel.PRODUCT_ID) == 500
 
 
 class TestConvertPenceToPounds:
@@ -53,7 +53,9 @@ class TestConvertPenceToPounds:
         ),
     )
     def test_conversion(self, price_in_pence: int, formatted_price: str):
-        assert main._convert_pence_to_pounds(price_in_pence) == formatted_price
+        assert (
+            price_fetching._convert_pence_to_pounds(price_in_pence) == formatted_price
+        )
 
 
 class TestChangeSummary:
@@ -61,13 +63,13 @@ class TestChangeSummary:
         current_archive = {}
         updated_archive = {}
 
-        assert main._change_summary(current_archive, updated_archive) == ""
+        assert price_fetching._change_summary(current_archive, updated_archive) == ""
 
     def test_summary_when_new_product_added(self):
         current_archive = {}
         updated_archive = Archive(p1__name="Snickers")
 
-        summary = main._change_summary(current_archive, updated_archive)
+        summary = price_fetching._change_summary(current_archive, updated_archive)
 
         assert summary == "Update price archive\n\nNew product: Snickers"
 
@@ -78,7 +80,7 @@ class TestChangeSummary:
             p2=ArchiveProduct(name="Bacon"),
         )
 
-        summary = main._change_summary(current_archive, updated_archive)
+        summary = price_fetching._change_summary(current_archive, updated_archive)
 
         assert (
             summary == "Update price archive\n\nNew product: Eggs\nNew product: Bacon"
@@ -93,7 +95,7 @@ class TestChangeSummary:
             p1=ArchiveProduct(name="Eggs"),
         )
 
-        summary = main._change_summary(current_archive, updated_archive)
+        summary = price_fetching._change_summary(current_archive, updated_archive)
 
         assert summary == "Update price archive\n\nRemove product: Bacon"
 
@@ -116,7 +118,7 @@ class TestChangeSummary:
             )
         )
 
-        summary = main._change_summary(current_archive, updated_archive)
+        summary = price_fetching._change_summary(current_archive, updated_archive)
 
         assert (
             summary == "Update price archive\n\nPrice change for Eggs: £1.50 to £2.50"
