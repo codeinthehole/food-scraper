@@ -1,14 +1,14 @@
 import pytest
 
-import main
+from chow.usecases import price_fetching
 
 
 class TestFetchOcadoPriceExternal:
     @pytest.mark.parametrize(
         "product_id, price",
         (
-            ("13175011", 500),
-            ("23476011", 180),
+            ("13175011", 400),
+            ("23476011", 190),
         ),
         ids=(
             "500g of Lurpak",
@@ -16,4 +16,4 @@ class TestFetchOcadoPriceExternal:
         ),
     )
     def test_fetches_correct_price(self, product_id: str, price: int):
-        assert main._fetch_ocado_price(product_id) == price
+        assert price_fetching._fetch_ocado_price(product_id) == price
