@@ -12,13 +12,16 @@ def cli():
 
 
 @cli.command()
-@click.argument("products_file", type=click.File("rb"))
-def update_price_archive(products_file: TextIO) -> None:
+@click.argument("products", type=click.File("rb"))
+@click.argument("archive")
+def update_price_archive(products: TextIO, archive: str) -> None:
     """
     Update a price archive JSON file.
     """
-    products: usecases.ProductMap = json.load(products_file)
-    summary = usecases.update_price_archive(products)
+    product_map: usecases.ProductMap = json.load(products)
+    summary = usecases.update_price_archive(
+        product_map=product_map, archive_filepath=archive
+    )
     if summary:
         print(summary)
 

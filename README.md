@@ -37,9 +37,10 @@ See the `makefile` for how to run the linters individually.
 
 Execute the price fetching script with:
 
-    python main.py update-price-archive products.json
+    python main.py update-price-archive products.json prices.json
 
-which will update a local `prices.json` file.
+which will take the products from `products.json` and update `prices.json` with
+the latest prices (if they have changed).
 
 ## Test suite
 

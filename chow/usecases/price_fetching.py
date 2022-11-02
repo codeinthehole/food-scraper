@@ -16,25 +16,24 @@ class Product(TypedDict):
 ProductMap = Dict[str, Product]
 
 
-def update_price_archive(products: ProductMap) -> str:
+def update_price_archive(product_map: ProductMap, archive_filepath: str) -> str:
     """
     Update the price archive.
     """
-
-    # Append latest price to products dict.
-    _fetch_product_prices(products)
+    # Append latest prices to products dict.
+    _fetch_product_prices(product_map)
 
     # Update archive file.
-    current_archive = archive.load()
+    current_archive = archive.load(archive_filepath)
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
-        products=products,
+        products=product_map,
         price_archive=current_archive,
     )
 
     # If the archive has changed, save it and print out a summary of changes.
     if updated_archive != current_archive:
-        archive.save(updated_archive)
+        archive.save(archive_filepath, updated_archive)
         return _change_summary(current_archive, updated_archive)
 
     return ""

@@ -16,12 +16,11 @@ class ProductPriceHistory(TypedDict):
 ArchiveProductMap = Dict[str, ProductPriceHistory]
 
 
-def load() -> ArchiveProductMap:
+def load(filepath: str) -> ArchiveProductMap:
     """
     Return the product archive data structure.
     """
     # Archive is stored in a local file.
-    filepath = _filepath()
     if not os.path.exists(filepath):
         return {}
 
@@ -29,11 +28,10 @@ def load() -> ArchiveProductMap:
         return json.load(f)
 
 
-def save(archive: ArchiveProductMap) -> None:
+def save(filepath: str, archive: ArchiveProductMap) -> None:
     """
     Save the product archive data structure.
     """
-    filepath = _filepath()
     with open(filepath, "w") as f:
         return json.dump(archive, f, indent=4)
 
