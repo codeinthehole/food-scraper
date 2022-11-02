@@ -6,7 +6,7 @@ install:
 
 # Static analysis
 
-check: black isort flake8 mypy
+check: black isort flake8 mypy unit_tests
 
 mypy:
 	mypy .
