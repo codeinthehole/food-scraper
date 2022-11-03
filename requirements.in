@@ -17,3 +17,4 @@ types-beautifulsoup4
 pytest
 pytest-socket
 factory-boy
+responses
