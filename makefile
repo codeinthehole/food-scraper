@@ -22,10 +22,9 @@ flake8:
 
 # Testing
 
-test: unit_tests integration_tests
+test:
+	pytest -v tests/unit/ tests/functional/
 
-unit_tests:
-	pytest -v tests/unit/
-
+# These aren't run in CI as they hit external APIs.
 integration_tests:
 	pytest -v tests/integration/
