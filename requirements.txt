@@ -55,6 +55,10 @@ pyflakes==2.5.0
 pyparsing==3.0.9
     # via packaging
 pytest==7.1.3
+    # via
+    #   -r requirements.in
+    #   pytest-socket
+pytest-socket==0.5.1
     # via -r requirements.in
 python-dateutil==2.8.2
     # via faker
