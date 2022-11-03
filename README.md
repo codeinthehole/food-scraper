@@ -3,11 +3,19 @@
 A Git-scraper repo for scraping prices from Ocado.
 
 Once a day, the `main.py` Python script is run via a Github Actions workflow.
-This fetches prices for a list of products (`products.json`) and, if there are
-changes, updates the `prices.json` file and commits the change to the repo.
+This fetches prices for a list of products ([`products.json`][products_file])
+and, if there are changes, updates the [`prices.json`][prices_file] file and
+commits the change to the repo.
 
-To browse historic price changes, look for commits with subject "Update price
-archive".
+[products_file]:
+  https://github.com/codeinthehole/food-scraper/blob/master/products.json
+[prices_file]:
+  https://github.com/codeinthehole/food-scraper/blob/master/prices.json
+
+To browse historic price changes, [look for commits][commits_list] with subject
+"Update price archive".
+
+[commits_list]: https://github.com/codeinthehole/food-scraper/commits/master
 
 ## Local development
 
