@@ -48,14 +48,15 @@ the latest prices (if they have changed).
 
 - `tests/unit/` contains isolated unit tests.
 - `tests/integration/` contains tests that exercise a real external API.
+- `tests/functional/` contains end-to-end tests that use Click's API to call
+  commands.
 
 ### Running tests
 
-Run all tests with:
+Run the CI tests with:
 
     make test
 
-or a category of test with:
+or the external tests with
 
-    make unit_tests
     make integration_tests
