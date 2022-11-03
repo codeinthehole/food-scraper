@@ -33,7 +33,7 @@ def save(filepath: str, archive: ArchiveProductMap) -> None:
     Save the product archive data structure.
     """
     with open(filepath, "w") as f:
-        return json.dump(archive, f, indent=4)
+        json.dump(archive, f, indent=4)
 
 
 def _filepath() -> str:
