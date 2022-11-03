@@ -63,11 +63,17 @@ pytest-socket==0.5.1
 python-dateutil==2.8.2
     # via faker
 requests==2.28.1
+    # via
+    #   -r requirements.in
+    #   responses
+responses==0.22.0
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
 soupsieve==2.3.2.post1
     # via beautifulsoup4
+toml==0.10.2
+    # via responses
 tomli==2.0.1
     # via
     #   black
@@ -77,9 +83,13 @@ types-beautifulsoup4==4.11.6
     # via -r requirements.in
 types-requests==2.28.11
     # via -r requirements.in
+types-toml==0.10.8
+    # via responses
 types-urllib3==1.26.24
     # via types-requests
 typing-extensions==4.3.0
     # via mypy
 urllib3==1.26.12
-    # via requests
+    # via
+    #   requests
+    #   responses
