@@ -5,7 +5,7 @@ from typing import Dict, Optional, TypedDict
 import bs4
 import requests
 
-from chow import archive
+from chow import archive, logger
 
 
 class Product(TypedDict):
@@ -16,12 +16,14 @@ class Product(TypedDict):
 ProductMap = Dict[str, Product]
 
 
-def update_price_archive(product_map: ProductMap, archive_filepath: str) -> str:
+def update_price_archive(
+    product_map: ProductMap, archive_filepath: str, logger: logger.ConsoleLogger
+) -> str:
     """
     Update the price archive.
     """
     # Append latest prices to products dict.
-    _fetch_product_prices(product_map)
+    _fetch_product_prices(product_map, logger)
 
     # Update archive file.
     current_archive = archive.load(archive_filepath)
@@ -39,11 +41,12 @@ def update_price_archive(product_map: ProductMap, archive_filepath: str) -> str:
     return ""
 
 
-def _fetch_product_prices(products: ProductMap) -> None:
+def _fetch_product_prices(products: ProductMap, logger: logger.ConsoleLogger) -> None:
     """
     Update the passed dict of product data with latest prices.
     """
     for product_id, product_data in products.items():
+        logger.info(f"Fetching price for product {product_id}")
         product_data["price"] = _fetch_ocado_price(product_id)
 
 
