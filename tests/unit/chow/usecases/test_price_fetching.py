@@ -37,9 +37,8 @@ class TestArchive:
 
 class TestFetchOcadoPrice:
     @mock.patch.object(price_fetching.requests, "get")
-    def test_extracts_correct_price(self, get):
-        with open("tests/fixtures/ocado_product.html") as f:
-            get.return_value = mock.Mock(text=f.read())
+    def test_extracts_correct_price(self, get, fixture):
+        get.return_value = mock.Mock(text=fixture("ocado_product.html"))
 
         assert price_fetching._fetch_ocado_price(mock.sentinel.PRODUCT_ID) == 500
 
