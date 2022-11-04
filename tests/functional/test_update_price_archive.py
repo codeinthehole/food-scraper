@@ -8,7 +8,7 @@ import main
 
 
 @responses.activate
-def test_create_archive_file(runner, tmp_path):
+def test_create_archive_file(runner, fixture, tmp_path):
     # Create a temporary file of products.
     products = {"123": {"name": "Crisps", "price": None}}
     products_file = tmp_path / "products.json"
@@ -18,11 +18,9 @@ def test_create_archive_file(runner, tmp_path):
     archive_file = tmp_path / "archive.json"
 
     # Stub Ocado response for any the above product URL.
-    with open("tests/fixtures/ocado_product.html") as f:
-        response_html = f.read()
     responses.get(
         url=re.compile(r"https://www.ocado.com/products/slug-123"),
-        body=response_html,
+        body=fixture("ocado_product.html"),
     )
 
     # Run command.
@@ -49,7 +47,7 @@ def test_create_archive_file(runner, tmp_path):
 
 
 @responses.activate
-def test_update_archive_file(runner, tmp_path):
+def test_update_archive_file(runner, fixture, tmp_path):
     # Create a temporary file of products.
     products = {"123": {"name": "Crisps", "price": None}}
     products_file = tmp_path / "products.json"
@@ -71,11 +69,9 @@ def test_update_archive_file(runner, tmp_path):
     archive_file.write_text(json.dumps(archive_data))
 
     # Stub Ocado response for any the above product URL.
-    with open("tests/fixtures/ocado_product.html") as f:
-        response_html = f.read()
     responses.get(
         url=re.compile(r"https://www.ocado.com/products/slug-123"),
-        body=response_html,
+        body=fixture("ocado_product.html"),
     )
 
     # Run command at a later date then archived price.
