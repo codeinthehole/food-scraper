@@ -27,6 +27,25 @@ Create a Python 3.10 virtualenv, then run::
 
 which will install `pip-tools` and the necessary packages.
 
+### Running the application
+
+Execute the price fetching script with:
+
+    python main.py update-price-archive $PRODUCTS_FILE $ARCHIVE_FILE
+
+which will take the products from `$PRODUCTS_FILE` and update `$ARCHIVE_FILE`
+with the latest prices (if they have changed).
+
+When run in Github's scheduler, the products file is `products.json` and the
+archive file is `prices.json`.
+
+To smoke test the application, run:
+
+    make run
+
+which will use `products.json` for the product list and update a throw-away copy
+of `prices.json`. This avoids dirtying a tracked file.
+
 ### Development
 
 Conventions:
@@ -40,15 +59,6 @@ Check formatting and type annotations with:
     make check
 
 See the `makefile` for how to run the linters individually.
-
-### Running the application
-
-Execute the price fetching script with:
-
-    python main.py update-price-archive products.json prices.json
-
-which will take the products from `products.json` and update `prices.json` with
-the latest prices (if they have changed).
 
 ## Test suite
 
