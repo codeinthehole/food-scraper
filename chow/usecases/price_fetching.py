@@ -1,3 +1,4 @@
+import concurrent.futures
 import copy
 import datetime
 from typing import Dict, Optional, TypedDict
@@ -45,8 +46,20 @@ def _fetch_product_prices(products: ProductMap, logger: logger.ConsoleLogger) ->
     """
     Update the passed dict of product data with latest prices.
     """
-    for product_id, product_data in products.items():
-        product_data["price"] = _fetch_ocado_price(product_id, logger)
+    # Use a thread pool to fetch prices concurrently.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        # Create a dict of Future->productDict
+        future_to_data = {
+            executor.submit(_fetch_ocado_price, product_id, logger): product_data
+            for (product_id, product_data) in products.items()
+        }
+        # Loop over the completed futures and update the product data dict.
+        for future in concurrent.futures.as_completed(future_to_data):
+            product_data = future_to_data[future]
+            try:
+                product_data["price"] = future.result()
+            except UnableToFetchPrice as e:
+                logger.error("Unable to fetch price: %s" % e)
 
 
 class UnableToFetchPrice(Exception):
