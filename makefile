@@ -28,3 +28,8 @@ test:
 # These aren't run in CI as they hit external APIs.
 integration_tests:
 	pytest -v tests/integration/
+
+run:
+	@echo Updating /tmp/prices.json
+	cp prices.json /tmp/prices.json
+	python main.py update-price-archive products.json /tmp/prices.json
