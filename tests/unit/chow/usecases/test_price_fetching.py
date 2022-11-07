@@ -40,7 +40,10 @@ class TestFetchOcadoPrice:
     def test_extracts_correct_price(self, get, fixture):
         get.return_value = mock.Mock(text=fixture("ocado_product.html"))
 
-        assert price_fetching._fetch_ocado_price(mock.sentinel.PRODUCT_ID) == 500
+        price = price_fetching._fetch_ocado_price(
+            mock.sentinel.PRODUCT_ID, logger=mock.Mock()
+        )
+        assert price == 500
 
 
 class TestConvertPenceToPounds:

@@ -46,20 +46,21 @@ def _fetch_product_prices(products: ProductMap, logger: logger.ConsoleLogger) ->
     Update the passed dict of product data with latest prices.
     """
     for product_id, product_data in products.items():
-        logger.info(f"Fetching price for product {product_id}")
-        product_data["price"] = _fetch_ocado_price(product_id)
+        product_data["price"] = _fetch_ocado_price(product_id, logger)
 
 
 class UnableToFetchPrice(Exception):
     pass
 
 
-def _fetch_ocado_price(product_id: str) -> int:
+def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     """
     Fetch the price of the passed product from Ocado.
 
     Raises UnableToFetchPrice.
     """
+    logger.info(f"Fetching price for product {product_id}")
+
     # Construct URL for product detail page. The slug doesn't matter: Ocado will redirect to the
     # canonical URL.
     url = f"https://www.ocado.com/products/slug-{product_id}"

@@ -1,3 +1,5 @@
+from unittest import mock
+
 import pytest
 
 from chow.usecases import price_fetching
@@ -16,4 +18,6 @@ class TestFetchOcadoPriceExternal:
         ),
     )
     def test_fetches_correct_price(self, product_id: str, price: int):
-        assert price_fetching._fetch_ocado_price(product_id) == price
+        assert (
+            price_fetching._fetch_ocado_price(product_id, logger=mock.Mock()) == price
+        )
