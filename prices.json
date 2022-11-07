@@ -204,5 +204,77 @@
                 "price": "5.50"
             }
         ]
+    },
+    "64862011": {
+        "name": "Braeburn Apples (6 pack)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.80"
+            }
+        ]
+    },
+    "79530011": {
+        "name": "Warburtons sandwich thins (6 pack)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.30"
+            }
+        ]
+    },
+    "59394011": {
+        "name": "Runny honey (340g)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.80"
+            }
+        ]
+    },
+    "520104011": {
+        "name": "Pure set honey (340g)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.65"
+            }
+        ]
+    },
+    "63741011": {
+        "name": "Smoked back bacon rashers (10 pack)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.75"
+            }
+        ]
+    },
+    "65186011": {
+        "name": "Halloumi (250g)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "2.65"
+            }
+        ]
+    },
+    "506077011": {
+        "name": "Fruit and fibre (500g)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "1.40"
+            }
+        ]
+    },
+    "514022011": {
+        "name": "Cheese and tomato pizza (465g)",
+        "prices": [
+            {
+                "date": "2022-11-07",
+                "price": "3.75"
+            }
+        ]
     }
 }
