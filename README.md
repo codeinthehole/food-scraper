@@ -29,7 +29,9 @@ which will install `pip-tools` and the necessary packages.
 
 ### Running the application
 
-Execute the price fetching script with:
+#### Fetching new prices
+
+Update the price archive with:
 
     python main.py update-price-archive $PRODUCTS_FILE $ARCHIVE_FILE
 
@@ -39,12 +41,30 @@ with the latest prices (if they have changed).
 When run in Github's scheduler, the products file is `products.json` and the
 archive file is `prices.json`.
 
+#### Product price charts
+
+Builds new versions of the product price charts with:
+
+    python main.py generate-graphs $ARCHIVE_FILE $CHARTS_FOLDER
+
+which will generate PNG chart images in `$CHARTS_FOLDER` based on the products
+in `$ARCHIVE_FILE`.
+
+#### Smoke test
+
 To smoke test the application, run:
 
     make run
 
-which will use `products.json` for the product list and update a throw-away copy
-of `prices.json`. This avoids dirtying a tracked file.
+This will:
+
+- Fetch product prices using `products.json` for the product list and update a
+  throw-away copy of `prices.json`.
+
+- Build product chart images in `/tmp/charts` based on the products in
+  `prices.json`.
+
+This shouldn't modify a file tracked in Git.
 
 ### Development
 
