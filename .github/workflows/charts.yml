@@ -1,0 +1,39 @@
+name: Update product charts
+
+on:
+  # Manual button in Github.
+  workflow_dispatch:
+  # Run on a schedule.
+  schedule:
+    - cron: "46 5 * * *"
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        # https://github.com/actions/checkout
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        # https://github.com/actions/setup-python
+        # Will install python version from .python-version
+        uses: actions/setup-python@v4
+        with:
+          cache: "pip"
+
+      - name: Install Python packages
+        run: |-
+          make install
+
+      - name: Generate product charts
+        run: |-
+          python main.py generate-graphs prices.json charts/
+
+      - name: Commit and push any new charts
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add charts/
+          git commit -m "Update product charts" || exit 0
+          git push

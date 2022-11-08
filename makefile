@@ -29,7 +29,17 @@ test:
 integration_tests:
 	pytest -v tests/integration/
 
-run:
+
+# Smoke testing
+#
+run: update_prices update_charts
+
+update_prices:
 	@echo Updating /tmp/prices.json
 	cp prices.json /tmp/prices.json
 	python main.py update-price-archive products.json /tmp/prices.json
+
+update_charts:
+	@echo Generating charts in /tmp/charts
+	mkdir -p /tmp/charts
+	python main.py generate-graphs prices.json /tmp/charts

@@ -28,5 +28,19 @@ def update_price_archive(products: TextIO, archive: str) -> None:
         print(summary)
 
 
+@cli.command()
+@click.argument("archive")
+@click.argument("folder")
+def generate_graphs(archive: str, folder: str) -> None:
+    """
+    Update the product graphs.
+    """
+    usecases.generate_product_graphs(
+        archive_filepath=archive,
+        chart_folder=folder,
+        logger=logger.ConsoleLogger(debug_mode=True),
+    )
+
+
 if __name__ == "__main__":
     cli()
