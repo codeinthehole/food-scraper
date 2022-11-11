@@ -34,10 +34,3 @@ def save(filepath: str, archive: ArchiveProductMap) -> None:
     """
     with open(filepath, "w") as f:
         json.dump(archive, f, indent=4)
-
-
-def _filepath() -> str:
-    """
-    Return the filepath of the archive file.
-    """
-    return os.path.join(os.path.dirname(os.path.dirname(__file__)), "prices.json")
