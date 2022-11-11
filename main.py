@@ -1,8 +1,10 @@
 import json
 import pathlib
+import sys
 from typing import TextIO
 
 import click
+import jsonschema
 
 from chow import logger, usecases
 
@@ -19,7 +21,14 @@ def update_price_archive(products: TextIO, archive: str) -> None:
     """
     Update a price archive JSON file with any prices changes and print a summary to STDOUT.
     """
-    product_map: usecases.ProductMap = json.load(products)
+    try:
+        product_map = _load_products(products)
+    except InvalidJSON as e:
+        # Print out schema in case input it invalid.
+        schema = json.dumps(PRODUCTS_SCHEMA, indent=4)
+        click.secho(f"Error: {e}\nSchema:\n{schema}", fg="red")
+        sys.exit(1)
+
     summary = usecases.update_price_archive(
         product_map=product_map,
         archive_filepath=archive,
@@ -27,6 +36,52 @@ def update_price_archive(products: TextIO, archive: str) -> None:
     )
     if summary:
         print(summary)
+
+
+class InvalidJSON(Exception):
+    pass
+
+
+PRODUCTS_SCHEMA = {
+    "type": "object",
+    "patternProperties": {
+        r"^\d+$": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                },
+                "price": {
+                    "type": "null",
+                },
+            },
+            "required": ["name", "price"],
+            "additionalProperties": False,
+        }
+    },
+    "additionalProperties": False,
+}
+
+
+def _load_products(products: TextIO) -> usecases.ProductMap:
+    """
+    Load the product map from the passed text stream.
+
+    Raises InvalidJSON if the JSON text is invalid.
+    """
+    # Decode JSON content.
+    try:
+        product_map: usecases.ProductMap = json.load(products)
+    except json.decoder.JSONDecodeError as e:
+        raise InvalidJSON("JSON could not be decoded") from e
+
+    # Validate against schema.
+    try:
+        jsonschema.validate(instance=product_map, schema=PRODUCTS_SCHEMA)
+    except jsonschema.exceptions.ValidationError as e:
+        raise InvalidJSON("JSON does not conform to schema") from e
+
+    return product_map
 
 
 @cli.command()
@@ -47,7 +102,7 @@ def generate_graphs(archive: str, folder: str) -> None:
 @click.argument("archive")
 @click.argument("folder")
 @click.argument("overview_file")
-def generate_overview(archive, folder: str, overview_file: str) -> None:
+def generate_overview(archive: str, folder: str, overview_file: str) -> None:
     """
     Generate a product overview in the passed file.
     """

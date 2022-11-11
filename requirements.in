@@ -3,6 +3,7 @@ requests
 beautifulsoup4
 click
 matplotlib
+jsonschema
 
 # Linting
 black
@@ -13,6 +14,7 @@ flake8
 mypy
 types-requests
 types-beautifulsoup4
+types-jsonschema
 
 # This stubs package is deprecated as pandas/numpy/etc are adding stubs
 # to the main packages. We'll keep using it for now.
