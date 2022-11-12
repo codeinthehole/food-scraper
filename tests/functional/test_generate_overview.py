@@ -55,4 +55,7 @@ def test_creates_overview_doc(runner, fixture_path, tmp_path, tmp_path_factory):
     with open(overview_file) as f:
         contents = f.read()
 
-    assert contents == "# Product price charts\n![Crisps](charts/product-123.png)\n"
+    assert (
+        contents
+        == '# Product price charts\n<img align="left" style="width:48%" alt="Crisps" src="charts/product-123.png" />\n'
+    )
