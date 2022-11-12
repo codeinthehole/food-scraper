@@ -22,7 +22,8 @@ def generate_overview_file(
             if not image_file.exists():
                 continue
             image_url = image_file.relative_to(overview_filepath.parent)
-            line = "![{name}]({image_url})\n".format(
+            # Size images so they float two per row.
+            line = '<img align="left" style="width:48%" alt="{name}" src="{image_url}" />\n'.format(
                 name=product_data["name"], image_url=str(image_url)
             )
             f.write(line)
