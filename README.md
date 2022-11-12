@@ -24,7 +24,7 @@ To browse historic price changes, [look for commits][commits_list] with subject
 
 ## Local development
 
-### Installation
+<details><summary><h3>Installation</h3></summary>
 
 Create a Python 3.10 virtualenv, then run::
 
@@ -32,9 +32,10 @@ Create a Python 3.10 virtualenv, then run::
 
 which will install `pip-tools` and the necessary packages.
 
-### Running the application
+</details>
+<details><summary><h3>Running the application</h3></summary>
 
-#### Fetching new prices
+<details><summary><h4>Fetching new prices</h4></summary>
 
 Update the price archive with:
 
@@ -46,7 +47,9 @@ with the latest prices (if they have changed).
 When run in Github's scheduler, the products file is `products.json` and the
 archive file is `prices.json`.
 
-#### Product price charts
+</details>
+
+<details><summary><h4>Product price charts</h4></summary>
 
 Builds new versions of the product price charts with:
 
@@ -55,7 +58,9 @@ Builds new versions of the product price charts with:
 which will generate PNG chart images in `$CHARTS_FOLDER` based on the products
 in `$ARCHIVE_FILE`.
 
-#### Smoke test
+</details>
+
+<details><summary><h4>Smoke test</h4></summary>
 
 To smoke test the application, run:
 
@@ -71,7 +76,10 @@ This will:
 
 This shouldn't modify a file tracked in Git.
 
-### Development
+</details>
+
+</details>
+<details><summary><h3>Development</h3></summary>
 
 Conventions:
 
@@ -85,7 +93,9 @@ Check formatting and type annotations with:
 
 See the `makefile` for how to run the linters individually.
 
-### Packages
+</details>
+
+<details><summary><h3>Python packages</h3></summary>
 
 Packages are managed with [`pip-tools`](https://github.com/jazzband/pip-tools).
 To add a new dependency, add it to `requirements.in` and run:
@@ -98,16 +108,18 @@ which will generate a new version of `requirements.txt`. Then run:
 
 to install `requirements.txt`.
 
-## Test suite
+</details>
 
-### Test suite structure
+<details><summary><h3>Test suite</h3></summary>
+
+#### Test suite structure
 
 - `tests/unit/` contains isolated unit tests.
 - `tests/integration/` contains tests that exercise a real external API.
 - `tests/functional/` contains end-to-end tests that use Click's API to call
   commands.
 
-### Running tests
+#### Running tests
 
 Run the CI tests with:
 
@@ -116,3 +128,5 @@ Run the CI tests with:
 or the external tests with
 
     make integration_tests
+
+</details>
