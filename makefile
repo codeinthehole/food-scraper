@@ -32,7 +32,7 @@ integration_tests:
 
 # Smoke testing
 #
-run: update_prices update_charts
+run: update_prices update_charts update_overview
 
 update_prices:
 	@echo Updating /tmp/prices.json
@@ -43,3 +43,7 @@ update_charts:
 	@echo Generating charts in /tmp/charts
 	mkdir -p /tmp/charts
 	python main.py generate-graphs prices.json /tmp/charts
+
+update_overview:
+	@echo Generating overview in /tmp/overview.md
+	python main.py generate-overview prices.json /tmp/charts /tmp/overview.md
