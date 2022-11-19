@@ -136,7 +136,8 @@ See the `makefile` for how to run the linters individually.
 ### Test suite structure
 
 - `tests/unit/` contains isolated unit tests.
-- `tests/integration/` contains tests that exercise a real external API.
+- `tests/integration/` contains tests that exercise a real external API. These
+  are skipped by default.
 - `tests/functional/` contains end-to-end tests that use Click's API to call
   commands.
 
@@ -145,10 +146,6 @@ See the `makefile` for how to run the linters individually.
 Run the CI tests with:
 
     make test
-
-or the external tests with
-
-    make integration_tests
 
 ### Packages
 

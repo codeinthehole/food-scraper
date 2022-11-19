@@ -23,12 +23,7 @@ flake8:
 # Testing
 
 test:
-	pytest -v tests/unit/ tests/functional/
-
-# These aren't run in CI as they hit external APIs.
-integration_tests:
-	pytest -v tests/integration/
-
+	pytest -v tests/
 
 # Smoke testing
 

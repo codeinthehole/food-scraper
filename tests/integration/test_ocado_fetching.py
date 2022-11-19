@@ -4,6 +4,10 @@ import pytest
 
 from chow.usecases import price_fetching
 
+# Don't run these tests by default. They are only needed when testing the direct integration with
+# external sites.
+pytestmark = pytest.mark.skip
+
 
 class TestFetchOcadoPriceExternal:
     @pytest.mark.parametrize(
