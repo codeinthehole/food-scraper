@@ -4,14 +4,21 @@ A Git-scraper repo for scraping prices from Ocado.
 
 Once a day, the prices for a list of products (declared in
 [`products.json`][products_file]) are fetched from Ocado and any changes are
-recorded in [`prices.json`][prices_file]. Next, graphs of each product's prices
-are generated (in the [`charts/` folder][charts_folder]) and an [overview
-page][overview_file] is updated. Any changes are committed to the repo.
+recorded in [`prices.json`][prices_file].
+
+If there are any price changes, a [`timeline.md`][timeline_file] document is
+updated.
+
+Next, graphs of each product's prices are generated (in the [`charts/`
+folder][charts_folder]) and an [overview page][overview_file] is updated. Any
+changes are committed to the repo.
 
 [products_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/products.json
 [prices_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/prices.json
+[timeline_file]:
+  https://github.com/codeinthehole/food-scraper/blob/master/timeline.md
 [charts_folder]:
   https://github.com/codeinthehole/food-scraper/blob/master/charts/
 [overview_file]:

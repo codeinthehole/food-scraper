@@ -31,8 +31,8 @@ integration_tests:
 
 
 # Smoke testing
-#
-run: update_prices update_charts update_overview
+
+run: update_prices update_charts update_overview update_timeline
 
 update_prices:
 	@echo Updating /tmp/prices.json
@@ -47,3 +47,7 @@ update_charts:
 update_overview:
 	@echo Generating overview in /tmp/overview.md
 	python main.py generate-overview prices.json /tmp/charts /tmp/overview.md
+
+update_timeline:
+	@echo Generating timeline in /tmp/timeline.md
+	python main.py generate-timeline prices.json /tmp/timeline.md
