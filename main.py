@@ -125,5 +125,26 @@ def generate_overview(archive: str, folder: str, overview_file: str) -> None:
     )
 
 
+@cli.command()
+@click.argument("archive")
+@click.argument("timeline_file")
+def generate_timeline(archive: str, timeline_file: str) -> None:
+    """
+    Generate a timeline in the passed file.
+    """
+    # Check archive file exists
+    archive_filepath = pathlib.Path(archive)
+    assert archive_filepath.is_file() and archive_filepath.exists()
+
+    # Timeline doc doesn't necessarily exist.
+    timeline_filepath = pathlib.Path(timeline_file)
+
+    usecases.generate_timeline_file(
+        archive_filepath=archive_filepath,
+        timeline_filepath=timeline_filepath,
+        logger=logger.ConsoleLogger(debug_mode=True),
+    )
+
+
 if __name__ == "__main__":
     cli()
