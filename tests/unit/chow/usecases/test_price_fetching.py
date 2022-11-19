@@ -1,38 +1,9 @@
 from unittest import mock
 
-import factory  # type:ignore
 import pytest
 
 from chow.usecases import price_fetching
-
-# Factories
-
-
-class ArchiveProductPrice(factory.DictFactory):
-    date = "2022-09-20"
-    price = "0.85"
-
-
-class ArchiveProduct(factory.DictFactory):
-    name = "Mars bar"
-    prices = factory.List([ArchiveProductPrice()])
-
-
-class Archive(factory.DictFactory):
-    p1 = factory.SubFactory(ArchiveProduct)
-
-
-class TestArchive:
-    def test_defaults(self):
-        assert Archive() == {
-            "p1": {
-                "name": "Mars bar",
-                "prices": [{"date": "2022-09-20", "price": "0.85"}],
-            }
-        }
-
-
-# Tests
+from tests import factories
 
 
 class TestFetchOcadoPrice:
@@ -69,7 +40,7 @@ class TestChangeSummary:
 
     def test_summary_when_new_product_added(self):
         current_archive = {}
-        updated_archive = Archive(p1__name="Snickers")
+        updated_archive = factories.Archive(p1__name="Snickers")
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
 
@@ -77,9 +48,9 @@ class TestChangeSummary:
 
     def test_summary_when_multiple_new_products_added(self):
         current_archive = {}
-        updated_archive = Archive(
-            p1=ArchiveProduct(name="Eggs"),
-            p2=ArchiveProduct(name="Bacon"),
+        updated_archive = factories.Archive(
+            p1=factories.ArchiveProduct(name="Eggs"),
+            p2=factories.ArchiveProduct(name="Bacon"),
         )
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
@@ -89,12 +60,12 @@ class TestChangeSummary:
         )
 
     def test_summary_when_product_removed(self):
-        current_archive = Archive(
-            p1=ArchiveProduct(name="Eggs"),
-            p2=ArchiveProduct(name="Bacon"),
+        current_archive = factories.Archive(
+            p1=factories.ArchiveProduct(name="Eggs"),
+            p2=factories.ArchiveProduct(name="Bacon"),
         )
-        updated_archive = Archive(
-            p1=ArchiveProduct(name="Eggs"),
+        updated_archive = factories.Archive(
+            p1=factories.ArchiveProduct(name="Eggs"),
         )
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
@@ -102,20 +73,20 @@ class TestChangeSummary:
         assert summary == "Update price archive\n\nRemove product: Bacon"
 
     def test_product_price_change(self):
-        current_archive = Archive(
-            p1=ArchiveProduct(
+        current_archive = factories.Archive(
+            p1=factories.ArchiveProduct(
                 name="Eggs",
                 prices=[
-                    ArchiveProductPrice(price="1.50"),
+                    factories.ArchiveProductPrice(price="1.50"),
                 ],
             )
         )
-        updated_archive = Archive(
-            p1=ArchiveProduct(
+        updated_archive = factories.Archive(
+            p1=factories.ArchiveProduct(
                 name="Eggs",
                 prices=[
-                    ArchiveProductPrice(price="1.50"),
-                    ArchiveProductPrice(price="2.50"),
+                    factories.ArchiveProductPrice(price="1.50"),
+                    factories.ArchiveProductPrice(price="2.50"),
                 ],
             )
         )
