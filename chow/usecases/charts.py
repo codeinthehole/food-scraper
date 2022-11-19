@@ -27,10 +27,6 @@ def _generate_product_graph(product_data, filepath: str) -> None:
     """
     Generate a price chart PNG file in the passed filepath
     """
-    if len(product_data["prices"]) < 2:
-        # Need at least 2 price points to make the graph worth while.
-        return
-
     # Extract data series.
     dates, prices = _generate_data_series(product_data, end_date=datetime.date.today())
 
