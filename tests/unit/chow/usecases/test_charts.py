@@ -1,15 +1,14 @@
 import datetime
 
 from chow.usecases import charts
-
-from .test_price_fetching import ArchiveProduct, ArchiveProductPrice
+from tests import factories
 
 
 class TestGenerateDataSeries:
     def test_single_price_change_with_matching_end_date(self):
-        product_data = ArchiveProduct(
+        product_data = factories.ArchiveProduct(
             prices=[
-                ArchiveProductPrice(date="2022-10-01", price="1.00"),
+                factories.ArchiveProductPrice(date="2022-10-01", price="1.00"),
             ]
         )
         end_date = datetime.date(2022, 10, 1)
@@ -22,9 +21,9 @@ class TestGenerateDataSeries:
         assert prices == [1.00]
 
     def test_single_price_change_with_later_end_date(self):
-        product_data = ArchiveProduct(
+        product_data = factories.ArchiveProduct(
             prices=[
-                ArchiveProductPrice(date="2022-10-01", price="1.00"),
+                factories.ArchiveProductPrice(date="2022-10-01", price="1.00"),
             ]
         )
         end_date = datetime.date(2022, 10, 2)
@@ -38,10 +37,10 @@ class TestGenerateDataSeries:
         assert prices == [1.00, 1.00]
 
     def test_multiple_price_changes_with_later_end_date(self):
-        product_data = ArchiveProduct(
+        product_data = factories.ArchiveProduct(
             prices=[
-                ArchiveProductPrice(date="2022-10-01", price="1.00"),
-                ArchiveProductPrice(date="2022-10-03", price="2.00"),
+                factories.ArchiveProductPrice(date="2022-10-01", price="1.00"),
+                factories.ArchiveProductPrice(date="2022-10-03", price="2.00"),
             ]
         )
         end_date = datetime.date(2022, 10, 5)
