@@ -16,7 +16,7 @@ def cli():
 
 @cli.command()
 @click.argument("products", type=click.File("rb"))
-@click.argument("archive")
+@click.argument("archive", type=click.Path(exists=False))
 def update_price_archive(products: TextIO, archive: str) -> None:
     """
     Update a price archive JSON file with any prices changes and print a summary to STDOUT.
@@ -85,9 +85,19 @@ def _load_products(products: TextIO) -> usecases.ProductMap:
 
 
 @cli.command()
-@click.argument("archive")
-@click.argument("folder")
-def generate_graphs(archive: str, folder: str) -> None:
+@click.argument(
+    "archive",
+    type=click.Path(
+        exists=True, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "folder",
+    type=click.Path(
+        exists=True, file_okay=False, dir_okay=True, path_type=pathlib.Path
+    ),
+)
+def generate_graphs(archive: pathlib.Path, folder: pathlib.Path) -> None:
     """
     Update the product graphs.
     """
@@ -99,24 +109,32 @@ def generate_graphs(archive: str, folder: str) -> None:
 
 
 @cli.command()
-@click.argument("archive")
-@click.argument("folder")
-@click.argument("overview_file")
-def generate_overview(archive: str, folder: str, overview_file: str) -> None:
+@click.argument(
+    "archive_filepath",
+    type=click.Path(
+        exists=True, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "charts_folder",
+    type=click.Path(
+        exists=True, file_okay=False, dir_okay=True, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "overview_filepath",
+    type=click.Path(
+        exists=False, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+def generate_overview(
+    archive_filepath: pathlib.Path,
+    charts_folder: pathlib.Path,
+    overview_filepath: pathlib.Path,
+) -> None:
     """
     Generate a product overview in the passed file.
     """
-    # Check archive file exists
-    archive_filepath = pathlib.Path(archive)
-    assert archive_filepath.is_file() and archive_filepath.exists()
-
-    # Check charts folder exists
-    charts_folder = pathlib.Path(folder)
-    assert charts_folder.is_dir() and charts_folder.exists()
-
-    # Overview doc doesn't necessarily exist.
-    overview_filepath = pathlib.Path(overview_file)
-
     usecases.generate_overview_file(
         archive_filepath=archive_filepath,
         charts_folder=charts_folder,
@@ -126,19 +144,24 @@ def generate_overview(archive: str, folder: str, overview_file: str) -> None:
 
 
 @cli.command()
-@click.argument("archive")
-@click.argument("timeline_file")
-def generate_timeline(archive: str, timeline_file: str) -> None:
+@click.argument(
+    "archive_filepath",
+    type=click.Path(
+        exists=True, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "timeline_filepath",
+    type=click.Path(
+        exists=False, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+def generate_timeline(
+    archive_filepath: pathlib.Path, timeline_filepath: pathlib.Path
+) -> None:
     """
     Generate a timeline in the passed file.
     """
-    # Check archive file exists
-    archive_filepath = pathlib.Path(archive)
-    assert archive_filepath.is_file() and archive_filepath.exists()
-
-    # Timeline doc doesn't necessarily exist.
-    timeline_filepath = pathlib.Path(timeline_file)
-
     usecases.generate_timeline_file(
         archive_filepath=archive_filepath,
         timeline_filepath=timeline_filepath,

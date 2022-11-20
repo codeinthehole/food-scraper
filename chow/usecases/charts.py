@@ -1,4 +1,5 @@
 import datetime
+import pathlib
 from typing import List, Tuple
 
 import matplotlib.dates as mdates
@@ -10,14 +11,14 @@ from chow import archive, logger
 
 
 def generate_product_graphs(
-    archive_filepath: str,
-    chart_folder: str,
+    archive_filepath: pathlib.Path,
+    chart_folder: pathlib.Path,
     logger: logger.ConsoleLogger,
 ) -> None:
     """
     Generate price graph images for each produce in the passed archive file.
     """
-    archive_data = archive.load(archive_filepath)
+    archive_data = archive.load(str(archive_filepath))
     for product_id, product_data in archive_data.items():
         filepath = f"{chart_folder}/product-{product_id}.png"
         _generate_product_graph(product_data, filepath)
