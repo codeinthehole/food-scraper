@@ -51,6 +51,8 @@ def _generate_product_graph(product_data, filepath: str) -> None:
     # Save to file.
     figure.savefig(filepath)
 
+    plt.close()
+
 
 def _generate_data_series(
     product_data, end_date: datetime.date
