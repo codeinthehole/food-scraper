@@ -1,7 +1,7 @@
 import json
 import pathlib
 import sys
-from typing import TextIO
+from typing import List, TextIO, TypedDict
 
 import click
 import jsonschema
@@ -15,22 +15,24 @@ def cli():
 
 
 @cli.command()
-@click.argument("products", type=click.File("rb"))
+@click.argument("products_stream", type=click.File("rb"))
 @click.argument("archive")
-def update_price_archive(products: TextIO, archive: str) -> None:
+def update_price_archive(products_stream: TextIO, archive: str) -> None:
     """
     Update a price archive JSON file with any prices changes and print a summary to STDOUT.
     """
     try:
-        product_map = _load_products(products)
+        products = _load_products(products_stream)
     except InvalidJSON as e:
         # Print out schema in case input it invalid.
         schema = json.dumps(PRODUCTS_SCHEMA, indent=4)
         click.secho(f"Error: {e}\nSchema:\n{schema}", fg="red")
         sys.exit(1)
 
+    breakpoint()
+
     summary = usecases.update_price_archive(
-        product_map=product_map,
+        products=products,
         archive_filepath=archive,
         logger=logger.ConsoleLogger(debug_mode=True),
     )
@@ -43,27 +45,28 @@ class InvalidJSON(Exception):
 
 
 PRODUCTS_SCHEMA = {
-    "type": "object",
-    "patternProperties": {
-        r"^\d+$": {
-            "type": "object",
-            "properties": {
-                "name": {
-                    "type": "string",
-                },
-                "price": {
-                    "type": "null",
-                },
-            },
-            "required": ["name", "price"],
-            "additionalProperties": False,
-        }
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {"type": "string"},
+            "ocado_product_id": {"type": "string"},
+        },
+        "required": ["name", "ocado_product_id"],
+        "additionalProperties": False,
     },
-    "additionalProperties": False,
 }
 
 
-def _load_products(products: TextIO) -> usecases.ProductMap:
+class Product(TypedDict):
+    name: str
+    ocado_product_id: str
+
+
+Products = List[Product]
+
+
+def _load_products(products_stream: TextIO) -> Products:
     """
     Load the product map from the passed text stream.
 
@@ -71,17 +74,17 @@ def _load_products(products: TextIO) -> usecases.ProductMap:
     """
     # Decode JSON content.
     try:
-        product_map: usecases.ProductMap = json.load(products)
+        products: Products = json.load(products_stream)
     except json.decoder.JSONDecodeError as e:
         raise InvalidJSON("JSON could not be decoded") from e
 
     # Validate against schema.
     try:
-        jsonschema.validate(instance=product_map, schema=PRODUCTS_SCHEMA)
+        jsonschema.validate(instance=products, schema=PRODUCTS_SCHEMA)
     except jsonschema.exceptions.ValidationError as e:
         raise InvalidJSON("JSON does not conform to schema") from e
 
-    return product_map
+    return products
 
 
 @cli.command()

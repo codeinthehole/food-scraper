@@ -11,10 +11,11 @@ from chow import archive, logger
 
 class Product(TypedDict):
     name: str
-    price: Optional[int]
+    ocado_product_id: str
+    price: int
 
 
-ProductMap = Dict[str, Product]
+Products = List[Product]
 
 
 def update_price_archive(
