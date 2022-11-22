@@ -10,7 +10,7 @@ def fixture_path() -> Callable[[str], str]:
     Inject a function that looks up fixture filepaths.
     """
 
-    def _path(relative_filepath: str):
+    def _path(relative_filepath: str) -> str:
         """
         Return the filepath to a fixture file.
         """
@@ -24,16 +24,16 @@ def fixture_path() -> Callable[[str], str]:
 
 
 @pytest.fixture
-def fixture(fixture_path) -> Callable[[str], str]:
+def fixture(fixture_path: Callable[[str], str]) -> Callable[[str], str]:
     """
     Inject a function that loads fixture file contents.
     """
 
-    def _load_fixture(relative_filepath: str):
+    def _load_fixture(relative_filepath: str) -> str:
         """
         Return the contents of a fixture file.
         """
         with open(fixture_path(relative_filepath), "r") as f:
-            return f.read()
+            return str(f.read())
 
     return _load_fixture

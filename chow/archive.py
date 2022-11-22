@@ -67,7 +67,7 @@ def load(filepath: str) -> ArchiveProductMap:
     # Decode file content.
     with open(filepath, "r") as f:
         try:
-            content = json.load(f)
+            content: ArchiveProductMap = json.load(f)
         except json.decoder.JSONDecodeError as e:
             raise InvalidJSON("JSON could not be decoded") from e
 

@@ -4,7 +4,7 @@ import datetime
 from typing import Dict, Optional, TypedDict
 
 import bs4
-import requests
+import requests as requests
 
 from chow import archive, logger
 
@@ -162,7 +162,10 @@ def _convert_pence_to_pounds(pence: int) -> str:
     return f"{amt:.2f}"
 
 
-def _change_summary(current_archive, updated_archive) -> str:
+def _change_summary(
+    current_archive: archive.ArchiveProductMap,
+    updated_archive: archive.ArchiveProductMap,
+) -> str:
     """
     Return a summary of the changes.
     """

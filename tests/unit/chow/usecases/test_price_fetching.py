@@ -2,6 +2,7 @@ from unittest import mock
 
 import pytest
 
+from chow import archive
 from chow.usecases import price_fetching
 from tests import factories
 
@@ -25,7 +26,7 @@ class TestConvertPenceToPounds:
             (175, "1.75"),
         ),
     )
-    def test_conversion(self, price_in_pence: int, formatted_price: str):
+    def test_conversion(self, price_in_pence: int, formatted_price: str) -> None:
         assert (
             price_fetching._convert_pence_to_pounds(price_in_pence) == formatted_price
         )
@@ -33,13 +34,13 @@ class TestConvertPenceToPounds:
 
 class TestChangeSummary:
     def test_no_summary_when_no_changes(self):
-        current_archive = {}
-        updated_archive = {}
+        current_archive: archive.ArchiveProductMap = {}
+        updated_archive: archive.ArchiveProductMap = {}
 
         assert price_fetching._change_summary(current_archive, updated_archive) == ""
 
     def test_summary_when_new_product_added(self):
-        current_archive = {}
+        current_archive: archive.ArchiveProductMap = {}
         updated_archive = factories.Archive(p1__name="Snickers")
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
@@ -47,7 +48,7 @@ class TestChangeSummary:
         assert summary == "Update price archive\n\nNew product: Snickers"
 
     def test_summary_when_multiple_new_products_added(self):
-        current_archive = {}
+        current_archive: archive.ArchiveProductMap = {}
         updated_archive = factories.Archive(
             p1=factories.ArchiveProduct(name="Eggs"),
             p2=factories.ArchiveProduct(name="Bacon"),

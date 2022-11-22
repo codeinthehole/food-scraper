@@ -24,7 +24,9 @@ def generate_product_graphs(
         _generate_product_graph(product_data, filepath)
 
 
-def _generate_product_graph(product_data, filepath: str) -> None:
+def _generate_product_graph(
+    product_data: archive.ProductPriceHistory, filepath: str
+) -> None:
     """
     Generate a price chart PNG file in the passed filepath
     """
@@ -55,7 +57,7 @@ def _generate_product_graph(product_data, filepath: str) -> None:
 
 
 def _generate_data_series(
-    product_data, end_date: datetime.date
+    product_data: archive.ProductPriceHistory, end_date: datetime.date
 ) -> Tuple[List[datetime.date], List[float]]:
     """
     Return data series based on the product price-change data.
