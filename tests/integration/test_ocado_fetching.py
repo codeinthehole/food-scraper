@@ -21,7 +21,7 @@ class TestFetchOcadoPriceExternal:
             "5 plain NY bagels",
         ),
     )
-    def test_fetches_correct_price(self, product_id: str, price: int):
+    def test_fetches_correct_price(self, product_id: str, price: int) -> None:
         assert (
             price_fetching._fetch_ocado_price(product_id, logger=mock.Mock()) == price
         )

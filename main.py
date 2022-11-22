@@ -10,7 +10,7 @@ from chow import logger, usecases
 
 
 @click.group()
-def cli():
+def cli() -> None:
     pass
 
 

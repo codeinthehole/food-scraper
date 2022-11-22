@@ -42,7 +42,7 @@ class TestLoad:
         archive_file.write_text(json.dumps(content))
 
         with pytest.raises(archive.InvalidJSON):
-            archive.load(str(archive_file)) == content
+            archive.load(str(archive_file))
 
     def test_misspelt_name(self, tmp_path):
         # Create file with empty dict content.
