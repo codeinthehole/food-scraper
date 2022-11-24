@@ -150,12 +150,25 @@ Run the CI tests with:
 ### Packages
 
 Packages are managed with [`pip-tools`](https://github.com/jazzband/pip-tools).
+
 To add a new dependency, add it to `requirements.in` and run:
 
-    pip-compile
+    pip-compile requirements.in
 
 which will generate a new version of `requirements.txt`. Then run:
 
     pip-sync
 
 to install `requirements.txt`.
+
+To upgrade a dependency, run:
+
+    pip-compile -P $package==$version requirements.in
+
+to update `requirements.txt`, then:
+
+    pip-sync
+
+to install the upgraded package.
+
+
