@@ -4,7 +4,7 @@ import datetime
 from typing import Dict, Optional, TypedDict
 
 import bs4
-import requests as requests
+import requests
 
 from chow import archive, logger
 
