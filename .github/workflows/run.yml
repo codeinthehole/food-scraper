@@ -37,7 +37,7 @@ jobs:
 
       - name: Generate timeline
         run: |-
-          python main.py generate-timeline data/archive.json timeline.md
+          python main.py generate-timeline data/archive.json docs/timeline.md
 
       - name: Commit and push if it changed
         run: |-
