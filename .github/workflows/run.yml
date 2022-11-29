@@ -33,7 +33,7 @@ jobs:
       - name: Fetch latest data
         run: |-
           # Run price fetching and capture change summary (if there is one) into a file.
-          python main.py update-price-archive products.json prices.json | tee commit_msg.txt
+          python main.py update-price-archive data/products.json prices.json | tee commit_msg.txt
 
       - name: Generate timeline
         run: |-

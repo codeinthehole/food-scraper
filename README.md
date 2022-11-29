@@ -3,7 +3,7 @@
 A Git-scraper repo for scraping prices from Ocado.
 
 Once a day, the prices for a list of products (declared in
-[`products.json`][products_file]) are fetched from Ocado and any changes are
+[`data/products.json`][products_file]) are fetched from Ocado and any changes are
 recorded in [`prices.json`][prices_file].
 
 If there are any price changes, a [`timeline.md`][timeline_file] document is
@@ -14,7 +14,7 @@ folder][charts_folder]) and an [overview page][overview_file] is updated. Any
 changes are committed to the repo.
 
 [products_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/products.json
+  https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
 [prices_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/prices.json
 [timeline_file]:
@@ -64,7 +64,7 @@ which will:
 - Print a summary of the changes to STDOUT.
 
 When [run as a Github action][gh_workflow_run], the products file is
-`products.json` and the archive file is `prices.json`.
+`data/products.json` and the archive file is `prices.json`.
 
 [gh_workflow_run]:
   https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
@@ -106,7 +106,7 @@ To informally check all the above commands are working, run:
 
 This will:
 
-- Fetch product prices using `products.json` for the product list and update a
+- Fetch product prices using `data/products.json` for the product list and update a
   throw-away archive file in `/tmp/prices.json`.
 
 - Build product chart images in `/tmp/charts` based on the products in
@@ -170,5 +170,3 @@ to update `requirements.txt`, then:
     pip-sync
 
 to install the upgraded package.
-
-

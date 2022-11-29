@@ -32,7 +32,7 @@ run: update_prices update_charts update_overview update_timeline
 update_prices:
 	@echo Updating /tmp/prices.json
 	cp prices.json /tmp/prices.json
-	python main.py update-price-archive products.json /tmp/prices.json
+	python main.py update-price-archive data/products.json /tmp/prices.json
 
 update_charts:
 	@echo Generating charts in /tmp/charts
