@@ -11,14 +11,14 @@ class TestLoad:
 
     def test_empty_file(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         archive_file.write_text(json.dumps({}))
 
         assert archive.load(str(archive_file)) == {}
 
     def test_valid_file(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         content = {
             "123": {
                 "name": "X",
@@ -33,7 +33,7 @@ class TestLoad:
 
     def test_missing_prices(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         content = {
             "123": {
                 "name": "X",
@@ -46,7 +46,7 @@ class TestLoad:
 
     def test_misspelt_name(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         content = {
             "123": {
                 "mane": "X",
@@ -62,7 +62,7 @@ class TestLoad:
 
     def test_invalid_product_id(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         content = {
             "123x": {
                 "name": "X",
@@ -78,7 +78,7 @@ class TestLoad:
 
     def test_extra_properties(self, tmp_path):
         # Create file with empty dict content.
-        archive_file = tmp_path / "prices.json"
+        archive_file = tmp_path / "archive.json"
         content = {
             "123": {
                 "name": "X",
