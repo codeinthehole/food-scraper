@@ -10,8 +10,8 @@ If there are any price changes, a [`timeline.md`][timeline_file] document is
 updated.
 
 Next, graphs of each product's prices are generated (in the [`charts/`
-folder][charts_folder]) and an [overview page][overview_file] is updated. Any
-changes are committed to the repo.
+folder][charts_folder]) and an [`docs/overview.md`][overview_file] file is
+updated. Any changes are committed to the repo.
 
 [products_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
@@ -22,7 +22,7 @@ changes are committed to the repo.
 [charts_folder]:
   https://github.com/codeinthehole/food-scraper/blob/master/charts/
 [overview_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/overview.md
+  https://github.com/codeinthehole/food-scraper/blob/master/docs/overview.md
 
 To browse historic price changes, [look for commits][commits_list] with subject
 "Update price archive".
@@ -96,7 +96,7 @@ and store the overview document in `$OVERVIEW_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
 `data/archive.json`, the charts folder is `charts/` and the overview document is
-`overview.md`.
+`docs/overview.md`.
 
 #### Smoke test
 

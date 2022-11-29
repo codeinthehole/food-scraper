@@ -32,12 +32,12 @@ jobs:
 
       - name: Update overview page
         run: |-
-          python main.py generate-overview data/archive.json charts/ overview.md
+          python main.py generate-overview data/archive.json charts/ docs/overview.md
 
       - name: Commit and push any new charts
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
-          git add charts/ overview.md
+          git add charts/ docs/overview.md
           git commit -m "Update product charts" || exit 0
           git push
