@@ -6,7 +6,7 @@ Once a day, the prices for a list of products (declared in
 [`data/products.json`][products_file]) are fetched from Ocado and any changes
 are recorded in [`data/archive.json`][prices_file].
 
-If there are any price changes, a [`timeline.md`][timeline_file] document is
+If there are any price changes, a [`docs/timeline.md`][timeline_file] document is
 updated.
 
 Next, graphs of each product's prices are generated (in the [`charts/`
@@ -18,7 +18,7 @@ updated. Any changes are committed to the repo.
 [prices_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/data/archive.json
 [timeline_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/timeline.md
+  https://github.com/codeinthehole/food-scraper/blob/master/docs/timeline.md
 [charts_folder]:
   https://github.com/codeinthehole/food-scraper/blob/master/charts/
 [overview_file]:
