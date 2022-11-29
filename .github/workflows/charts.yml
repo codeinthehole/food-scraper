@@ -28,11 +28,11 @@ jobs:
 
       - name: Generate product charts
         run: |-
-          python main.py generate-graphs prices.json charts/
+          python main.py generate-graphs data/archive.json charts/
 
       - name: Update overview page
         run: |-
-          python main.py generate-overview prices.json charts/ overview.md
+          python main.py generate-overview data/archive.json charts/ overview.md
 
       - name: Commit and push any new charts
         run: |-

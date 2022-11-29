@@ -3,8 +3,8 @@
 A Git-scraper repo for scraping prices from Ocado.
 
 Once a day, the prices for a list of products (declared in
-[`data/products.json`][products_file]) are fetched from Ocado and any changes are
-recorded in [`prices.json`][prices_file].
+[`data/products.json`][products_file]) are fetched from Ocado and any changes
+are recorded in [`data/archive.json`][prices_file].
 
 If there are any price changes, a [`timeline.md`][timeline_file] document is
 updated.
@@ -16,7 +16,7 @@ changes are committed to the repo.
 [products_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
 [prices_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/prices.json
+  https://github.com/codeinthehole/food-scraper/blob/master/data/archive.json
 [timeline_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/timeline.md
 [charts_folder]:
@@ -64,7 +64,7 @@ which will:
 - Print a summary of the changes to STDOUT.
 
 When [run as a Github action][gh_workflow_run], the products file is
-`data/products.json` and the archive file is `prices.json`.
+`data/products.json` and the archive file is `data/archive.json`.
 
 [gh_workflow_run]:
   https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
@@ -79,7 +79,7 @@ which will generate PNG chart images in `$CHARTS_FOLDER` based on the products
 in `$ARCHIVE_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
-`prices.json` and the charts folder is `charts/`.
+`data/archive.json` and the charts folder is `charts/`.
 
 [gh_workflow_charts]:
   https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml
@@ -95,7 +95,7 @@ which will collate the product price charts for the products in `$ARCHIVE_FILE`
 and store the overview document in `$OVERVIEW_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
-`prices.json`, the charts folder is `charts/` and the overview document is
+`data/archive.json`, the charts folder is `charts/` and the overview document is
 `overview.md`.
 
 #### Smoke test
@@ -106,11 +106,11 @@ To informally check all the above commands are working, run:
 
 This will:
 
-- Fetch product prices using `data/products.json` for the product list and update a
-  throw-away archive file in `/tmp/prices.json`.
+- Fetch product prices using `data/products.json` for the product list and
+  update a throw-away archive file in `/tmp/archive.json`.
 
 - Build product chart images in `/tmp/charts` based on the products in
-  `prices.json`.
+  `data/archive.json`.
 
 - Build a throw-away overview document in `/tmp/overview.md`.
 
