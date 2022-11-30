@@ -6,10 +6,10 @@ Once a day, the prices for a list of products (declared in
 [`data/products.json`][products_file]) are fetched from Ocado and any changes
 are recorded in [`data/archive.json`][prices_file].
 
-If there are any price changes, a [`docs/timeline.md`][timeline_file] document is
-updated.
+If there are any price changes, a [`docs/timeline.md`][timeline_file] document
+is updated.
 
-Next, graphs of each product's prices are generated (in the [`charts/`
+Next, graphs of each product's prices are generated (in the [`docs/charts/`
 folder][charts_folder]) and an [`docs/overview.md`][overview_file] file is
 updated. Any changes are committed to the repo.
 
@@ -20,7 +20,7 @@ updated. Any changes are committed to the repo.
 [timeline_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/docs/timeline.md
 [charts_folder]:
-  https://github.com/codeinthehole/food-scraper/blob/master/charts/
+  https://github.com/codeinthehole/food-scraper/blob/master/docs/charts/
 [overview_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/docs/overview.md
 
@@ -79,7 +79,7 @@ which will generate PNG chart images in `$CHARTS_FOLDER` based on the products
 in `$ARCHIVE_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
-`data/archive.json` and the charts folder is `charts/`.
+`data/archive.json` and the charts folder is `docs/charts/`.
 
 [gh_workflow_charts]:
   https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml
@@ -95,8 +95,8 @@ which will collate the product price charts for the products in `$ARCHIVE_FILE`
 and store the overview document in `$OVERVIEW_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
-`data/archive.json`, the charts folder is `charts/` and the overview document is
-`docs/overview.md`.
+`data/archive.json`, the charts folder is `docs/charts/` and the overview
+document is `docs/overview.md`.
 
 #### Smoke test
 
