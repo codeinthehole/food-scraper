@@ -1,4 +1,14 @@
 # Product price timeline
+## 2022-12-03
+- Red seedless grapes (500g) changed price from £2.00 to £2.25 (+12%)
+## 2022-11-30
+- Royal Gala apples (6 pack) changed price from £1.70 to £1.36 (-20%)
+- Red seedless grapes (500g) changed price from £2.15 to £2.00 (-7%)
+- Cathedral City Cheese (550g) changed price from £5.40 to £4.00 (-26%)
+- Chicken thigh fillets (450g) changed price from £3.22 to £3.79 (+18%)
+- Braeburn Apples (6 pack) changed price from £1.10 to £1.70 (+55%)
+## 2022-11-24
+- Large free range eggs (6 pack) changed price from £1.65 to £1.75 (+6%)
 ## 2022-11-19
 - Onken biopot natural yoghurt (1kg) changed price from £2.50 to £2.80 (+12%)
 ## 2022-11-17
