@@ -61,12 +61,12 @@ def test_creates_timeline_doc(runner, fixture_path, tmp_path, tmp_path_factory):
     expected_contents = (
         "# Product price timeline\n"
         "## 2022-11-05\n"
-        "- Crisps changed price from £3.00 to £4.00 (+33%)\n"
+        "🔴 Crisps changed price from £3.00 to £4.00 (+33%)<br/>\n"
         "## 2022-11-01\n"
-        "- Crisps added to archive - price is £3.00\n"
-        "- Eggs changed price from £0.50 to £0.60 (+20%)\n"
+        "🟡 Crisps added to archive - price is £3.00<br/>\n"
+        "🔴 Eggs changed price from £0.50 to £0.60 (+20%)<br/>\n"
         "## 2022-10-20\n"
-        "- Eggs added to archive - price is £0.50\n"
+        "🟡 Eggs added to archive - price is £0.50<br/>\n"
     )
     with open(timeline_file) as f:
         assert f.read() == expected_contents

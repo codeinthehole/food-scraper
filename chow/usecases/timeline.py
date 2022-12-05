@@ -31,7 +31,7 @@ def generate_timeline_file(
         for timeline_date in timeline_data:
             line = f"## {timeline_date['date']}\n"
             for description in timeline_date["event_descriptions"]:
-                line += f"- {description}\n"
+                line += f"{description}<br/>\n"
             f.write(line)
 
 
@@ -64,14 +64,18 @@ def _change_summary(
     current_price_change: archive.PriceChange,
     previous_price_change: Optional[archive.PriceChange],
 ) -> str:
+    """
+    Return a summary of the price change.
+    """
     if previous_price_change is None:
-        summary = f"{product_name} added to archive - price is £{current_price_change['price']}"
+        summary = f"🟡 {product_name} added to archive - price is £{current_price_change['price']}"
     else:
         previous_price = float(previous_price_change["price"])
         current_price = float(current_price_change["price"])
         delta = current_price - previous_price
         delta_percentage = round(abs(delta) / previous_price * 100)
-        summary = "{name} changed price from £{previous_price} to £{current_price} ({sign}{delta_percentage}%)".format(
+        summary = "{emoji} {name} changed price from £{previous_price} to £{current_price} ({sign}{delta_percentage}%)".format(
+            emoji="🔴" if delta > 0 else "🟢",
             name=product_name,
             previous_price=previous_price_change["price"],
             current_price=current_price_change["price"],
