@@ -1,4 +1,6 @@
 # Product price timeline
+## 2022-12-16
+🔴 Brown onions (3 pack) changed price from £0.95 to £1.00 (+5%)<br/>
 ## 2022-12-15
 🔴 Smoked back bacon rashers (10 pack) changed price from £1.90 to £2.00 (+5%)<br/>
 ## 2022-12-03
