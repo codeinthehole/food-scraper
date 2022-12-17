@@ -1,4 +1,6 @@
 # Product price timeline
+## 2022-12-17
+🔴 Cheese and tomato pizza (465g) changed price from £3.75 to £3.90 (+4%)<br/>
 ## 2022-12-16
 🔴 Brown onions (3 pack) changed price from £0.95 to £1.00 (+5%)<br/>
 ## 2022-12-15
