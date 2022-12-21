@@ -1,16 +1,16 @@
 import collections
 import pathlib
-from typing import List, Optional, TypedDict
+from typing import TypedDict
 
 from chow import archive, logger
 
 
 class TimelineDate(TypedDict):
     date: str  # YYYY-MM-DD
-    event_descriptions: List[str]
+    event_descriptions: list[str]
 
 
-Timeline = List[TimelineDate]
+Timeline = list[TimelineDate]
 
 
 def generate_timeline_file(
@@ -41,7 +41,7 @@ def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
     """
     grouped_changes = collections.defaultdict(list)
     for product_data in products_data.values():
-        previous_price_change: Optional[archive.PriceChange] = None
+        previous_price_change: archive.PriceChange | None = None
         for price_change in product_data["prices"]:
             grouped_changes[price_change["date"]].append(
                 _change_summary(
@@ -62,7 +62,7 @@ def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
 def _change_summary(
     product_name: str,
     current_price_change: archive.PriceChange,
-    previous_price_change: Optional[archive.PriceChange],
+    previous_price_change: archive.PriceChange | None,
 ) -> str:
     """
     Return a summary of the price change.

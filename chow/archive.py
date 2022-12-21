@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, List, TypedDict
+from typing import TypedDict
 
 import jsonschema
 
@@ -12,10 +12,10 @@ class PriceChange(TypedDict):
 
 class ProductPriceHistory(TypedDict):
     name: str
-    prices: List[PriceChange]
+    prices: list[PriceChange]
 
 
-ArchiveProductMap = Dict[str, ProductPriceHistory]
+ArchiveProductMap = dict[str, ProductPriceHistory]
 
 
 class InvalidJSON(Exception):
@@ -65,7 +65,7 @@ def load(filepath: str) -> ArchiveProductMap:
         return {}
 
     # Decode file content.
-    with open(filepath, "r") as f:
+    with open(filepath) as f:
         try:
             content: ArchiveProductMap = json.load(f)
         except json.decoder.JSONDecodeError as e:

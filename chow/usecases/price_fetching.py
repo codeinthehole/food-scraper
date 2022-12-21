@@ -1,7 +1,7 @@
 import concurrent.futures
 import copy
 import datetime
-from typing import Dict, Optional, TypedDict
+from typing import TypedDict
 
 import bs4
 import requests
@@ -11,10 +11,10 @@ from chow import archive, logger
 
 class Product(TypedDict):
     name: str
-    price: Optional[int]
+    price: int | None
 
 
-ProductMap = Dict[str, Product]
+ProductMap = dict[str, Product]
 
 
 def update_price_archive(

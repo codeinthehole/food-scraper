@@ -1,6 +1,5 @@
 import datetime
 import pathlib
-from typing import List, Tuple
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
@@ -43,12 +42,14 @@ def _generate_product_graph(
     # Ensure X axis has sensible ticks.
     locator = mdates.AutoDateLocator(minticks=3, maxticks=15)
     formatter = mdates.ConciseDateFormatter(locator)
-    axes.xaxis.set_major_locator(locator)  # type: ignore
-    axes.xaxis.set_major_formatter(formatter)  # type: ignore
+    axes.xaxis.set_major_locator(locator)  # type: ignore[attr-defined]
+    axes.xaxis.set_major_formatter(formatter)  # type: ignore[attr-defined]
 
     # Ensure Y axis starts at zero and has fixed precision.
     plt.ylim(0, max(prices) + 1)
-    axes.yaxis.set_major_formatter(ticker.FormatStrFormatter("£%.2f"))  # type: ignore
+    axes.yaxis.set_major_formatter(  # type: ignore[attr-defined]
+        ticker.FormatStrFormatter("£%.2f")
+    )
 
     # Save to file.
     figure.savefig(filepath)
@@ -58,12 +59,12 @@ def _generate_product_graph(
 
 def _generate_data_series(
     product_data: archive.ProductPriceHistory, end_date: datetime.date
-) -> Tuple[List[datetime.date], List[float]]:
+) -> tuple[list[datetime.date], list[float]]:
     """
     Return data series based on the product price-change data.
     """
-    dates: List[datetime.date] = []
-    prices: List[float] = []
+    dates: list[datetime.date] = []
+    prices: list[float] = []
 
     for price_change in product_data["prices"]:
         date = datetime.date.fromisoformat(price_change["date"])
