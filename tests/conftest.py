@@ -1,5 +1,5 @@
 import os
-from typing import Callable
+from collections.abc import Callable
 
 import pytest
 
@@ -33,7 +33,7 @@ def fixture(fixture_path: Callable[[str], str]) -> Callable[[str], str]:
         """
         Return the contents of a fixture file.
         """
-        with open(fixture_path(relative_filepath), "r") as f:
+        with open(fixture_path(relative_filepath)) as f:
             return str(f.read())
 
     return _load_fixture
