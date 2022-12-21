@@ -1,3 +1,4 @@
+---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -29,11 +30,30 @@ repos:
     hooks:
       - id: black
 
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.3.1
+    hooks:
+      - id: pyupgrade
+        args: [--py310-plus]
+
+  - repo: https://github.com/asottile/blacken-docs
+    rev: v1.12.1
+    hooks:
+      - id: blacken-docs
+        additional_dependencies: [black==22.12.0]
+
   - repo: https://github.com/timothycrosley/isort
     rev: v5.11.3
     hooks:
       - id: isort
         additional_dependencies: [toml]
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-blanket-type-ignore
+      - id: python-check-mock-methods
 
   - repo: local
     hooks:
@@ -56,5 +76,5 @@ repos:
         language: system
         types: [python]
         entry: pytest
-        files: 'test_.*\.py'
+        files: test_.*\.py
         require_serial: true
