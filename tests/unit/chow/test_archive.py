@@ -58,7 +58,7 @@ class TestLoad:
         archive_file.write_text(json.dumps(content))
 
         with pytest.raises(archive.InvalidJSON):
-            archive.load(str(archive_file)) == content
+            archive.load(str(archive_file))
 
     def test_invalid_product_id(self, tmp_path):
         # Create file with empty dict content.
@@ -74,7 +74,7 @@ class TestLoad:
         archive_file.write_text(json.dumps(content))
 
         with pytest.raises(archive.InvalidJSON):
-            archive.load(str(archive_file)) == content
+            archive.load(str(archive_file))
 
     def test_extra_properties(self, tmp_path):
         # Create file with empty dict content.
@@ -91,4 +91,4 @@ class TestLoad:
         archive_file.write_text(json.dumps(content))
 
         with pytest.raises(archive.InvalidJSON):
-            archive.load(str(archive_file)) == content
+            archive.load(str(archive_file))
