@@ -27,7 +27,7 @@ def _generate_product_graph(
     product_data: archive.ProductPriceHistory, filepath: str
 ) -> None:
     """
-    Generate a price chart PNG file in the passed filepath
+    Generate a price chart PNG file in the passed filepath.
     """
     # Extract data series.
     dates, prices = _generate_data_series(product_data, end_date=datetime.date.today())
