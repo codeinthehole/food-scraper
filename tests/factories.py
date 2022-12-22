@@ -1,4 +1,4 @@
-import factory  # type:ignore
+import factory
 
 
 class ArchiveProductPrice(factory.DictFactory):
