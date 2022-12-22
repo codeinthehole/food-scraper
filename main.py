@@ -11,7 +11,9 @@ from chow import logger, usecases
 
 @click.group()
 def cli() -> None:
-    pass
+    """
+    Provate base CLI group.
+    """
 
 
 @cli.command()
@@ -39,7 +41,9 @@ def update_price_archive(products: TextIO, archive: str) -> None:
 
 
 class InvalidJSON(Exception):
-    pass
+    """
+    For when JSON is invalid.
+    """
 
 
 PRODUCTS_SCHEMA = {
