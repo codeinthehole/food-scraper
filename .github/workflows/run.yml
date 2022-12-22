@@ -1,3 +1,4 @@
+---
 name: Update price archive
 
 on:
@@ -9,7 +10,7 @@ on:
   workflow_dispatch:
   # Run on a schedule.
   schedule:
-    - cron: "46 4 * * *"
+    - cron: 46 4 * * *
 
 jobs:
   scheduled:
@@ -24,7 +25,8 @@ jobs:
         # Will install python version from .python-version
         uses: actions/setup-python@v4
         with:
-          cache: "pip"
+          python-version: '3.10'
+          cache: pip
 
       - name: Install Python packages
         run: |-
