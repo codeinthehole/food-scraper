@@ -1,4 +1,10 @@
 # Product price timeline
+## 2022-12-29
+🔴 Royal Gala apples (6 pack) changed price from £1.36 to £1.70 (+25%)<br/>
+🟢 Lemons (5 pack) changed price from £1.50 to £1.20 (-20%)<br/>
+🔴 Cathedral City Cheese (550g) changed price from £4.00 to £5.40 (+35%)<br/>
+🟢 Braeburn Apples (6 pack) changed price from £1.70 to £1.44 (-15%)<br/>
+🟢 Fruit and fibre (500g) changed price from £1.40 to £1.35 (-4%)<br/>
 ## 2022-12-17
 🔴 Cheese and tomato pizza (465g) changed price from £3.75 to £3.90 (+4%)<br/>
 ## 2022-12-16
