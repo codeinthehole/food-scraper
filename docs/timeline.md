@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-01-04
+🟢 Chicken thigh fillets (450g) changed price from £3.79 to £3.41 (-10%)<br/>
 ## 2022-12-29
 🔴 Royal Gala apples (6 pack) changed price from £1.36 to £1.70 (+25%)<br/>
 🟢 Lemons (5 pack) changed price from £1.50 to £1.20 (-20%)<br/>
