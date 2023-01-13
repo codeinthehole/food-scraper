@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-01-13
+🟢 Brown onions (3 pack) changed price from £1.10 to £0.95 (-14%)<br/>
 ## 2023-01-10
 🟢 Blueberries (150g) changed price from £2.00 to £1.75 (-12%)<br/>
 ## 2023-01-08
