@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-01-21
+🔴 Super seeded loaf (800g) changed price from £1.60 to £1.70 (+6%)<br/>
 ## 2023-01-13
 🟢 Brown onions (3 pack) changed price from £1.10 to £0.95 (-14%)<br/>
 ## 2023-01-10
