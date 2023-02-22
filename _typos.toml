@@ -1,0 +1,2 @@
+[files]
+extend-exclude = ["data/*.json", "tests/fixtures/*.html"]

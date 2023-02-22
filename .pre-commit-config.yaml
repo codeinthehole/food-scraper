@@ -55,6 +55,11 @@ repos:
       - id: python-check-blanket-type-ignore
       - id: python-check-mock-methods
 
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.13.10
+    hooks:
+      - id: typos
+
   - repo: local
     hooks:
       - id: mypy
