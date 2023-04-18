@@ -126,7 +126,9 @@ def _update_price_archive(
     # Create a new copy of the archive.
     updated_archive = copy.deepcopy(price_archive)
     for product_id, product_data in products.items():
-        assert product_data["price"] is not None
+        if product_data["price"] is None:
+            # Skip products where we've been unable to fetch a price.
+            continue
         price_in_pounds = _convert_pence_to_pounds(product_data["price"])
         if product_id not in price_archive:
             # New product - not currently in archive.
