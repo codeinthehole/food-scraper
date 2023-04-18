@@ -1,3 +1,4 @@
+import datetime
 from unittest import mock
 
 import pytest
@@ -97,3 +98,29 @@ class TestChangeSummary:
         assert (
             summary == "Update price archive\n\nPrice change for Eggs: £1.50 to £2.50"
         )
+
+
+class TestUpdatePriceArchive:
+    def test_simple_update(self):
+        price_date = datetime.date(2023, 4, 1)
+        product_map = {"123": price_fetching.Product(name="Sample product", price=120)}
+
+        new_archive = price_fetching._update_price_archive(
+            price_date=price_date, products=product_map, price_archive={}
+        )
+
+        assert new_archive == {
+            "123": {
+                "name": "Sample product",
+                "prices": [{"date": "2023-04-01", "price": "1.20"}],
+            }
+        }
+
+    def test_handles_missing_prices(self):
+        product_map = {"123": price_fetching.Product(name="Sample product", price=None)}
+
+        new_archive = price_fetching._update_price_archive(
+            price_date=mock.sentinel.DATE, products=product_map, price_archive={}
+        )
+
+        assert new_archive == {}
