@@ -13,7 +13,7 @@ class TestFetchOcadoPriceExternal:
     @pytest.mark.parametrize(
         "product_id, price",
         (
-            ("13175011", 400),
+            ("13175011", 500),
             ("23476011", 190),
         ),
         ids=(
