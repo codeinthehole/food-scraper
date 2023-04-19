@@ -1,17 +1,36 @@
 # Ocado price scraper
 
-A Git-scraper repo for scraping prices from Ocado.
+A Git scraper repo for collecting prices from Ocado.
+
+Contents:
+
+- [What does this do?](#what-does-this-do?)
+- [Local development](#local-development)
+  - [Installation](#installation)
+  - [Running the application](#running-the-application)
+    - [Update price archive](#update-price-archive)
+    - [Generate product price charts](#generate-product-price-charts)
+    - [Generate overview document](#generate-overview-document)
+    - [Smoke test](#smoke-test)
+  - [Application development](#application-development)
+    - [Conventions](#conventions)
+  - [Testing](#testing)
+    - [Test suite structure](#test-suite-structure)
+    - [Running tests](#running-tests)
+  - [Packages](#packages)
+
+## What does this do?
 
 Once a day, the prices for a list of products (declared in
-[`data/products.json`][products_file]) are fetched from Ocado and any changes
-are recorded in [`data/archive.json`][prices_file].
-
-If there are any price changes, a [`docs/timeline.md`][timeline_file] document
-is updated.
+[`data/products.json`][products_file]) are fetched from Ocado and, if there are
+any changes, they are recorded in [`data/archive.json`][prices_file] and a
+[`docs/timeline.md`][timeline_file] document is updated.
 
 Next, graphs of each product's prices are generated (in the [`docs/charts/`
-folder][charts_folder]) and an [`docs/overview.md`][overview_file] file is
-updated. Any changes are committed to the repo.
+folder][charts_folder]) and an [`docs/overview.md`][overview_file] file, which
+collates all the charts, is updated.
+
+Any changes are committed to the repo.
 
 [products_file]:
   https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
@@ -117,7 +136,9 @@ This will:
 This shouldn't modify a file tracked in Git so can be run without dirtying your
 local checkout.
 
-### Development
+### Application development
+
+#### Conventions
 
 Conventions:
 
@@ -131,9 +152,9 @@ Check formatting and type annotations with:
 
 See the `makefile` for how to run the linters individually.
 
-### Test suite
+### Testing
 
-### Test suite structure
+#### Test suite structure
 
 - `tests/unit/` contains isolated unit tests.
 - `tests/integration/` contains tests that exercise a real external API. These
@@ -141,7 +162,7 @@ See the `makefile` for how to run the linters individually.
 - `tests/functional/` contains end-to-end tests that use Click's API to call
   commands.
 
-### Running tests
+#### Running tests
 
 Run the CI tests with:
 
