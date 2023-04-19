@@ -25,18 +25,22 @@ jobs:
           cache: pip
 
       - name: Install Python packages
+        shell: bash
         run: |-
           make install
 
       - name: Generate product charts
+        shell: bash
         run: |-
           python main.py generate-graphs data/archive.json docs/charts/
 
       - name: Update overview page
+        shell: bash
         run: |-
           python main.py generate-overview data/archive.json docs/charts/ docs/overview.md
 
       - name: Commit and push any new charts
+        shell: bash
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
