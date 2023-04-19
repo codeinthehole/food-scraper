@@ -1,5 +1,5 @@
 ---
-name: Update price archive
+name: Update price archive and update timeline document
 
 on:
   # Run on each push to master.
