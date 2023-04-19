@@ -1,4 +1,17 @@
 # Product price timeline
+## 2023-04-19
+🔴 Brown onions (3 pack) changed price from £0.95 to £1.00 (+5%)<br/>
+🔴 Fairtrade bananas (5 pack) changed price from £0.80 to £0.95 (+19%)<br/>
+🟢 Semi skimmed milk (4 pints) changed price from £1.65 to £1.55 (-6%)<br/>
+🔴 Blueberries (150g) changed price from £1.75 to £2.00 (+14%)<br/>
+🔴 Lemons (5 pack) changed price from £1.20 to £1.50 (+25%)<br/>
+🔴 Cucumber changed price from £0.69 to £0.79 (+14%)<br/>
+🔴 Cathedral City Cheese (550g) changed price from £5.40 to £5.95 (+10%)<br/>
+🔴 Braeburn Apples (6 pack) changed price from £1.44 to £1.70 (+18%)<br/>
+🔴 Warburtons sandwich thins (6 pack) changed price from £1.30 to £1.40 (+8%)<br/>
+🟢 Runny honey (340g) changed price from £1.80 to £1.50 (-17%)<br/>
+🟢 Pure set honey (340g) changed price from £1.65 to £1.25 (-24%)<br/>
+🔴 Halloumi (250g) changed price from £2.65 to £2.70 (+2%)<br/>
 ## 2023-01-21
 🔴 Super seeded loaf (800g) changed price from £1.60 to £1.70 (+6%)<br/>
 ## 2023-01-13
