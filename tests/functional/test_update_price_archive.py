@@ -10,14 +10,14 @@ import main
 @responses.activate
 def test_create_archive_file(runner, fixture, tmp_path):
     # Create a temporary file of products.
-    products = {"123": {"name": "Crisps", "price": None}}
+    products = [{"name": "Crisps", "ocado_product_id": "123"}]
     products_file = tmp_path / "products.json"
     products_file.write_text(json.dumps(products))
 
     # Create a filepath for the archive file
     archive_file = tmp_path / "archive.json"
 
-    # Stub Ocado response for any the above product URL.
+    # Stub Ocado response for the above product URL.
     responses.get(
         url=re.compile(r"https://www.ocado.com/products/slug-123"),
         body=fixture("ocado_product.html"),
@@ -29,7 +29,7 @@ def test_create_archive_file(runner, fixture, tmp_path):
             main.cli,
             args=["update-price-archive", str(products_file), str(archive_file)],
         )
-    assert result.exit_code == 0, result.exception
+    assert result.exit_code == 0, result.output
 
     # Check archive file has been created.
     content = json.loads(archive_file.read_text())
@@ -49,7 +49,7 @@ def test_create_archive_file(runner, fixture, tmp_path):
 @responses.activate
 def test_update_archive_file(runner, fixture, tmp_path):
     # Create a temporary file of products.
-    products = {"123": {"name": "Crisps", "price": None}}
+    products = [{"name": "Crisps", "ocado_product_id": "123"}]
     products_file = tmp_path / "products.json"
     products_file.write_text(json.dumps(products))
 
@@ -80,7 +80,7 @@ def test_update_archive_file(runner, fixture, tmp_path):
             main.cli,
             args=["update-price-archive", str(products_file), str(archive_file)],
         )
-    assert result.exit_code == 0, result.exception
+    assert result.exit_code == 0, result.output
 
     # Check archive file has been updated correctly.
     content = json.loads(archive_file.read_text())
