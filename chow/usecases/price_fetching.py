@@ -68,7 +68,9 @@ def _fetch_product_prices(
             try:
                 price = future.result()
             except UnableToFetchPrice as e:
-                logger.error("Unable to fetch price: %s" % e)
+                logger.error(
+                    "Unable to fetch price for product %s: %s" % (product["name"], e)
+                )
             else:
                 product_prices.append((product, price))
 
@@ -95,13 +97,13 @@ def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     try:
         response = requests.get(url)
     except requests.exceptions.RequestException as e:
-        raise UnableToFetchPrice from e
+        raise UnableToFetchPrice(str(e))
 
     # Extract price from HTML content.
     try:
         return _extract_price(response.text)
     except UnableToExtractPrice as e:
-        raise UnableToFetchPrice from e
+        raise UnableToFetchPrice(str(e))
 
 
 class UnableToExtractPrice(Exception):
