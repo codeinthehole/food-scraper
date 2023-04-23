@@ -7,21 +7,19 @@ import main
 
 class TestLoadProducts:
     def test_empty_dict(self):
-        contents = io.StringIO("{}")
+        contents = io.StringIO("[]")
 
-        assert main._load_products(contents) == {}
+        assert main._load_products(contents) == []
 
     def test_single_product(self):
-        contents = io.StringIO('{"123": {"name": "X", "price": null}}')
+        contents = io.StringIO('[{"name": "X", "ocado_product_id": "123"}]')
 
-        product_map = main._load_products(contents)
-
-        assert product_map == {
-            "123": {
+        assert main._load_products(contents) == [
+            {
                 "name": "X",
-                "price": None,
+                "ocado_product_id": "123",
             }
-        }
+        ]
 
     def test_invalid_json(self):
         contents = io.StringIO("this isn't JSON")
@@ -29,23 +27,14 @@ class TestLoadProducts:
         with pytest.raises(main.InvalidJSON):
             main._load_products(contents)
 
-    def test_missing_price_attribute(self):
-        # No price attribute
-        contents = io.StringIO('{"123": {"name": "X"}}')
+    def test_missing_product_id_attribute(self):
+        contents = io.StringIO('[{"name": "X"}]')
 
         with pytest.raises(main.InvalidJSON):
             main._load_products(contents)
 
     def test_misspelt_name_attribute(self):
-        # No price attribute
-        contents = io.StringIO('{"123": {"mane": "X", "price": null}}')
-
-        with pytest.raises(main.InvalidJSON):
-            main._load_products(contents)
-
-    def test_non_numeric_key(self):
-        # No price attribute
-        contents = io.StringIO('{"123x": {"mane": "X", "price": null}}')
+        contents = io.StringIO('[{"naem": "X", "ocado_product_id": "123"}]')
 
         with pytest.raises(main.InvalidJSON):
             main._load_products(contents)

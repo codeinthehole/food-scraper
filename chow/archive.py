@@ -15,6 +15,8 @@ class ProductPriceHistory(TypedDict):
     prices: list[PriceChange]
 
 
+# The archive schema maps the product ID to a dict containing the product name and a list of price
+# changes.
 ArchiveProductMap = dict[str, ProductPriceHistory]
 
 

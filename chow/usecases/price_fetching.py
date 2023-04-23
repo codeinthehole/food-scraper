@@ -11,26 +11,29 @@ from chow import archive, logger
 
 class Product(TypedDict):
     name: str
-    price: int | None
+    ocado_product_id: str
 
 
-ProductMap = dict[str, Product]
+Products = list[Product]
+
+# A private type associating prices with products.
+_ProductPrices = list[tuple[Product, int]]
 
 
 def update_price_archive(
-    product_map: ProductMap, archive_filepath: str, logger: logger.ConsoleLogger
+    products: Products, archive_filepath: str, logger: logger.ConsoleLogger
 ) -> str:
     """
-    Update the price archive.
+    Fetch prices for the passed products and update the price archive.
     """
-    # Append latest prices to products dict.
-    _fetch_product_prices(product_map, logger)
+    # Fetch product prices.
+    product_prices = _fetch_product_prices(products, logger)
 
     # Update archive file.
     current_archive = archive.load(archive_filepath)
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
-        products=product_map,
+        product_prices=product_prices,
         price_archive=current_archive,
     )
 
@@ -42,24 +45,34 @@ def update_price_archive(
     return ""
 
 
-def _fetch_product_prices(products: ProductMap, logger: logger.ConsoleLogger) -> None:
+def _fetch_product_prices(
+    products: Products, logger: logger.ConsoleLogger
+) -> _ProductPrices:
     """
-    Update the passed dict of product data with latest prices.
+    Return a list of product prices.
     """
     # Use a thread pool to fetch prices concurrently.
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        # Create a dict of Future->productDict
+        # Create a dict of Future->Product
         future_to_data = {
-            executor.submit(_fetch_ocado_price, product_id, logger): product_data
-            for (product_id, product_data) in products.items()
+            executor.submit(
+                _fetch_ocado_price, product["ocado_product_id"], logger
+            ): product
+            for product in products
         }
+
         # Loop over the completed futures and update the product data dict.
+        product_prices: _ProductPrices = []
         for future in concurrent.futures.as_completed(future_to_data):
-            product_data = future_to_data[future]
+            product = future_to_data[future]
             try:
-                product_data["price"] = future.result()
+                price = future.result()
             except UnableToFetchPrice as e:
                 logger.error("Unable to fetch price: %s" % e)
+            else:
+                product_prices.append((product, price))
+
+    return product_prices
 
 
 class UnableToFetchPrice(Exception):
@@ -117,7 +130,7 @@ def _extract_price(content: str) -> int:
 
 def _update_price_archive(
     price_date: datetime.date,
-    products: ProductMap,
+    product_prices: _ProductPrices,
     price_archive: archive.ArchiveProductMap,
 ) -> archive.ArchiveProductMap:
     """
@@ -125,15 +138,13 @@ def _update_price_archive(
     """
     # Create a new copy of the archive.
     updated_archive = copy.deepcopy(price_archive)
-    for product_id, product_data in products.items():
-        if product_data["price"] is None:
-            # Skip products where we've been unable to fetch a price.
-            continue
-        price_in_pounds = _convert_pence_to_pounds(product_data["price"])
+    for product, price in product_prices:
+        price_in_pounds = _convert_pence_to_pounds(price)
+        product_id = product["ocado_product_id"]
         if product_id not in price_archive:
             # New product - not currently in archive.
             updated_archive[product_id] = {
-                "name": product_data["name"],
+                "name": product["name"],
                 "prices": [
                     {
                         "date": price_date.isoformat(),
