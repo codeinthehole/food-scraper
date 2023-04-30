@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-04-30
+🔴 Cucumber changed price from £0.69 to £0.79 (+14%)<br/>
 ## 2023-04-25
 🟢 Cucumber changed price from £0.79 to £0.69 (-13%)<br/>
 ## 2023-04-19
