@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-05-03
+🟢 Cathedral City Cheese (550g) changed price from £5.95 to £4.75 (-20%)<br/>
+🟢 Warburtons sandwich thins (6 pack) changed price from £1.40 to £1.10 (-21%)<br/>
 ## 2023-04-30
 🔴 Cucumber changed price from £0.69 to £0.79 (+14%)<br/>
 ## 2023-04-25
