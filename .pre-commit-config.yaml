@@ -26,7 +26,7 @@ repos:
       - id: no-commit-to-branch
 
   - repo: https://github.com/psf/black
-    rev: 22.12.0
+    rev: 23.3.0
     hooks:
       - id: black
 
@@ -43,7 +43,7 @@ repos:
         additional_dependencies: [black==22.12.0]
 
   - repo: https://github.com/timothycrosley/isort
-    rev: v5.11.3
+    rev: 5.12.0
     hooks:
       - id: isort
         additional_dependencies: [toml]
