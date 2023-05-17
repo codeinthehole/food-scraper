@@ -6,7 +6,7 @@ import jsonschema
 
 
 class PriceChange(TypedDict):
-    date: str
+    date: str  # YYYY-MM-DD
     price: str
 
 
