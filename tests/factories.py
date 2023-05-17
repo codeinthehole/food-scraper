@@ -1,15 +1,17 @@
 import factory
 
+# Archive types
 
-class ArchiveProductPrice(factory.DictFactory):
+
+class PriceChange(factory.DictFactory):
     date = "2022-09-20"
     price = "0.85"
 
 
-class ArchiveProduct(factory.DictFactory):
+class ProductPriceHistory(factory.DictFactory):
     name = "Mars bar"
-    prices = factory.List([ArchiveProductPrice()])
+    prices = factory.List([PriceChange()])
 
 
-class Archive(factory.DictFactory):
-    p1 = factory.SubFactory(ArchiveProduct)
+class ArchiveProductMap(factory.DictFactory):
+    p1 = factory.SubFactory(ProductPriceHistory)

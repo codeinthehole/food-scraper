@@ -38,48 +38,62 @@ def generate_timeline_file(
 def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
     """
     Convert the archive data into a timeline structure where events are grouped by date.
+
+    Events are sorted in reverse price-change percentage order.
     """
-    grouped_changes = collections.defaultdict(list)
+    # Convert archive data into a dict mapping the YYYY-MM-DD date string to a list of
+    # (delta_percentage, change_description) tuples.
+    grouped_changes: dict[str, list[tuple[float, str]]] = collections.defaultdict(list)
     for product_data in products_data.values():
         previous_price_change: archive.PriceChange | None = None
+        # Prices are in chronological order.
         for price_change in product_data["prices"]:
+            # Compute description of change.
+            delta_percentage, change_description = _change_summary(
+                product_data["name"], price_change, previous_price_change
+            )
+
             grouped_changes[price_change["date"]].append(
-                _change_summary(
-                    product_data["name"], price_change, previous_price_change
-                )
+                (delta_percentage, change_description)
             )
             previous_price_change = price_change
 
     # Sort in reverse chronological order.
-    sorted_changes = sorted(list(grouped_changes.items()), reverse=True)
+    chronological_changes = sorted(list(grouped_changes.items()), reverse=True)
 
-    return [
-        {"date": date, "event_descriptions": changes}
-        for (date, changes) in sorted_changes
-    ]
+    # Build timeline datastructure.
+    timeline = []
+    for date, changes in chronological_changes:
+        event_descriptions = [x[1] for x in sorted(changes, reverse=True)]
+        timeline.append(TimelineDate(date=date, event_descriptions=event_descriptions))
+
+    return timeline
 
 
 def _change_summary(
     product_name: str,
     current_price_change: archive.PriceChange,
     previous_price_change: archive.PriceChange | None,
-) -> str:
+) -> tuple[float, str]:
     """
-    Return a summary of the price change.
+    Return a tuple of the price delta percentage and a summary of the price change.
     """
+    delta_percentage: float
     if previous_price_change is None:
         summary = f"🟡 {product_name} added to archive - price is £{current_price_change['price']}"
+        delta_percentage = 0
     else:
         previous_price = float(previous_price_change["price"])
         current_price = float(current_price_change["price"])
         delta = current_price - previous_price
-        delta_percentage = round(abs(delta) / previous_price * 100)
-        summary = "{emoji} {name} changed price from £{previous_price} to £{current_price} ({sign}{delta_percentage}%)".format(
+        delta_percentage = delta / previous_price * 100
+        abs_delta_percentage = round(abs(delta) / previous_price * 100)
+        summary = "{emoji} {name} changed price from £{previous_price} to £{current_price} ({sign}{abs_delta_percentage}%)".format(
             emoji="🔴" if delta > 0 else "🟢",
             name=product_name,
             previous_price=previous_price_change["price"],
             current_price=current_price_change["price"],
             sign="+" if delta > 0 else "-",
-            delta_percentage=delta_percentage,
+            abs_delta_percentage=abs_delta_percentage,
         )
-    return summary
+    return delta_percentage, summary

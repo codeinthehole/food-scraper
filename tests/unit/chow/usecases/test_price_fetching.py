@@ -42,7 +42,7 @@ class TestChangeSummary:
 
     def test_summary_when_new_product_added(self):
         current_archive: archive.ArchiveProductMap = {}
-        updated_archive = factories.Archive(p1__name="Snickers")
+        updated_archive = factories.ArchiveProductMap(p1__name="Snickers")
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
 
@@ -50,9 +50,9 @@ class TestChangeSummary:
 
     def test_summary_when_multiple_new_products_added(self):
         current_archive: archive.ArchiveProductMap = {}
-        updated_archive = factories.Archive(
-            p1=factories.ArchiveProduct(name="Eggs"),
-            p2=factories.ArchiveProduct(name="Bacon"),
+        updated_archive = factories.ArchiveProductMap(
+            p1=factories.ProductPriceHistory(name="Eggs"),
+            p2=factories.ProductPriceHistory(name="Bacon"),
         )
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
@@ -62,12 +62,12 @@ class TestChangeSummary:
         )
 
     def test_summary_when_product_removed(self):
-        current_archive = factories.Archive(
-            p1=factories.ArchiveProduct(name="Eggs"),
-            p2=factories.ArchiveProduct(name="Bacon"),
+        current_archive = factories.ArchiveProductMap(
+            p1=factories.ProductPriceHistory(name="Eggs"),
+            p2=factories.ProductPriceHistory(name="Bacon"),
         )
-        updated_archive = factories.Archive(
-            p1=factories.ArchiveProduct(name="Eggs"),
+        updated_archive = factories.ArchiveProductMap(
+            p1=factories.ProductPriceHistory(name="Eggs"),
         )
 
         summary = price_fetching._change_summary(current_archive, updated_archive)
@@ -75,20 +75,20 @@ class TestChangeSummary:
         assert summary == "Update price archive\n\nRemove product: Bacon"
 
     def test_product_price_change(self):
-        current_archive = factories.Archive(
-            p1=factories.ArchiveProduct(
+        current_archive = factories.ArchiveProductMap(
+            p1=factories.ProductPriceHistory(
                 name="Eggs",
                 prices=[
-                    factories.ArchiveProductPrice(price="1.50"),
+                    factories.PriceChange(price="1.50"),
                 ],
             )
         )
-        updated_archive = factories.Archive(
-            p1=factories.ArchiveProduct(
+        updated_archive = factories.ArchiveProductMap(
+            p1=factories.ProductPriceHistory(
                 name="Eggs",
                 prices=[
-                    factories.ArchiveProductPrice(price="1.50"),
-                    factories.ArchiveProductPrice(price="2.50"),
+                    factories.PriceChange(price="1.50"),
+                    factories.PriceChange(price="2.50"),
                 ],
             )
         )
