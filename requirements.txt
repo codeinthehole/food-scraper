@@ -37,7 +37,7 @@ flake8==6.0.0
     #   -r requirements.in
     #   flake8-bugbear
     #   flake8-docstrings
-flake8-bugbear==23.3.23
+flake8-bugbear==23.5.9
     # via -r requirements.in
 flake8-docstrings==1.7.0
     # via -r requirements.in
@@ -103,7 +103,7 @@ python-dateutil==2.8.2
     #   time-machine
 pyyaml==6.0
     # via responses
-requests==2.30.0
+requests==2.31.0
     # via
     #   -r requirements.in
     #   responses
@@ -130,7 +130,7 @@ types-jsonschema==4.17.0.8
     # via -r requirements.in
 types-pyyaml==6.0.12.9
     # via responses
-types-requests==2.30.0.0
+types-requests==2.31.0.1
     # via -r requirements.in
 types-urllib3==1.26.25.13
     # via types-requests
