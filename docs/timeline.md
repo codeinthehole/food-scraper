@@ -2,6 +2,8 @@
 ## 2023-05-31
 🔴 Warburtons sandwich thins (6 pack) changed price from £1.10 to £1.40 (+27%)<br/>
 🔴 Cathedral City Cheese (550g) changed price from £4.75 to £5.95 (+25%)<br/>
+🟢 Cathedral City Cheese (550g) changed price from £5.95 to £4.50 (-24%)<br/>
+🟢 Lurpak butter (500g) changed price from £5.00 to £3.75 (-25%)<br/>
 ## 2023-05-27
 🔴 Chicken thigh fillets (450g) changed price from £3.41 to £3.45 (+1%)<br/>
 ## 2023-05-10
