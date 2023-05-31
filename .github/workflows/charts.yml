@@ -1,5 +1,5 @@
 ---
-name: Update product charts
+name: Update product charts and overview document
 
 on:
   # Manual button in Github.
@@ -34,7 +34,7 @@ jobs:
         run: |-
           python main.py generate-graphs data/archive.json docs/charts/
 
-      - name: Update overview page
+      - name: Update overview document
         shell: bash
         run: |-
           python main.py generate-overview data/archive.json docs/charts/ docs/overview.md
