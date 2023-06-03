@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-06-03
+🔴 Brown onions (3 pack) changed price from £1.10 to £1.20 (+9%)<br/>
+🔴 Large free range eggs (6 pack) changed price from £1.75 to £1.80 (+3%)<br/>
 ## 2023-05-31
 🔴 Warburtons sandwich thins (6 pack) changed price from £1.10 to £1.40 (+27%)<br/>
 🔴 Cathedral City Cheese (550g) changed price from £4.75 to £5.95 (+25%)<br/>
