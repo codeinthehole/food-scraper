@@ -12,7 +12,7 @@ from chow import logger, usecases
 @click.group()
 def cli() -> None:
     """
-    Provate base CLI group.
+    Private base CLI group.
     """
 
 
@@ -163,6 +163,41 @@ def generate_timeline(
     usecases.generate_timeline_file(
         archive_filepath=archive_filepath,
         timeline_filepath=timeline_filepath,
+        logger=logger.ConsoleLogger(debug_mode=True),
+    )
+
+
+@cli.command()
+@click.argument(
+    "archive_filepath",
+    type=click.Path(
+        exists=True, file_okay=True, dir_okay=False, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "charts_folder",
+    type=click.Path(
+        exists=True, file_okay=False, dir_okay=True, path_type=pathlib.Path
+    ),
+)
+@click.argument(
+    "products_folder",
+    type=click.Path(
+        exists=True, file_okay=False, dir_okay=True, path_type=pathlib.Path
+    ),
+)
+def generate_product_documents(
+    archive_filepath: pathlib.Path,
+    charts_folder: pathlib.Path,
+    products_folder: pathlib.Path,
+) -> None:
+    """
+    Generate product detail documents in the passed folder.
+    """
+    usecases.generate_product_detail_documents(
+        archive_filepath=archive_filepath,
+        charts_folder=charts_folder,
+        products_folder=products_folder,
         logger=logger.ConsoleLogger(debug_mode=True),
     )
 
