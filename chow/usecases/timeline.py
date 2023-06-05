@@ -44,13 +44,13 @@ def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
     # Convert archive data into a dict mapping the YYYY-MM-DD date string to a list of
     # (delta_percentage, change_description) tuples.
     grouped_changes: dict[str, list[tuple[float, str]]] = collections.defaultdict(list)
-    for product_data in products_data.values():
+    for product_id, product_data in products_data.items():
         previous_price_change: archive.PriceChange | None = None
         # Prices are in chronological order.
         for price_change in product_data["prices"]:
             # Compute description of change.
             delta_percentage, change_description = _change_summary(
-                product_data["name"], price_change, previous_price_change
+                product_id, product_data["name"], price_change, previous_price_change
             )
 
             grouped_changes[price_change["date"]].append(
@@ -71,6 +71,7 @@ def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
 
 
 def _change_summary(
+    product_id: str,
     product_name: str,
     current_price_change: archive.PriceChange,
     previous_price_change: archive.PriceChange | None,
@@ -78,9 +79,10 @@ def _change_summary(
     """
     Return a tuple of the price delta percentage and a summary of the price change.
     """
+    product_url = f"./product-{product_id}.md"
     delta_percentage: float
     if previous_price_change is None:
-        summary = f"🟡 {product_name} added to archive - price is £{current_price_change['price']}"
+        summary = f"🟡 [{product_name}]({product_url}) added to archive - price is £{current_price_change['price']}"
         delta_percentage = 0
     else:
         previous_price = float(previous_price_change["price"])
@@ -88,9 +90,10 @@ def _change_summary(
         delta = current_price - previous_price
         delta_percentage = delta / previous_price * 100
         abs_delta_percentage = round(abs(delta) / previous_price * 100)
-        summary = "{emoji} {name} changed price from £{previous_price} to £{current_price} ({sign}{abs_delta_percentage}%)".format(
+        summary = "{emoji} [{name}]({product_url}) changed price from £{previous_price} to £{current_price} ({sign}{abs_delta_percentage}%)".format(
             emoji="🔴" if delta > 0 else "🟢",
             name=product_name,
+            product_url=product_url,
             previous_price=previous_price_change["price"],
             current_price=current_price_change["price"],
             sign="+" if delta > 0 else "-",
