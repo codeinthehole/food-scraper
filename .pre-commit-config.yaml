@@ -81,5 +81,5 @@ repos:
         language: system
         types: [python]
         entry: pytest
-        files: test_.*\.py
+        pass_filenames: false
         require_serial: true
