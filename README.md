@@ -9,6 +9,8 @@ Contents:
   - [Installation](#installation)
   - [Running the application](#running-the-application)
     - [Update price archive](#update-price-archive)
+    - [Generate product detail documents](#generate-product-detail-documents)
+    - [Generate timeline document](#generate-timeline-document)
     - [Generate product price charts](#generate-product-price-charts)
     - [Generate overview document](#generate-overview-document)
     - [Smoke test](#smoke-test)
@@ -23,12 +25,14 @@ Contents:
 
 Once a day, the prices for a list of products (declared in
 [`data/products.json`][products_file]) are fetched from Ocado and, if there are
-any changes, they are recorded in [`data/archive.json`][prices_file] and a
-[`docs/timeline.md`][timeline_file] document is updated.
+any changes, they are recorded in [`data/archive.json`][prices_file].
+Subsequently, product detail documents (of form `docs/product-$PRODUCT_ID.md`)
+and a [`docs/timeline.md`][timeline_file] document are updated.
 
-Next, graphs of each product's prices are generated (in the [`docs/charts/`
-folder][charts_folder]) and an [`docs/overview.md`][overview_file] file, which
-collates all the charts, is updated.
+An hour later, graphs of each product's prices are generated (in the
+[`docs/charts/` folder][charts_folder]) and an
+[`docs/overview.md`][overview_file] file, which collates all the charts, is
+updated.
 
 Any changes are committed to the repo.
 
@@ -85,8 +89,37 @@ which will:
 When [run as a Github action][gh_workflow_run], the products file is
 `data/products.json` and the archive file is `data/archive.json`.
 
-[gh_workflow_run]:
-  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
+</details>
+
+#### Generate product detail documents
+
+Generate a new set of product detail documents with:
+
+    python main.py generate-product-documents $ARCHIVE_FILE $CHARTS_FOLDER $DOCS_FOLDER
+
+which will:
+
+- Take the product data from `$ARCHIVE_FILE` and build a set of product detail
+  documents in `$DOCS_FOLDER` using the corresponding charts from
+  `$CHARTS_FOLDER`.
+
+When [run as a Github action][gh_workflow_run], the archive file is
+`data/archive.json`, the charts folder is `docs/charts/` and the docs folder is
+`docs/`.
+
+#### Generate timeline document
+
+Generate a new timeline document with:
+
+    python main.py generate-timeline $ARCHIVE_FILE $TIMELINE_FILE
+
+which will:
+
+- Take the product data from `$ARCHIVE_FILE` and build a timeline document in
+  `$TIMELINE_FILE`.
+
+When [run as a Github action][gh_workflow_run], the archive file is
+`data/archive.json` and the timeline file is `docs/timeline.md`.
 
 #### Generate product price charts
 
@@ -99,9 +132,6 @@ in `$ARCHIVE_FILE`.
 
 When [run as a Github action][gh_workflow_charts], the archive file is
 `data/archive.json` and the charts folder is `docs/charts/`.
-
-[gh_workflow_charts]:
-  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml
 
 #### Generate overview document
 
@@ -191,3 +221,8 @@ to update `requirements.txt`, then:
     pip-sync
 
 to install the upgraded package.
+
+[gh_workflow_run]:
+  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
+[gh_workflow_charts]:
+  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml

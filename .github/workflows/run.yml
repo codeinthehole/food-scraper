@@ -33,7 +33,7 @@ jobs:
         run: |-
           make install
 
-      - name: Fetch latest data
+      - name: Update price archive
         shell: bash
         run: |-
           # Run price fetching and capture change summary (if there is one) into a file.
