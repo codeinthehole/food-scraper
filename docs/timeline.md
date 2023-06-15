@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-06-15
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.95 (+32%)<br/>
 ## 2023-06-03
 🔴 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.10 to £1.20 (+9%)<br/>
 🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.75 to £1.80 (+3%)<br/>
