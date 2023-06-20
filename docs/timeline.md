@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-06-20
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.50 (-24%)<br/>
 ## 2023-06-15
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.95 (+32%)<br/>
 ## 2023-06-03
