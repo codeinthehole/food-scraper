@@ -1,4 +1,8 @@
 # Product price timeline
+## 2023-06-22
+🔴 [Lurpak butter (500g)](./product-13175011.md) changed price from £3.75 to £5.00 (+33%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.95 (+32%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.25 (-34%)<br/>
 ## 2023-06-20
 🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.50 (-24%)<br/>
 ## 2023-06-15
