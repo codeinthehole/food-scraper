@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-06-23
+🔴 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £2.00 to £2.10 (+5%)<br/>
 ## 2023-06-22
 🔴 [Lurpak butter (500g)](./product-13175011.md) changed price from £3.75 to £5.00 (+33%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.95 (+32%)<br/>
