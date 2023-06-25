@@ -34,9 +34,19 @@ def _product_detail_markdown(
     previous_price: archive.PriceChange | None = None
     for price_change in price_changes["prices"]:
         if previous_price is not None:
-            description = f"Changed price from £{previous_price['price']} to £{price_change['price']}"
+            # Determine % change.
+            delta = float(price_change["price"]) - float(previous_price["price"])
+            delta_percentage = delta / float(previous_price["price"]) * 100
+            abs_delta_percentage = round(abs(delta_percentage))
+            description = "{emoji} Changed price from £{previous_price} to £{current_price} ({sign}{abs_delta_percentage}%)".format(
+                emoji="🔴" if delta > 0 else "🟢",
+                previous_price=previous_price["price"],
+                current_price=price_change["price"],
+                sign="+" if delta > 0 else "-",
+                abs_delta_percentage=abs_delta_percentage,
+            )
         else:
-            description = f"Added to archive with price £{price_change['price']}"
+            description = f"🟡 Added to archive with price £{price_change['price']}"
         date_descriptions.append((price_change["date"], description))
         previous_price = price_change
 
