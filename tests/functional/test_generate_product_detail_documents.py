@@ -60,7 +60,7 @@ def test_creates_product_doc(runner, fixture_path, tmp_path, tmp_path_factory):
         "# Crisps",
         "![](charts/product-123.png)",
         "## 2022-11-05",
-        "Changed price from £3.00 to £4.00",
+        "🔴 Changed price from £3.00 to £4.00 (+33%)",
         "## 2022-11-01",
-        "Added to archive with price £3.00",
+        "🟡 Added to archive with price £3.00",
     ]
