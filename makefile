@@ -27,7 +27,7 @@ test:
 
 # Smoke testing
 
-run: update_prices update_charts update_overview update_timeline
+run: update_prices update_charts update_overview update_timeline update_product_docs
 
 update_prices:
 	@echo Updating /tmp/archive.json
@@ -46,3 +46,8 @@ update_overview:
 update_timeline:
 	@echo Generating timeline in /tmp/timeline.md
 	python main.py generate-timeline data/archive.json /tmp/timeline.md
+
+update_product_docs:
+	@echo Generating product docs in /tmp/product-docs
+	mkdir -p /tmp/product-docs
+	python main.py generate-product-documents data/archive.json /tmp/charts /tmp/
