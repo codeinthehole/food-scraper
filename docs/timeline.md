@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-06-29
+🟢 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.55 to £1.45 (-6%)<br/>
 ## 2023-06-27
 🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.75 (-20%)<br/>
 ## 2023-06-23
