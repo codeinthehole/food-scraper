@@ -1,4 +1,4 @@
-[   
+[
     {"name": "Lurpak butter (500g)", "ocado_product_id": "13175011"},
     {"name": "New York bagels (5)", "ocado_product_id": "23476011"},
     {"name": "Brown onions (3 pack)", "ocado_product_id": "65448011"},
@@ -24,5 +24,13 @@
     {"name": "Smoked back bacon rashers (10 pack)", "ocado_product_id": "63741011"},
     {"name": "Halloumi (250g)", "ocado_product_id": "65186011"},
     {"name": "Fruit and fibre (500g)", "ocado_product_id": "506077011"},
+    {"name": "M&S Super Seeded Bread Loaf", "ocado_product_id": "510737011"},
+    {"name": "Ocado Granny Smith Apples", "ocado_product_id": "64863011"},
+    {"name": "M&S Squeezed Orange Juice with Bits", "ocado_product_id": "505309011"},
+    {"name": "M&S Wholemeal Tortilla Wraps", "ocado_product_id": "510858011"},
+    {"name": "Ocado Carrots (1kg)", "ocado_product_id": "63026011"},
+    {"name": "Ocado Cypriot Halloumi (250g)", "ocado_product_id": "65186011"},
+    {"name": "Ocado Parmigiano Reggiano (200g)", "ocado_product_id": "57272011"},
+    {"name": "M&S Scottish Oak Smoked Salmon Slices (100g)", "ocado_product_id": "505092011"},
     {"name": "Cheese and tomato pizza (465g)", "ocado_product_id": "514022011"}
 ]
