@@ -1,4 +1,11 @@
 # Product price timeline
+## 2023-07-11
+🟡 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) added to archive - price is £3.40<br/>
+🟡 [Ocado Granny Smith Apples](./product-64863011.md) added to archive - price is £1.48<br/>
+🟡 [Ocado Carrots (1kg)](./product-63026011.md) added to archive - price is £0.65<br/>
+🟡 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) added to archive - price is £1.25<br/>
+🟡 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) added to archive - price is £2.10<br/>
+🟡 [M&S Scottish Oak Smoked Salmon Slices (100g)](./product-505092011.md) added to archive - price is £4.75<br/>
 ## 2023-06-29
 🟢 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.55 to £1.45 (-6%)<br/>
 ## 2023-06-27
