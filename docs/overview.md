@@ -25,3 +25,9 @@
 <img align="left" style="width:48%" alt="Halloumi (250g)" src="charts/product-65186011.png" />
 <img align="left" style="width:48%" alt="Fruit and fibre (500g)" src="charts/product-506077011.png" />
 <img align="left" style="width:48%" alt="Cheese and tomato pizza (465g)" src="charts/product-514022011.png" />
+<img align="left" style="width:48%" alt="Ocado Granny Smith Apples" src="charts/product-64863011.png" />
+<img align="left" style="width:48%" alt="M&S Squeezed Orange Juice with Bits" src="charts/product-505309011.png" />
+<img align="left" style="width:48%" alt="Ocado Carrots (1kg)" src="charts/product-63026011.png" />
+<img align="left" style="width:48%" alt="M&S Wholemeal Tortilla Wraps" src="charts/product-510858011.png" />
+<img align="left" style="width:48%" alt="Ocado Parmigiano Reggiano (200g)" src="charts/product-57272011.png" />
+<img align="left" style="width:48%" alt="M&S Scottish Oak Smoked Salmon Slices (100g)" src="charts/product-505092011.png" />
