@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-07-13
+🟢 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.65 to £0.55 (-15%)<br/>
+🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.25 to £1.80 (-20%)<br/>
 ## 2023-07-11
 🟡 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) added to archive - price is £3.40<br/>
 🟡 [Ocado Granny Smith Apples](./product-64863011.md) added to archive - price is £1.48<br/>
