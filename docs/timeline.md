@@ -1,4 +1,9 @@
 # Product price timeline
+## 2023-07-19
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
+🔴 [Ocado Granny Smith Apples](./product-64863011.md) changed price from £1.48 to £1.75 (+18%)<br/>
+🟢 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.40 to £1.10 (-21%)<br/>
 ## 2023-07-13
 🟢 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.65 to £0.55 (-15%)<br/>
 🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.25 to £1.80 (-20%)<br/>
