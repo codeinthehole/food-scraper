@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-07-26
+🟢 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.10 to £2.00 (-5%)<br/>
 ## 2023-07-19
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
