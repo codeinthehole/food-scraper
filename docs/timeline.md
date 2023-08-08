@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-08-08
+🔴 [Pure set honey (340g)](./product-520104011.md) changed price from £1.25 to £1.35 (+8%)<br/>
 ## 2023-07-26
 🟢 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.10 to £2.00 (-5%)<br/>
 ## 2023-07-19
