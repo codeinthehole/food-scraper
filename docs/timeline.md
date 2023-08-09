@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-08-09
+🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.80 to £1.85 (+3%)<br/>
 ## 2023-08-08
 🔴 [Pure set honey (340g)](./product-520104011.md) changed price from £1.25 to £1.35 (+8%)<br/>
 ## 2023-07-26
