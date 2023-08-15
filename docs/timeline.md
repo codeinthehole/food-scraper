@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-08-15
+🟢 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.55 to £0.50 (-9%)<br/>
 ## 2023-08-09
 🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.80 to £1.85 (+3%)<br/>
 ## 2023-08-08
