@@ -1,4 +1,9 @@
 # Product price timeline
+## 2023-08-16
+🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.10 to £1.40 (+27%)<br/>
+🔴 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £2.10 to £2.25 (+7%)<br/>
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.28 (-15%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.75 (-20%)<br/>
 ## 2023-08-15
 🟢 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.55 to £0.50 (-9%)<br/>
 ## 2023-08-09
