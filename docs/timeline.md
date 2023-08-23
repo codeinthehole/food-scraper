@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-08-23
+🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.80 to £1.85 (+3%)<br/>
 ## 2023-08-16
 🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.10 to £1.40 (+27%)<br/>
 🔴 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £2.10 to £2.25 (+7%)<br/>
