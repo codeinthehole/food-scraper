@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-09-13
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.28 to £1.50 (+17%)<br/>
 ## 2023-09-05
 🔴 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.25 to £1.30 (+4%)<br/>
 ## 2023-08-23
