@@ -1,4 +1,9 @@
 # Product price timeline
+## 2023-10-04
+🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.20 to £1.10 (-8%)<br/>
+🟢 [Large garlic](./product-91370011.md) changed price from £0.65 to £0.55 (-15%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.75 (-20%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.25 (-34%)<br/>
 ## 2023-09-13
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.28 to £1.50 (+17%)<br/>
