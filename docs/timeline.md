@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-10-14
+🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.10 to £0.90 (-18%)<br/>
 ## 2023-10-04
 🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.20 to £1.10 (-8%)<br/>
 🟢 [Large garlic](./product-91370011.md) changed price from £0.65 to £0.55 (-15%)<br/>
