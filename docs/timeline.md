@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-10-18
+🟢 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.40 to £3.20 (-6%)<br/>
 ## 2023-10-14
 🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.10 to £0.90 (-18%)<br/>
 ## 2023-10-04
