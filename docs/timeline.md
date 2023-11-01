@@ -1,4 +1,8 @@
 # Product price timeline
+## 2023-11-01
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
+🔴 [Brown onions (3 pack)](./product-65448011.md) changed price from £0.90 to £1.10 (+22%)<br/>
 ## 2023-10-28
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.25 to £1.30 (+4%)<br/>
 ## 2023-10-18
