@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-03
+🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.50 to £0.55 (+10%)<br/>
 ## 2023-11-01
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
