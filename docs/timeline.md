@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-04
+🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.45 to £3.60 (+4%)<br/>
 ## 2023-11-03
 🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.50 to £0.55 (+10%)<br/>
 ## 2023-11-01
