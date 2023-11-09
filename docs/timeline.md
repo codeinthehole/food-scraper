@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-09
+🟢 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.50 to £5.09 (-7%)<br/>
 ## 2023-11-04
 🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.45 to £3.60 (+4%)<br/>
 ## 2023-11-03
