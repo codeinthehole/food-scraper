@@ -56,7 +56,7 @@ To browse historic price changes, [look for commits][commits_list] with subject
 
 ### Installation
 
-Create a Python 3.10 virtualenv, then run::
+Create a Python 3.11 virtualenv, then run::
 
     make install
 
