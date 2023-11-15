@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-15
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.30 to £1.40 (+8%)<br/>
 ## 2023-11-09
 🟢 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.50 to £5.09 (-7%)<br/>
 ## 2023-11-04
