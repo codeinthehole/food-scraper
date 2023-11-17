@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-17
+🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.55 to £0.60 (+9%)<br/>
 ## 2023-11-15
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.30 to £1.40 (+8%)<br/>
 ## 2023-11-09
