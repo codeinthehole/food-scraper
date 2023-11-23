@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-11-23
+🔴 [Cucumber](./product-240875011.md) changed price from £0.79 to £0.80 (+1%)<br/>
 ## 2023-11-17
 🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.55 to £0.60 (+9%)<br/>
 ## 2023-11-15
