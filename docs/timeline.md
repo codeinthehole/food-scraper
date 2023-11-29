@@ -1,4 +1,8 @@
 # Product price timeline
+## 2023-11-29
+🔴 [Cucumber](./product-240875011.md) changed price from £0.80 to £0.85 (+6%)<br/>
+🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.70 to £1.44 (-15%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.75 (-20%)<br/>
 ## 2023-11-23
 🔴 [Cucumber](./product-240875011.md) changed price from £0.79 to £0.80 (+1%)<br/>
 ## 2023-11-17
