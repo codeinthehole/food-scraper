@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-12-05
+🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.85 to £2.00 (+8%)<br/>
 ## 2023-11-29
 🔴 [Cucumber](./product-240875011.md) changed price from £0.80 to £0.85 (+6%)<br/>
 🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.70 to £1.44 (-15%)<br/>
