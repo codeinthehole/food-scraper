@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-12-06
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.54 (-0%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.70 to £2.54 (-6%)<br/>
 ## 2023-12-05
 🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.85 to £2.00 (+8%)<br/>
 ## 2023-11-29
