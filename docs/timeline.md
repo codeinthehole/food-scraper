@@ -1,4 +1,7 @@
 # Product price timeline
+## 2023-12-28
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
+🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.44 to £1.70 (+18%)<br/>
 ## 2023-12-06
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.54 (-0%)<br/>
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.70 to £2.54 (-6%)<br/>
