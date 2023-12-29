@@ -1,4 +1,6 @@
 # Product price timeline
+## 2023-12-29
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.12 (-25%)<br/>
 ## 2023-12-28
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.75 to £5.95 (+25%)<br/>
 🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.44 to £1.70 (+18%)<br/>
