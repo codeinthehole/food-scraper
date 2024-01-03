@@ -1,4 +1,8 @@
 # Product price timeline
+## 2024-01-03
+🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.70 (+6%)<br/>
+🟢 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.30 to £1.25 (-4%)<br/>
+🟢 [Super seeded loaf (800g)](./product-510737011.md) changed price from £1.70 to £1.60 (-6%)<br/>
 ## 2023-12-29
 🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.12 (-25%)<br/>
 ## 2023-12-28
