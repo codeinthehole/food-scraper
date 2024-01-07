@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-01-07
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.54 (-0%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.70 to £2.54 (-6%)<br/>
 ## 2024-01-03
 🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.70 (+6%)<br/>
 🟢 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.30 to £1.25 (-4%)<br/>
