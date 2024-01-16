@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-01-16
+🔴 [Cucumber](./product-240875011.md) changed price from £0.85 to £0.89 (+5%)<br/>
 ## 2024-01-07
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.54 (-0%)<br/>
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.70 to £2.54 (-6%)<br/>
