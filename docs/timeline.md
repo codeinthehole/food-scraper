@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-01-22
+🟢 [Runny honey (340g)](./product-59394011.md) changed price from £1.50 to £1.25 (-17%)<br/>
 ## 2024-01-17
 🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.60 to £0.65 (+8%)<br/>
 ## 2024-01-16
