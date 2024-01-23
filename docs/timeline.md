@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-01-23
+🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £1.85 (-7%)<br/>
 ## 2024-01-22
 🟢 [Runny honey (340g)](./product-59394011.md) changed price from £1.50 to £1.25 (-17%)<br/>
 ## 2024-01-17
