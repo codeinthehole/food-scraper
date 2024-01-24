@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-01-24
+🟢 [Pure set honey (340g)](./product-520104011.md) changed price from £1.35 to £1.30 (-4%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.95 to £4.75 (-20%)<br/>
 ## 2024-01-23
 🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £1.85 (-7%)<br/>
 ## 2024-01-22
