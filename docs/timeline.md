@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-01-30
+🟢 [Blueberries (150g)](./product-53687011.md) changed price from £2.00 to £1.80 (-10%)<br/>
 ## 2024-01-25
 🔴 [Runny honey (340g)](./product-59394011.md) changed price from £1.25 to £1.50 (+20%)<br/>
 ## 2024-01-24
