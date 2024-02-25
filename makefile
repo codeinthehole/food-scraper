@@ -1,7 +1,7 @@
 # Virtualenv
 
 install:
-	pip install pip==23.1.2 pip-tools==6.13
+	pip install pip==24.0 pip-tools==7.4
 	pip-sync
 
 # Static analysis
