@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-03-01
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.12 to £1.50 (+34%)<br/>
 ## 2024-02-27
 🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.85 to £1.80 (-3%)<br/>
 ## 2024-02-21
