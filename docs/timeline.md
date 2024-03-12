@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-03-12
+🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.70 to £1.75 (+3%)<br/>
 ## 2024-03-01
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.12 to £1.50 (+34%)<br/>
 ## 2024-02-27
