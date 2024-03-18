@@ -40,8 +40,8 @@ def _generate_product_graph(
     axes.set_ylabel("Price")
 
     # Ensure X axis has sensible ticks.
-    locator = mdates.AutoDateLocator(minticks=3, maxticks=15)
-    formatter = mdates.ConciseDateFormatter(locator)
+    locator = mdates.AutoDateLocator(minticks=3, maxticks=15)  # type: ignore[no-untyped-call]
+    formatter = mdates.ConciseDateFormatter(locator)  # type: ignore[no-untyped-call]
     axes.xaxis.set_major_locator(locator)  # type: ignore[attr-defined]
     axes.xaxis.set_major_formatter(formatter)  # type: ignore[attr-defined]
 
