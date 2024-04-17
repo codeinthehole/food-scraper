@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-04-17
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
+🔴 [Pure set honey (340g)](./product-520104011.md) changed price from £1.30 to £1.45 (+12%)<br/>
 ## 2024-03-20
 🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.50 (-20%)<br/>
 ## 2024-03-12
