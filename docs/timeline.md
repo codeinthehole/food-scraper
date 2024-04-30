@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-04-30
+🟢 [Runny honey (340g)](./product-59394011.md) changed price from £1.25 to £1.10 (-12%)<br/>
 ## 2024-04-17
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
 🔴 [Pure set honey (340g)](./product-520104011.md) changed price from £1.30 to £1.45 (+12%)<br/>
