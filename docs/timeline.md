@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-05-04
+🔴 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.09 to £5.25 (+3%)<br/>
 ## 2024-05-01
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.20 to £3.40 (+6%)<br/>
 🔴 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.25 to £1.30 (+4%)<br/>
