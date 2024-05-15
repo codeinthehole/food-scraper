@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-05-15
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.27 (-15%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.50 (-20%)<br/>
 ## 2024-05-04
 🔴 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.09 to £5.25 (+3%)<br/>
 ## 2024-05-01
