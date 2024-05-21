@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-05-21
+🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.60 to £3.67 (+2%)<br/>
 ## 2024-05-15
 🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.27 (-15%)<br/>
 🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.50 (-20%)<br/>
