@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-05-22
+🟢 [Onken biopot natural yoghurt (1kg)](./product-32003011.md) changed price from £2.80 to £2.60 (-7%)<br/>
 ## 2024-05-21
 🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.60 to £3.67 (+2%)<br/>
 ## 2024-05-15
