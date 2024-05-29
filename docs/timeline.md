@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-05-29
+🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.80 to £2.00 (+11%)<br/>
 ## 2024-05-22
 🟢 [Onken biopot natural yoghurt (1kg)](./product-32003011.md) changed price from £2.80 to £2.60 (-7%)<br/>
 ## 2024-05-21
