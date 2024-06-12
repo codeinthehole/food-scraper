@@ -1,4 +1,8 @@
 # Product price timeline
+## 2024-06-12
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.27 to £1.50 (+18%)<br/>
+🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £1.80 (-10%)<br/>
 ## 2024-06-05
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.40 (-0%)<br/>
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.54 to £2.40 (-6%)<br/>
