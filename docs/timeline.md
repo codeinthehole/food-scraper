@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-06-14
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.25 (-17%)<br/>
 ## 2024-06-12
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.27 to £1.50 (+18%)<br/>
