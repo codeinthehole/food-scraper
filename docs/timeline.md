@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-06-19
+🔴 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.00 to £2.10 (+5%)<br/>
 ## 2024-06-14
 🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.25 (-17%)<br/>
 ## 2024-06-12
