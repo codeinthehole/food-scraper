@@ -11,9 +11,9 @@ attrs==23.2.0
     #   referencing
 beautifulsoup4==4.12.3
     # via -r requirements.in
-black==24.2.0
+black==24.4.2
     # via -r requirements.in
-certifi==2024.2.2
+certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
@@ -21,7 +21,7 @@ click==8.1.7
     # via
     #   -r requirements.in
     #   black
-contourpy==1.2.0
+contourpy==1.2.1
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
@@ -29,91 +29,91 @@ data-science-types==0.2.23
     # via -r requirements.in
 factory-boy==3.3.0
     # via -r requirements.in
-faker==23.2.1
+faker==26.0.0
     # via factory-boy
-flake8==7.0.0
+flake8==7.1.0
     # via
     #   -r requirements.in
     #   flake8-bugbear
     #   flake8-docstrings
-flake8-bugbear==24.2.6
+flake8-bugbear==24.4.26
     # via -r requirements.in
 flake8-docstrings==1.7.0
     # via -r requirements.in
-fonttools==4.49.0
+fonttools==4.53.1
     # via matplotlib
-idna==3.6
+idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
 isort==5.13.2
     # via -r requirements.in
-jsonschema==4.21.1
+jsonschema==4.23.0
     # via -r requirements.in
 jsonschema-specifications==2023.12.1
     # via jsonschema
 kiwisolver==1.4.5
     # via matplotlib
-matplotlib==3.8.3
+matplotlib==3.9.1
     # via -r requirements.in
 mccabe==0.7.0
     # via flake8
-mypy==1.8.0
+mypy==1.11.0
     # via -r requirements.in
 mypy-extensions==1.0.0
     # via
     #   black
     #   mypy
-numpy==1.26.4
+numpy==2.0.1
     # via
     #   contourpy
     #   matplotlib
-packaging==23.2
+packaging==24.1
     # via
     #   black
     #   matplotlib
     #   pytest
 pathspec==0.12.1
     # via black
-pillow==10.2.0
+pillow==10.4.0
     # via matplotlib
-platformdirs==4.2.0
+platformdirs==4.2.2
     # via black
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
-pycodestyle==2.11.1
+pycodestyle==2.12.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
 pyflakes==3.2.0
     # via flake8
-pyparsing==3.1.1
+pyparsing==3.1.2
     # via matplotlib
-pytest==8.0.2
+pytest==8.3.1
     # via
     #   -r requirements.in
     #   pytest-socket
 pytest-socket==0.7.0
     # via -r requirements.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   faker
     #   matplotlib
     #   time-machine
 pyyaml==6.0.1
     # via responses
-referencing==0.33.0
+referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
     #   types-jsonschema
-requests==2.31.0
+requests==2.32.3
     # via
     #   -r requirements.in
     #   responses
-responses==0.25.0
+responses==0.25.3
     # via -r requirements.in
-rpds-py==0.18.0
+rpds-py==0.19.0
     # via
     #   jsonschema
     #   referencing
@@ -123,19 +123,19 @@ snowballstemmer==2.2.0
     # via pydocstyle
 soupsieve==2.5
     # via beautifulsoup4
-time-machine==2.13.0
+time-machine==2.14.2
     # via -r requirements.in
-types-beautifulsoup4==4.12.0.20240106
+types-beautifulsoup4==4.12.0.20240511
     # via -r requirements.in
-types-html5lib==1.1.11.20240222
+types-html5lib==1.1.11.20240228
     # via types-beautifulsoup4
-types-jsonschema==4.21.0.20240118
+types-jsonschema==4.23.0.20240712
     # via -r requirements.in
-types-requests==2.31.0.20240218
+types-requests==2.32.0.20240712
     # via -r requirements.in
-typing-extensions==4.9.0
+typing-extensions==4.12.2
     # via mypy
-urllib3==2.2.1
+urllib3==2.2.2
     # via
     #   requests
     #   responses
