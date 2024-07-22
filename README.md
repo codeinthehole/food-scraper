@@ -51,11 +51,12 @@ To browse historic price changes, [look for commits][commits_list] with subject
 
 ### Installation
 
-Create a Python 3.11 virtualenv, then run::
+Create a Python 3.11 virtualenv. Ensure `uv` is installed as a system package
+(e.g. installed with `pipx`). Then run::
 
     make install
 
-which will install `pip-tools` and the necessary packages.
+which will install the necessary packages.
 
 ### Running the application
 
@@ -195,25 +196,28 @@ Run the CI tests with:
 
 ### Packages
 
-Packages are managed with [`pip-tools`](https://github.com/jazzband/pip-tools).
+Packages are managed with [`uv`].
 
-To add a new dependency, add it to `requirements.in` and run:
+[`uv`]: https://github.com/astral-sh/uv
 
-    pip-compile requirements.in
+To add a new dependency, add it to `pyproject.toml` and run:
 
-which will generate a new version of `requirements.txt`. Then run:
+    make install
 
-    pip-sync
+which will generate a new version of `requirements.txt` and install it.
 
-to install `requirements.txt`.
+To upgrade all dependencies inline with the constraints in `pyproject.toml`, run:
 
-To upgrade a dependency, run:
+    make upgrade
+    make install
 
-    pip-compile -P $package==$version requirements.in
+To upgrade a single dependency, run:
+
+    uv pip compile -P $package==$version pyproject.toml
 
 to update `requirements.txt`, then:
 
-    pip-sync
+    make install
 
 to install the upgraded package.
 
