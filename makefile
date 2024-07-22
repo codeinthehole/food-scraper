@@ -6,19 +6,16 @@ install:
 
 # Static analysis
 
-check: black isort flake8 mypy test
+check: ruff_format ruff_lint mypy test
 
 mypy:
 	mypy .
 
-black:
-	black --check .
+ruff_format:
+	ruff format --check .
 
-isort:
-	isort --check .
-
-flake8:
-	flake8
+ruff_lint:
+	ruff check .
 
 # Testing
 

@@ -25,28 +25,11 @@ repos:
       - id: trailing-whitespace
       - id: no-commit-to-branch
 
-  - repo: https://github.com/psf/black
-    rev: 23.3.0
-    hooks:
-      - id: black
-
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.3.1
     hooks:
       - id: pyupgrade
         args: [--py310-plus]
-
-  - repo: https://github.com/asottile/blacken-docs
-    rev: v1.12.1
-    hooks:
-      - id: blacken-docs
-        additional_dependencies: [black==22.12.0]
-
-  - repo: https://github.com/timothycrosley/isort
-    rev: 5.12.0
-    hooks:
-      - id: isort
-        additional_dependencies: [toml]
 
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0
@@ -56,7 +39,7 @@ repos:
       - id: python-check-mock-methods
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.13.10
+    rev: v1.22.4
     hooks:
       - id: typos
 
@@ -69,12 +52,20 @@ repos:
         entry: mypy
         require_serial: true
 
-      - id: flake8
-        name: flake8
+      - id: ruff-lint
+        name: ruff
         language: system
         types: [python]
-        entry: flake8
-        files: .*
+        entry: "ruff check"
+        args: [--fix, --exit-non-zero-on-fix]
+        require_serial: true
+
+      - id: ruff-format
+        name: ruff_format
+        language: system
+        types: [python]
+        entry: "ruff format"
+        require_serial: true
 
       - id: pytest
         name: pytest

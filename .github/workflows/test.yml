@@ -27,17 +27,13 @@ jobs:
         run: |-
           make install
 
-      - name: Check code is formatted with Black
+      - name: Check Ruff formatting
         run: |-
-          make black
+          make ruff_format
 
-      - name: Check code is formatted with isort
+      - name: Check Ruff linting
         run: |-
-          make isort
-
-      - name: Check code passes flake8 validation
-        run: |-
-          make flake8
+          make ruff_lint
 
       - name: Check code passes mypy validation
         run: |-

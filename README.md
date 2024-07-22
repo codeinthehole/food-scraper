@@ -36,16 +36,11 @@ updated.
 
 Any changes are committed to the repo.
 
-[products_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
-[prices_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/data/archive.json
-[timeline_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/docs/timeline.md
-[charts_folder]:
-  https://github.com/codeinthehole/food-scraper/blob/master/docs/charts/
-[overview_file]:
-  https://github.com/codeinthehole/food-scraper/blob/master/docs/overview.md
+[products_file]: https://github.com/codeinthehole/food-scraper/blob/master/data/products.json
+[prices_file]: https://github.com/codeinthehole/food-scraper/blob/master/data/archive.json
+[timeline_file]: https://github.com/codeinthehole/food-scraper/blob/master/docs/timeline.md
+[charts_folder]: https://github.com/codeinthehole/food-scraper/blob/master/docs/charts/
+[overview_file]: https://github.com/codeinthehole/food-scraper/blob/master/docs/overview.md
 
 To browse historic price changes, [look for commits][commits_list] with subject
 "Update price archive".
@@ -172,8 +167,8 @@ local checkout.
 
 Conventions:
 
-- Code must be formatted with `black` and `isort`.
-- Code must pass validation with `flake8`.
+- Code must be formatted with `ruff format`
+- Code must pass validation with `ruff check`.
 - Code must have type annotations and pass validation with `mypy`.
 
 Check formatting and type annotations with:
@@ -222,7 +217,5 @@ to update `requirements.txt`, then:
 
 to install the upgraded package.
 
-[gh_workflow_run]:
-  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
-[gh_workflow_charts]:
-  https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml
+[gh_workflow_run]: https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/run.yml
+[gh_workflow_charts]: https://github.com/codeinthehole/food-scraper/blob/master/.github/workflows/charts.yml
