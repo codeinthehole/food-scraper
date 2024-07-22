@@ -2,20 +2,23 @@ SHELL=/bin/bash
 
 # Versions
 PIP_VERSION=24.1.2
-PIP_TOOLS_VERSION=7.4.1
 
 # Virtualenv
 
 .PHONY: install
 install: install_prerequisites requirements.txt
-	pip-sync requirements.txt <(echo "-e .")
+	uv pip sync requirements.txt <(echo "-e .")
 
 .PHONY: install_prerequisites
 install_prerequisites:
-	pip install pip==$(PIP_VERSION) pip-tools==$(PIP_TOOLS_VERSION)
+	uv pip install pip==$(PIP_VERSION)
 
 requirements.txt: pyproject.toml
-	pip-compile 
+	uv pip compile pyproject.toml
+
+.PHONY: upgrade
+upgrade: install_prerequisites
+	uv pip compile -U pyproject.toml
 
 # Static analysis
 
