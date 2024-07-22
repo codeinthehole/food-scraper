@@ -9,21 +9,21 @@ attrs==23.2.0
     #   jsonschema
     #   referencing
 beautifulsoup4==4.12.3
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
 click==8.1.7
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 contourpy==1.2.1
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
 data-science-types==0.2.23
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 factory-boy==3.3.0
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 faker==26.0.0
     # via factory-boy
 fonttools==4.53.1
@@ -33,15 +33,15 @@ idna==3.7
 iniconfig==2.0.0
     # via pytest
 jsonschema==4.23.0
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 jsonschema-specifications==2023.12.1
     # via jsonschema
 kiwisolver==1.4.5
     # via matplotlib
 matplotlib==3.9.1
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 mypy==1.11.0
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 mypy-extensions==1.0.0
     # via mypy
 numpy==2.0.1
@@ -60,10 +60,10 @@ pyparsing==3.1.2
     # via matplotlib
 pytest==8.3.1
     # via
-    #   -r requirements.in
+    #   food-scraper (pyproject.toml)
     #   pytest-socket
 pytest-socket==0.7.0
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via
     #   faker
@@ -78,30 +78,30 @@ referencing==0.35.1
     #   types-jsonschema
 requests==2.32.3
     # via
-    #   -r requirements.in
+    #   food-scraper (pyproject.toml)
     #   responses
 responses==0.25.3
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 rpds-py==0.19.0
     # via
     #   jsonschema
     #   referencing
 ruff==0.5.4
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 six==1.16.0
     # via python-dateutil
 soupsieve==2.5
     # via beautifulsoup4
 time-machine==2.14.2
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 types-beautifulsoup4==4.12.0.20240511
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 types-html5lib==1.1.11.20240228
     # via types-beautifulsoup4
 types-jsonschema==4.23.0.20240712
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 types-requests==2.32.0.20240712
-    # via -r requirements.in
+    # via food-scraper (pyproject.toml)
 typing-extensions==4.12.2
     # via mypy
 urllib3==2.2.2

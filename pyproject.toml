@@ -1,0 +1,120 @@
+[tool.setuptools.packages.find]
+where = ["chow"]  
+namespaces = false  
+
+[project]
+name = "food-scraper"
+# Use static version for now.
+version = "0.1"
+requires-python = ">=3.11"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "click",
+    "matplotlib",
+    "jsonschema",
+    # Linting
+    "ruff",
+    # Type hints
+    "mypy",
+    "types-requests",
+    "types-beautifulsoup4",
+    "types-jsonschema",
+    # This stubs package is deprecated as pandas/numpy/etc are adding stubs
+    # to the main packages. We'll keep using it for now.
+    # https://github.com/wearepal/data-science-types
+    "data-science-types",
+    # Testing
+    "pytest",
+    "pytest-socket",
+    "factory-boy",
+    "responses",
+    "time-machine"
+]
+
+[tool.ruff]
+lint.select = [
+    # pycodestyle
+    "E",
+    # pyflakes
+    "F",
+    # isort
+    "I",
+]
+lint.ignore = [
+    "E501"
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Allow unused imports in `__init__.py` files as these are convenience imports
+"**/__init__.py" = [ "F401" ]
+
+[tool.ruff.lint.isort]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "project",
+    "local-folder",
+]
+
+[tool.ruff.lint.isort.sections]
+"project" = [
+    "chow",
+    "tests",
+]
+
+[tool.pytest.ini_options]
+# Common options
+addopts = "--tb=short -v --disable-socket"
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults - equivalent to:
+# --check-untyped-defs
+# --disallow-any-generics
+# --disallow-incomplete-defs
+# --disallow-subclassing-any
+# --disallow-untyped-calls
+# --disallow-untyped-decorators
+# --disallow-untyped-defs
+# --no-implicit-optional
+# --no-implicit-reexport
+# --strict-concatenate
+# --strict-equality
+# --warn-redundant-casts
+# --warn-return-any
+# --warn-unused-configs
+# --warn-unused-ignores
+strict = true
+
+# Output
+show_error_codes = true
+
+# Warn about code inferred to be unreachable.
+warn_unreachable = true
+
+# Warn about functions that end without returning.
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.factories"
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+# Ignore packages with no stubs.
+module = [
+    'factory',
+    'matplotlib.dates',
+    'matplotlib.ticker',
+]
+ignore_missing_imports = true
