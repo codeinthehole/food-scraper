@@ -6,11 +6,7 @@ matplotlib
 jsonschema
 
 # Linting
-black
-isort
-flake8
-flake8-bugbear
-flake8-docstrings
+ruff
 
 # Type hints
 mypy
