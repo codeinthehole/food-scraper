@@ -213,7 +213,7 @@ To upgrade all dependencies inline with the constraints in `pyproject.toml`, run
 
 To upgrade a single dependency, run:
 
-    uv pip compile -P $package==$version pyproject.toml
+    uv pip compile -P $package==$version --output-file requirements.txt pyproject.toml
 
 to update `requirements.txt`, then:
 
