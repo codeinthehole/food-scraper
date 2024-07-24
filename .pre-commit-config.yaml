@@ -26,10 +26,10 @@ repos:
       - id: no-commit-to-branch
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.16.0
     hooks:
       - id: pyupgrade
-        args: [--py310-plus]
+        args: [--py312-plus]
 
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0
