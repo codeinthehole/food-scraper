@@ -51,7 +51,7 @@ To browse historic price changes, [look for commits][commits_list] with subject
 
 ### Installation
 
-Create a Python 3.11 virtualenv. Ensure `uv` is installed as a system package
+Create a Python 3.12 virtualenv. Ensure `uv` is installed as a system package
 (e.g. installed with `pipx`). Then run::
 
     make install

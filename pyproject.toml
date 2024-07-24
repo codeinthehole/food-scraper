@@ -1,12 +1,12 @@
 [tool.setuptools.packages.find]
-where = ["chow"]  
-namespaces = false  
+where = ["chow"]
+namespaces = false
 
 [project]
 name = "food-scraper"
 # Use static version for now.
 version = "0.1"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "requests",
     "beautifulsoup4",
