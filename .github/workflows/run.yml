@@ -30,7 +30,7 @@ jobs:
         # Will install python version from .python-version
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install Python packages
         shell: bash
