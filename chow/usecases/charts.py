@@ -32,7 +32,7 @@ def _generate_product_graph(
     # Extract data series.
     dates, prices = _generate_data_series(product_data, end_date=datetime.date.today())
 
-    # Create graph object. The generated PNGs are 640x480 pixels.
+    # Create graph object. The generated PNG images are 640x480 pixels.
     figure, axes = plt.subplots()
     axes.plot(np.array(dates), prices, linestyle="--", marker="o")
     axes.set_title(product_data["name"])

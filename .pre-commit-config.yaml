@@ -39,7 +39,7 @@ repos:
       - id: python-check-mock-methods
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.22.4
+    rev: v1.23.3
     hooks:
       - id: typos
 
