@@ -14,11 +14,11 @@ install_prerequisites:
 	uv pip install pip==$(PIP_VERSION)
 
 requirements.txt: pyproject.toml
-	uv pip compile pyproject.toml
+	uv pip compile pyproject.toml --output-file requirements.txt
 
 .PHONY: upgrade
 upgrade: install_prerequisites
-	uv pip compile -U pyproject.toml
+	uv pip compile -U pyproject.toml --output-file requirements.txt
 
 # Static analysis
 
