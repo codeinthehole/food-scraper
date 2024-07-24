@@ -1,2 +1,8 @@
 [files]
 extend-exclude = ["data/*.json", "tests/fixtures/*.html"]
+
+[default.extend-words]
+PNG = "PNG"
+
+# A deliberately misspelled word used in a test.
+naem = "naem"
