@@ -69,7 +69,9 @@ def _fetch_product_prices(
                 price = future.result()
             except UnableToFetchPrice as e:
                 logger.error(
-                    "Unable to fetch price for product %s: %s" % (product["name"], e)
+                    "Unable to fetch price for product {}: {}".format(
+                        product["name"], e
+                    )
                 )
             else:
                 product_prices.append((product, price))
