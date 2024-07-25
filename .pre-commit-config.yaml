@@ -21,7 +21,6 @@ repos:
       - id: detect-aws-credentials
       - id: detect-private-key
       - id: requirements-txt-fixer
-      - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: no-commit-to-branch
 
