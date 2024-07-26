@@ -34,10 +34,11 @@ def _generate_product_graph(
 
     # Create graph object. The generated PNG images are 640x480 pixels.
     figure, axes = plt.subplots()
-    axes.plot(np.array(dates), prices, linestyle="--", marker="o")
+    axes.plot(np.array(dates), prices, linestyle="--")
     axes.set_title(product_data["name"])
     axes.set_xlabel("Date")
     axes.set_ylabel("Price")
+    axes.grid(True, linestyle="dotted")  # type: ignore[call-arg]
 
     # Ensure X axis has sensible ticks.
     locator = mdates.AutoDateLocator(minticks=3, maxticks=15)  # type: ignore[no-untyped-call]
