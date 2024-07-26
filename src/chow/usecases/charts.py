@@ -18,13 +18,18 @@ def generate_product_graphs(
     Generate price graph images for each produce in the passed archive file.
     """
     archive_data = archive.load(str(archive_filepath))
+
+    # Use a consistent max Y value for all graphs.
+    # TODO calculate this from the archive data
+    max_y_value = 8.0
+
     for product_id, product_data in archive_data.items():
         filepath = f"{chart_folder}/product-{product_id}.png"
-        _generate_product_graph(product_data, filepath)
+        _generate_product_graph(product_data, max_y_value, filepath)
 
 
 def _generate_product_graph(
-    product_data: archive.ProductPriceHistory, filepath: str
+    product_data: archive.ProductPriceHistory, max_y_value: float, filepath: str
 ) -> None:
     """
     Generate a price chart PNG file in the passed filepath.
@@ -47,7 +52,7 @@ def _generate_product_graph(
     axes.xaxis.set_major_formatter(formatter)  # type: ignore[attr-defined]
 
     # Ensure Y axis starts at zero and has fixed precision.
-    plt.ylim(0, max(prices) + 1)
+    plt.ylim(0, max_y_value)
     axes.yaxis.set_major_formatter(  # type: ignore[attr-defined]
         ticker.FormatStrFormatter("£%.2f")
     )
