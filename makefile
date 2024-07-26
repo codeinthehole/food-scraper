@@ -52,26 +52,26 @@ run: update_prices update_charts update_overview update_timeline update_product_
 update_prices:
 	@echo Updating /tmp/archive.json
 	cp data/archive.json /tmp/archive.json
-	python main.py update-price-archive data/products.json /tmp/archive.json
+	chow update-price-archive data/products.json /tmp/archive.json
 
 .PHONY: update_charts
 update_charts:
 	@echo Generating charts in /tmp/charts
 	mkdir -p /tmp/charts
-	python main.py generate-graphs data/archive.json /tmp/charts
+	chow generate-graphs data/archive.json /tmp/charts
 
 .PHONY: update_overview
 update_overview:
 	@echo Generating overview in /tmp/overview.md
-	python main.py generate-overview data/archive.json /tmp/charts /tmp/overview.md
+	chow generate-overview data/archive.json /tmp/charts /tmp/overview.md
 
 .PHONY: update_timeline
 update_timeline:
 	@echo Generating timeline in /tmp/timeline.md
-	python main.py generate-timeline data/archive.json /tmp/timeline.md
+	chow generate-timeline data/archive.json /tmp/timeline.md
 
 .PHONY: update_product_docs
 update_product_docs:
 	@echo Generating product docs in /tmp/product-docs
 	mkdir -p /tmp/product-docs
-	python main.py generate-product-documents data/archive.json /tmp/charts /tmp/
+	chow generate-product-documents data/archive.json /tmp/charts /tmp/

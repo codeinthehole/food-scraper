@@ -2,7 +2,7 @@ import json
 
 import time_machine
 
-import main
+import chow.__main__ as main
 
 
 def test_creates_product_graphs(runner, tmp_path, tmp_path_factory):

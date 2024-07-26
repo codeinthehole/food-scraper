@@ -4,7 +4,7 @@ import re
 import responses
 import time_machine
 
-import main
+import chow.__main__ as main
 
 
 @responses.activate
