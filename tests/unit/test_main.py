@@ -2,7 +2,7 @@ import io
 
 import pytest
 
-import main
+import chow.__main__ as main
 
 
 class TestLoadProducts:

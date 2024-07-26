@@ -60,10 +60,10 @@ which will install the necessary packages.
 
 ### Running the application
 
-The application entry-point is `main.py` which uses [click][click_site] to
+The application entry-point is `chow` which uses [click][click_site] to
 provide a series of subcommands. Run:
 
-    python main.py
+    chow
 
 to see a list of available commands.
 
@@ -73,7 +73,7 @@ to see a list of available commands.
 
 Update the price archive with:
 
-    python main.py update-price-archive $PRODUCTS_FILE $ARCHIVE_FILE
+    chow update-price-archive $PRODUCTS_FILE $ARCHIVE_FILE
 
 which will:
 
@@ -91,7 +91,7 @@ When [run as a Github action][gh_workflow_run], the products file is
 
 Generate a new set of product detail documents with:
 
-    python main.py generate-product-documents $ARCHIVE_FILE $CHARTS_FOLDER $DOCS_FOLDER
+    chow generate-product-documents $ARCHIVE_FILE $CHARTS_FOLDER $DOCS_FOLDER
 
 which will:
 
@@ -107,7 +107,7 @@ When [run as a Github action][gh_workflow_run], the archive file is
 
 Generate a new timeline document with:
 
-    python main.py generate-timeline $ARCHIVE_FILE $TIMELINE_FILE
+    chow generate-timeline $ARCHIVE_FILE $TIMELINE_FILE
 
 which will:
 
@@ -121,7 +121,7 @@ When [run as a Github action][gh_workflow_run], the archive file is
 
 Build new versions of the product price charts with:
 
-    python main.py generate-graphs $ARCHIVE_FILE $CHARTS_FOLDER
+    chow generate-graphs $ARCHIVE_FILE $CHARTS_FOLDER
 
 which will generate PNG chart images in `$CHARTS_FOLDER` based on the products
 in `$ARCHIVE_FILE`.
@@ -134,7 +134,7 @@ When [run as a Github action][gh_workflow_charts], the archive file is
 Build a Markdown overview document, that contains all product price graphs,
 with:
 
-    python main.py generate-overview $ARCHIVE_FILE $CHARTS_FOLDER $OVERVIEW_FILE
+    chow generate-overview $ARCHIVE_FILE $CHARTS_FOLDER $OVERVIEW_FILE
 
 which will collate the product price charts for the products in `$ARCHIVE_FILE`
 and store the overview document in `$OVERVIEW_FILE`.

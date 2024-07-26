@@ -3,7 +3,7 @@ import shutil
 
 import time_machine
 
-import main
+import chow.__main__ as main
 
 
 def test_creates_overview_doc(runner, fixture_path, tmp_path, tmp_path_factory):

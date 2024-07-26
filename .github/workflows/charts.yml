@@ -35,12 +35,12 @@ jobs:
       - name: Generate product charts
         shell: bash
         run: |-
-          python main.py generate-graphs data/archive.json docs/charts/
+          chow generate-graphs data/archive.json docs/charts/
 
       - name: Update overview document
         shell: bash
         run: |-
-          python main.py generate-overview data/archive.json docs/charts/ docs/overview.md
+          chow generate-overview data/archive.json docs/charts/ docs/overview.md
 
       - name: Commit and push any new charts
         shell: bash
