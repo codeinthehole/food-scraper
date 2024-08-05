@@ -918,5 +918,86 @@
                 "price": "4.75"
             }
         ]
+    },
+    "65453011": {
+        "name": "Re onions (3 pack)",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "1.10"
+            }
+        ]
+    },
+    "69181011": {
+        "name": "Ocado 14 Smoked Streaky Bacon Rashers",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "2.75"
+            }
+        ]
+    },
+    "511957011": {
+        "name": "MOMA Original Oat Drink Unsweetened",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "1.60"
+            }
+        ]
+    },
+    "59106011": {
+        "name": "Ocado Broccoli",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "0.77"
+            }
+        ]
+    },
+    "556966011": {
+        "name": "Ocado British Unsalted Butter",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "1.69"
+            }
+        ]
+    },
+    "60110011": {
+        "name": "Ocado Greek Feta",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "2.00"
+            }
+        ]
+    },
+    "592687011": {
+        "name": "BUDA Fresh Paneer",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "1.60"
+            }
+        ]
+    },
+    "600908011": {
+        "name": "M&S Fruit & Fibre Flakes",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "1.25"
+            }
+        ]
+    },
+    "528017011": {
+        "name": "M&S British Mature Cheddar",
+        "prices": [
+            {
+                "date": "2024-08-05",
+                "price": "4.00"
+            }
+        ]
     }
 }

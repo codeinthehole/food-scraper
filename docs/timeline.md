@@ -1,4 +1,14 @@
 # Product price timeline
+## 2024-08-05
+🟡 [Re onions (3 pack)](./product-65453011.md) added to archive - price is £1.10<br/>
+🟡 [Ocado Greek Feta](./product-60110011.md) added to archive - price is £2.00<br/>
+🟡 [Ocado Broccoli](./product-59106011.md) added to archive - price is £0.77<br/>
+🟡 [Ocado British Unsalted Butter](./product-556966011.md) added to archive - price is £1.69<br/>
+🟡 [Ocado 14 Smoked Streaky Bacon Rashers](./product-69181011.md) added to archive - price is £2.75<br/>
+🟡 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) added to archive - price is £1.60<br/>
+🟡 [M&S Fruit & Fibre Flakes](./product-600908011.md) added to archive - price is £1.25<br/>
+🟡 [M&S British Mature Cheddar](./product-528017011.md) added to archive - price is £4.00<br/>
+🟡 [BUDA Fresh Paneer](./product-592687011.md) added to archive - price is £1.60<br/>
 ## 2024-07-18
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.40 to £3.50 (+3%)<br/>
 ## 2024-07-10
