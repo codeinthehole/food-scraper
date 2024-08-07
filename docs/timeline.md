@@ -1,4 +1,8 @@
 # Product price timeline
+## 2024-08-07
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.60 to £1.80 (+12%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.25 (-34%)<br/>
 ## 2024-08-05
 🟡 [Re onions (3 pack)](./product-65453011.md) added to archive - price is £1.10<br/>
 🟡 [Ocado Greek Feta](./product-60110011.md) added to archive - price is £2.00<br/>
