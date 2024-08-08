@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-08-08
+🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.65 to £0.69 (+6%)<br/>
 ## 2024-08-07
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.60 (+24%)<br/>
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.60 to £1.80 (+12%)<br/>
