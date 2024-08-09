@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-08-09
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £0.84 (-40%)<br/>
 ## 2024-08-08
 🔴 [Ocado Carrots (1kg)](./product-63026011.md) changed price from £0.65 to £0.69 (+6%)<br/>
 ## 2024-08-07
