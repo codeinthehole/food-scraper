@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-08-30
+🔴 [Ocado British Unsalted Butter](./product-556966011.md) changed price from £1.69 to £1.80 (+7%)<br/>
 ## 2024-08-09
 🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £0.84 (-40%)<br/>
 ## 2024-08-08
