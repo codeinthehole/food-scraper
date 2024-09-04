@@ -1,4 +1,9 @@
 # Product price timeline
+## 2024-09-04
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £0.84 to £1.40 (+67%)<br/>
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.27 to £1.50 (+18%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.40 (-21%)<br/>
 ## 2024-08-30
 🔴 [Ocado British Unsalted Butter](./product-556966011.md) changed price from £1.69 to £1.80 (+7%)<br/>
 ## 2024-08-09
