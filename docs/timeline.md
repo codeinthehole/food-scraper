@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-09-12
+🔴 [M&S Scottish Oak Smoked Salmon Slices (100g)](./product-505092011.md) changed price from £4.75 to £5.00 (+5%)<br/>
 ## 2024-09-04
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £0.84 to £1.40 (+67%)<br/>
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.25 to £1.90 (+52%)<br/>
