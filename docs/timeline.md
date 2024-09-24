@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-09-24
+🟢 [M&S Fruit & Fibre Flakes](./product-600908011.md) changed price from £1.25 to £1.10 (-12%)<br/>
 ## 2024-09-12
 🔴 [M&S Scottish Oak Smoked Salmon Slices (100g)](./product-505092011.md) changed price from £4.75 to £5.00 (+5%)<br/>
 ## 2024-09-04
