@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-10-02
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.40 to £5.60 (+27%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.80 to £1.40 (-22%)<br/>
 ## 2024-09-24
 🟢 [M&S Fruit & Fibre Flakes](./product-600908011.md) changed price from £1.25 to £1.10 (-12%)<br/>
 ## 2024-09-12
