@@ -1,4 +1,10 @@
 # Product price timeline
+## 2024-10-30
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £1.80 (+29%)<br/>
+🔴 [Ocado British Unsalted Butter](./product-556966011.md) changed price from £1.80 to £1.90 (+6%)<br/>
+🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.85 to £1.95 (+5%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.40 (-21%)<br/>
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.12 (-25%)<br/>
 ## 2024-10-15
 🟢 [Re onions (3 pack)](./product-65453011.md) changed price from £1.10 to £1.00 (-9%)<br/>
 🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.10 to £1.00 (-9%)<br/>
