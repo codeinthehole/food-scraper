@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-10-31
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.12 (-20%)<br/>
 ## 2024-10-30
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £1.80 (+29%)<br/>
 🔴 [Ocado British Unsalted Butter](./product-556966011.md) changed price from £1.80 to £1.90 (+6%)<br/>
