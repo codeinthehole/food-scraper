@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-11-06
+🟢 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £2.25 to £1.90 (-16%)<br/>
 ## 2024-10-31
 🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.12 (-20%)<br/>
 ## 2024-10-30
