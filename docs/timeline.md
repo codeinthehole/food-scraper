@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-11-09
+🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.80 to £2.00 (+11%)<br/>
 ## 2024-11-06
 🟢 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £2.25 to £1.90 (-16%)<br/>
 ## 2024-10-31
