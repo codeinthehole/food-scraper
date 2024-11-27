@@ -1,4 +1,8 @@
 # Product price timeline
+## 2024-11-27
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.40 to £5.60 (+27%)<br/>
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.12 to £1.40 (+25%)<br/>
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.80 to £2.00 (+11%)<br/>
 ## 2024-11-23
 🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £2.10 (+5%)<br/>
 ## 2024-11-13
