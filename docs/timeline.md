@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-12-10
+🔴 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.10 to £2.25 (+7%)<br/>
 ## 2024-12-03
 🔴 [Blueberries (150g)](./product-53687011.md) changed price from £1.80 to £2.00 (+11%)<br/>
 ## 2024-11-27
