@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-12-15
+🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.75 to £1.48 (-15%)<br/>
 ## 2024-12-10
 🔴 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.10 to £2.25 (+7%)<br/>
 ## 2024-12-03
