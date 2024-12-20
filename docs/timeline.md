@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-12-20
+🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
 ## 2024-12-15
 🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.75 to £1.48 (-15%)<br/>
 ## 2024-12-10
