@@ -1,4 +1,7 @@
 # Product price timeline
+## 2024-12-25
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.12 to £1.50 (+34%)<br/>
+🟢 [Ocado Broccoli](./product-59106011.md) changed price from £0.82 to £0.77 (-6%)<br/>
 ## 2024-12-20
 🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
 ## 2024-12-15
