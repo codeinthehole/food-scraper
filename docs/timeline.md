@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-12-26
+🔴 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.30 to £1.35 (+4%)<br/>
 ## 2024-12-25
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.12 to £1.50 (+34%)<br/>
 🟢 [Ocado Broccoli](./product-59106011.md) changed price from £0.82 to £0.77 (-6%)<br/>
