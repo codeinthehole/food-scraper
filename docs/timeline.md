@@ -1,4 +1,6 @@
 # Product price timeline
+## 2024-12-29
+🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
 ## 2024-12-26
 🔴 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.30 to £1.35 (+4%)<br/>
 ## 2024-12-25
