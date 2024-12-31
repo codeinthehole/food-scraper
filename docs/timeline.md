@@ -1,4 +1,8 @@
 # Product price timeline
+## 2024-12-31
+🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.48 to £1.75 (+18%)<br/>
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.12 (-20%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.60 to £4.30 (-23%)<br/>
 ## 2024-12-29
 🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
 ## 2024-12-26
