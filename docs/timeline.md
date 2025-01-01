@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-01-01
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.40 (-30%)<br/>
 ## 2024-12-31
 🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.48 to £1.75 (+18%)<br/>
 🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.12 (-20%)<br/>
