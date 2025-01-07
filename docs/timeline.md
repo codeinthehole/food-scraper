@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-01-07
+🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.50 to £3.70 (+6%)<br/>
+🔴 [Ocado British Unsalted Butter](./product-556966011.md) changed price from £1.90 to £2.00 (+5%)<br/>
 ## 2025-01-01
 🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.40 (-30%)<br/>
 ## 2024-12-31
