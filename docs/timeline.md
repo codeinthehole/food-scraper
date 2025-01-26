@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-01-26
+🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.50 to £3.70 (+6%)<br/>
+🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.50 (+4%)<br/>
+🔴 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.45 to £5.50 (+1%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.50 to £2.50 (-0%)<br/>
 ## 2025-01-24
 🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.10 to £2.00 (-5%)<br/>
 ## 2025-01-20
