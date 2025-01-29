@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-01-29
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.30 to £5.70 (+33%)<br/>
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.12 to £1.40 (+25%)<br/>
+🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.40 to £1.50 (+7%)<br/>
 ## 2025-01-26
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.50 to £3.70 (+6%)<br/>
 🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.50 (+4%)<br/>
