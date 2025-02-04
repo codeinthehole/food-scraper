@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-02-04
+🟢 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.90 to £3.75 (-4%)<br/>
 ## 2025-01-29
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.30 to £5.70 (+33%)<br/>
