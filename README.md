@@ -77,15 +77,13 @@ Update the price archive with:
 
 which will:
 
-- Take the products from `$PRODUCTS_FILE` and update `$ARCHIVE_FILE` with any
-  new or updates prices.
+- Take the products from `$PRODUCTS_FILE` and update `$ARCHIVE_FILE` with
+  the latest prices.
 
 - Print a summary of the changes to STDOUT.
 
 When [run as a Github action][gh_workflow_run], the products file is
 `data/products.json` and the archive file is `data/archive.json`.
-
-</details>
 
 #### Generate product detail documents
 
