@@ -1223,5 +1223,14 @@
                 "price": "4.00"
             }
         ]
+    },
+    "613748011": {
+        "name": "Lurpak Slightly Salted Spreadable Butter (400g)",
+        "prices": [
+            {
+                "date": "2025-02-08",
+                "price": "3.75"
+            }
+        ]
     }
 }
