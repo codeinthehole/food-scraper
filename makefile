@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 
 # Versions
-PIP_VERSION=24.1.2
+PIP_VERSION=25.0
 
 # Virtualenv
 
