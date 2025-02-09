@@ -40,3 +40,4 @@
 <img align="left" style="width:48%" alt="BUDA Fresh Paneer" src="charts/product-592687011.png" />
 <img align="left" style="width:48%" alt="M&S Fruit & Fibre Flakes" src="charts/product-600908011.png" />
 <img align="left" style="width:48%" alt="M&S British Mature Cheddar" src="charts/product-528017011.png" />
+<img align="left" style="width:48%" alt="Lurpak Slightly Salted Spreadable Butter (400g)" src="charts/product-613748011.png" />
