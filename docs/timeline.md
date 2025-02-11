@@ -1,5 +1,8 @@
 # Product price timeline
+## 2025-02-11
+🟢 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.75 to £3.25 (-13%)<br/>
 ## 2025-02-08
+🟡 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) added to archive - price is £3.75<br/>
 🟢 [Blueberries (150g)](./product-53687011.md) changed price from £2.00 to £1.90 (-5%)<br/>
 ## 2025-02-04
 🟢 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.90 to £3.75 (-4%)<br/>
