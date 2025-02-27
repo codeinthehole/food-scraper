@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-02-27
+🔴 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.25 to £3.75 (+15%)<br/>
 ## 2025-02-26
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.75 to £4.75 (+27%)<br/>
 🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.27 (-15%)<br/>
