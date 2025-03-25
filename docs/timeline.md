@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-03-25
+🔴 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.70 to £1.90 (+12%)<br/>
+🟢 [Ocado Greek Feta](./product-60110011.md) changed price from £2.10 to £1.80 (-14%)<br/>
 ## 2025-02-27
 🔴 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.25 to £3.75 (+15%)<br/>
 ## 2025-02-26
