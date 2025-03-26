@@ -1,4 +1,12 @@
 # Product price timeline
+## 2025-03-26
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.30 to £5.70 (+33%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.27 to £1.50 (+18%)<br/>
+🟢 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.75 to £3.25 (-13%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.75 (-21%)<br/>
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.10 (-21%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.50 (-25%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.35 (-29%)<br/>
 ## 2025-03-25
 🔴 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.70 to £1.90 (+12%)<br/>
 🟢 [Ocado Greek Feta](./product-60110011.md) changed price from £2.10 to £1.80 (-14%)<br/>
