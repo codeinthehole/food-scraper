@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-03-28
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.40 (-0%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.50 to £2.40 (-4%)<br/>
 ## 2025-03-26
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.30 to £5.70 (+33%)<br/>
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.27 to £1.50 (+18%)<br/>
