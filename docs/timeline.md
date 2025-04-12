@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-04-12
+🔴 [Runny honey (340g)](./product-59394011.md) changed price from £1.10 to £1.20 (+9%)<br/>
 ## 2025-03-28
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.40 (-0%)<br/>
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.50 to £2.40 (-4%)<br/>
