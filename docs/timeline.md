@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-04-15
+🔴 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.45 to £1.55 (+7%)<br/>
 ## 2025-04-14
 🟢 [Ocado 14 Smoked Streaky Bacon Rashers](./product-69181011.md) changed price from £2.75 to £2.45 (-11%)<br/>
 ## 2025-04-12
