@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-04-22
+🔴 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.25 to £3.50 (+8%)<br/>
+🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.67 to £3.79 (+3%)<br/>
 ## 2025-04-17
 🔴 [M&S Wholemeal Tortilla Wraps](./product-510858011.md) changed price from £1.35 to £1.50 (+11%)<br/>
 🔴 [Super seeded loaf (800g)](./product-510737011.md) changed price from £1.60 to £1.70 (+6%)<br/>
