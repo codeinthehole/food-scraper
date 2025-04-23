@@ -1,4 +1,12 @@
 # Product price timeline
+## 2025-04-23
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.35 to £1.90 (+41%)<br/>
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.50 to £2.00 (+33%)<br/>
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.10 to £1.40 (+27%)<br/>
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.75 to £4.75 (+27%)<br/>
+🔴 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.50 to £4.00 (+14%)<br/>
+🟢 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £1.90 (-5%)<br/>
+🟢 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.50 to £1.20 (-20%)<br/>
 ## 2025-04-22
 🔴 [Cheese and tomato pizza (465g)](./product-514022011.md) changed price from £3.25 to £3.50 (+8%)<br/>
 🔴 [Chicken thigh fillets (450g)](./product-225627011.md) changed price from £3.67 to £3.79 (+3%)<br/>
