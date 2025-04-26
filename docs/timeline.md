@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-04-26
+🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.95 to £2.00 (+3%)<br/>
 ## 2025-04-23
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.35 to £1.90 (+41%)<br/>
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.50 to £2.00 (+33%)<br/>
