@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-05-01
+🔴 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.50 to £6.50 (+18%)<br/>
 ## 2025-04-29
 🔴 [Ocado Greek Feta](./product-60110011.md) changed price from £1.80 to £2.10 (+17%)<br/>
 ## 2025-04-26
