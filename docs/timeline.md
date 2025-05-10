@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-05-10
+🟢 [Large garlic](./product-91370011.md) changed price from £0.55 to £0.40 (-27%)<br/>
 ## 2025-05-01
 🔴 [Parmigiano reggiano (320g)](./product-98385011.md) changed price from £5.50 to £6.50 (+18%)<br/>
 ## 2025-04-29
