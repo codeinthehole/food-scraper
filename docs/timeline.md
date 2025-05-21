@@ -1,4 +1,8 @@
 # Product price timeline
+## 2025-05-21
+🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.20 to £1.50 (+25%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.75 (-21%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.50 (-25%)<br/>
 ## 2025-05-10
 🟢 [Large garlic](./product-91370011.md) changed price from £0.55 to £0.40 (-27%)<br/>
 ## 2025-05-01
