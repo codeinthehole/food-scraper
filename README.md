@@ -4,7 +4,7 @@ A Git scraper repo for collecting prices from Ocado.
 
 Contents:
 
-- [What does this do?](#what-does-this-do?)
+- [What does this do?](#what-does-this-do)
 - [Local development](#local-development)
   - [Installation](#installation)
   - [Running the application](#running-the-application)
