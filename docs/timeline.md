@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-05-30
+🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.70 to £3.75 (+1%)<br/>
 ## 2025-05-21
 🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.20 to £1.50 (+25%)<br/>
 🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.75 (-21%)<br/>
@@ -152,7 +154,7 @@
 🟡 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) added to archive - price is £1.60<br/>
 🟡 [M&S Fruit & Fibre Flakes](./product-600908011.md) added to archive - price is £1.25<br/>
 🟡 [M&S British Mature Cheddar](./product-528017011.md) added to archive - price is £4.00<br/>
-🟡 [BUDDHA Fresh Paneer](./product-592687011.md) added to archive - price is £1.60<br/>
+🟡 [BUDA Fresh Paneer](./product-592687011.md) added to archive - price is £1.60<br/>
 ## 2024-07-18
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.40 to £3.50 (+3%)<br/>
 ## 2024-07-10
