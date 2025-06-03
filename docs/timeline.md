@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-06-03
+🔴 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.25 to £2.40 (+7%)<br/>
 ## 2025-05-30
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.70 to £3.75 (+1%)<br/>
 ## 2025-05-21
