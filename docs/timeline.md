@@ -1,4 +1,8 @@
 # Product price timeline
+## 2025-06-12
+🟢 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £2.00 to £1.95 (-3%)<br/>
+🟢 [Re onions (3 pack)](./product-65453011.md) changed price from £1.00 to £0.95 (-5%)<br/>
+🟢 [Brown onions (3 pack)](./product-65448011.md) changed price from £1.00 to £0.95 (-5%)<br/>
 ## 2025-06-03
 🔴 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.25 to £2.40 (+7%)<br/>
 ## 2025-05-30
