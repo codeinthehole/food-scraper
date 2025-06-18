@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-06-18
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.50 to £2.00 (+33%)<br/>
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.75 to £4.75 (+27%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.70 to £4.50 (-21%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.35 (-29%)<br/>
 ## 2025-06-12
 🟢 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £2.00 to £1.95 (-3%)<br/>
 🟢 [Re onions (3 pack)](./product-65453011.md) changed price from £1.00 to £0.95 (-5%)<br/>
