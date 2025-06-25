@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-06-25
+🔴 [M&S Fruit & Fibre Flakes](./product-600908011.md) changed price from £1.10 to £1.20 (+9%)<br/>
+🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.95 to £2.00 (+3%)<br/>
 ## 2025-06-18
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.50 to £2.00 (+33%)<br/>
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.75 to £4.75 (+27%)<br/>
