@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-07-03
+🔴 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.55 to £1.65 (+6%)<br/>
 ## 2025-06-25
 🔴 [M&S Fruit & Fibre Flakes](./product-600908011.md) changed price from £1.10 to £1.20 (+9%)<br/>
 🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £1.95 to £2.00 (+3%)<br/>
