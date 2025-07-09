@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-07-09
+🟢 [Ocado Broccoli](./product-59106011.md) changed price from £0.82 to £0.77 (-6%)<br/>
 ## 2025-07-03
 🔴 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.55 to £1.65 (+6%)<br/>
 ## 2025-06-25
