@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-07-16
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.35 to £1.90 (+41%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.70 (+27%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.50 (-26%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.40 (-30%)<br/>
 ## 2025-07-09
 🟢 [Ocado Broccoli](./product-59106011.md) changed price from £0.82 to £0.77 (-6%)<br/>
 ## 2025-07-03
