@@ -2,25 +2,6 @@
 
 A Git scraper repo for collecting prices from Ocado.
 
-Contents:
-
-- [What does this do?](#what-does-this-do)
-- [Local development](#local-development)
-  - [Installation](#installation)
-  - [Running the application](#running-the-application)
-    - [Update price archive](#update-price-archive)
-    - [Generate product detail documents](#generate-product-detail-documents)
-    - [Generate timeline document](#generate-timeline-document)
-    - [Generate product price charts](#generate-product-price-charts)
-    - [Generate overview document](#generate-overview-document)
-    - [Smoke test](#smoke-test)
-  - [Application development](#application-development)
-    - [Conventions](#conventions)
-  - [Testing](#testing)
-    - [Test suite structure](#test-suite-structure)
-    - [Running tests](#running-tests)
-  - [Packages](#packages)
-
 ## What does this do?
 
 Once a day, the prices for a list of products (declared in
