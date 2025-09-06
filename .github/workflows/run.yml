@@ -1,4 +1,3 @@
----
 name: Update price archive and update product detail and timeline documents
 
 on:
@@ -19,40 +18,33 @@ jobs:
       - name: Check out this repo
         # https://github.com/actions/checkout
         uses: actions/checkout@v4
-
       - name: Install UV
         run: |-
           curl -LsSf https://astral.sh/uv/install.sh | sh
           echo "UV_SYSTEM_PYTHON=1" >> $GITHUB_ENV
-
       - name: Install Python
         # https://github.com/actions/setup-python
         # Will install python version from .python-version
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
       - name: Install Python packages
         shell: bash
         run: |-
           make install
-
       - name: Update price archive
         shell: bash
         run: |-
           # Run price fetching and capture change summary (if there is one) into a file.
           chow update-price-archive data/products.json data/archive.json | tee commit_msg.txt
-
       - name: Generate product detail documents
         shell: bash
         run: |-
           chow generate-product-documents data/archive.json docs/charts docs/
-
       - name: Generate timeline
         shell: bash
         run: |-
           chow generate-timeline data/archive.json docs/timeline.md
-
       - name: Commit and push if it changed
         shell: bash
         run: |-

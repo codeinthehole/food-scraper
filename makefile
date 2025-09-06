@@ -37,6 +37,10 @@ ruff_format:
 ruff_lint:
 	ruff check .
 
+.PHONY: yamlfix
+yamlfix:
+	yamlfix --check .
+
 # Testing
 
 .PHONY: test
