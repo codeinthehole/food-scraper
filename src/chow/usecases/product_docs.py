@@ -55,6 +55,13 @@ def _product_detail_markdown(
 
     # Build a list of markdown lines.
     lines = [f"# {price_changes['name']}", f"![]({chart_url})"]
+
+    # Add removal status note
+    if price_changes.get("removed", False):
+        lines.append("**Note: This product has been removed from the Ocado catalog.**")
+    else:
+        lines.append("**Note: This product is still available in the Ocado catalog.**")
+
     for date, description in date_descriptions:
         lines.append(f"## {date}")
         lines.append(description)

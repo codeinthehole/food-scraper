@@ -106,14 +106,19 @@ class TestUpdatePriceArchive:
         product_prices = [
             (price_fetching.Product(name="Sample product", ocado_product_id="123"), 120)
         ]
+        missing_products: list[price_fetching.Product] = []
 
         new_archive = price_fetching._update_price_archive(
-            price_date=price_date, product_prices=product_prices, price_archive={}
+            price_date=price_date,
+            product_prices=product_prices,
+            missing_products=missing_products,
+            price_archive={},
         )
 
         assert new_archive == {
             "123": {
                 "name": "Sample product",
+                "removed": False,
                 "prices": [{"date": "2023-04-01", "price": "1.20"}],
             }
         }
