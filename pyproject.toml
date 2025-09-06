@@ -33,7 +33,8 @@ dependencies = [
     "pytest-socket",
     "factory-boy<3.3.3",
     "responses",
-    "time-machine"
+    "time-machine",
+    "yamlfix",
 ]
 
 [project.scripts]
@@ -121,3 +122,12 @@ module = [
     'matplotlib.ticker',
 ]
 ignore_missing_imports = true
+
+[tool.yamlfix]
+# See https://lyz-code.github.io/yamlfix/#configuration-options
+whitelines = 1
+section_whitelines = 1
+preserve_quotes = true
+explicit_start = false
+line_length = 120
+sequence_style = "keep_style"

@@ -25,6 +25,7 @@ class TestLoad:
                 "prices": [
                     {"date": "2022-10-02", "price": "5.00"},
                 ],
+                "removed": False,
             },
         }
         archive_file.write_text(json.dumps(content))

@@ -36,6 +36,7 @@ def test_create_archive_file(runner, fixture, tmp_path):
     assert content == {
         "123": {
             "name": "Crisps",
+            "removed": False,
             "prices": [
                 {
                     "date": "2022-11-01",
