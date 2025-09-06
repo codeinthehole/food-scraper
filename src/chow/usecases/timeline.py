@@ -26,6 +26,8 @@ def generate_timeline_file(
     # Convert products data into timeline datastructure.
     timeline_data = _convert_to_timeline(products_data)
 
+    missing_products = _generate_missing_products_summary(products_data)
+
     with timeline_filepath.open("w") as f:
         f.write("# Product price timeline\n")
         for timeline_date in timeline_data:
@@ -33,6 +35,29 @@ def generate_timeline_file(
             for description in timeline_date["event_descriptions"]:
                 line += f"{description}<br/>\n"
             f.write(line)
+
+        if missing_products:
+            f.write("## Missing products\n")
+            f.write(f"{missing_products}\n")
+
+
+def _generate_missing_products_summary(products_data: archive.ArchiveProductMap) -> str:
+    """
+    Return a summary of the products that are missing.
+    """
+    missing_product_names: list[str] = []
+    for product_id, product_data in products_data.items():
+        if product_data.get("removed", False):
+            missing_product_names.append(product_data["name"])
+
+    if not missing_product_names:
+        return ""
+
+    lines = ["The following products are no longer available:<br/>"]
+    for name in sorted(missing_product_names):
+        lines.append(f"- {name}")
+
+    return "\n".join(lines)
 
 
 def _convert_to_timeline(products_data: archive.ArchiveProductMap) -> Timeline:
