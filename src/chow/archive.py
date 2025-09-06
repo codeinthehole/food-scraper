@@ -12,6 +12,7 @@ class PriceChange(TypedDict):
 
 class ProductPriceHistory(TypedDict):
     name: str
+    removed: bool
     prices: list[PriceChange]
 
 
@@ -48,6 +49,9 @@ ARCHIVE_SCHEMA = {
                         "required": ["date", "price"],
                         "additionalProperties": False,
                     },
+                },
+                "removed": {
+                    "type": "boolean",
                 },
             },
             "required": ["name", "prices"],

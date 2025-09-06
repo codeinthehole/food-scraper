@@ -27,13 +27,14 @@ def update_price_archive(
     Fetch prices for the passed products and update the price archive.
     """
     # Fetch product prices.
-    product_prices = _fetch_product_prices(products, logger)
+    product_prices, missing_products = _fetch_product_prices(products, logger)
 
     # Update archive file.
     current_archive = archive.load(archive_filepath)
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
         product_prices=product_prices,
+        missing_products=missing_products,
         price_archive=current_archive,
     )
 
@@ -47,9 +48,9 @@ def update_price_archive(
 
 def _fetch_product_prices(
     products: Products, logger: logger.ConsoleLogger
-) -> _ProductPrices:
+) -> tuple[_ProductPrices, Products]:
     """
-    Return a list of product prices.
+    Return a list of product prices and a list of products for which prices couldn't be fetched.
     """
     # Use a thread pool to fetch prices concurrently.
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
@@ -63,6 +64,7 @@ def _fetch_product_prices(
 
         # Loop over the completed futures and update the product data dict.
         product_prices: _ProductPrices = []
+        missing_products: Products = []
         for future in concurrent.futures.as_completed(future_to_data):
             product = future_to_data[future]
             try:
@@ -73,10 +75,11 @@ def _fetch_product_prices(
                         product["name"], e
                     )
                 )
+                missing_products.append(product)
             else:
                 product_prices.append((product, price))
 
-    return product_prices
+    return product_prices, missing_products
 
 
 class UnableToFetchPrice(Exception):
@@ -135,6 +138,7 @@ def _extract_price(content: str) -> int:
 def _update_price_archive(
     price_date: datetime.date,
     product_prices: _ProductPrices,
+    missing_products: Products,
     price_archive: archive.ArchiveProductMap,
 ) -> archive.ArchiveProductMap:
     """
@@ -155,6 +159,7 @@ def _update_price_archive(
                         "price": price_in_pounds,
                     }
                 ],
+                "removed": False,
             }
         else:
             # Known product - see if price history needs updated.
@@ -167,6 +172,13 @@ def _update_price_archive(
                         "price": price_in_pounds,
                     }
                 )
+
+    # Mark any missing products.
+    for product in missing_products:
+        product_id = product["ocado_product_id"]
+        product_data = updated_archive.get(product_id)
+        if product_data:
+            updated_archive[product_id]["removed"] = True
 
     return updated_archive
 
