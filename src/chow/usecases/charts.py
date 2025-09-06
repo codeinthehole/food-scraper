@@ -39,7 +39,7 @@ def _generate_product_graph(
 
     # Create graph object. The generated PNG images are 640x480 pixels.
     figure, axes = plt.subplots()
-    axes.plot(np.array(dates), prices, linestyle="--")
+    axes.plot(np.array(dates), prices, linestyle="--")  # type: ignore[arg-type]
     axes.set_title(product_data["name"])
     axes.set_xlabel("Date")
     axes.set_ylabel("Price")
