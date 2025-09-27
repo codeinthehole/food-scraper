@@ -11,12 +11,14 @@ from tests import factories
 class TestFetchOcadoPrice:
     @mock.patch.object(price_fetching.requests, "get")
     def test_extracts_correct_price(self, get, fixture):
-        get.return_value = mock.Mock(text=fixture("ocado_product.html"))
+        get.return_value = mock.Mock(
+            text=fixture("ocado_product.html"), status_code=200
+        )
 
-        price = price_fetching._fetch_ocado_price(
+        price = price_fetching.fetch_ocado_price(
             mock.sentinel.PRODUCT_ID, logger=mock.Mock()
         )
-        assert price == 500
+        assert price == 190
 
 
 class TestConvertPenceToPounds:

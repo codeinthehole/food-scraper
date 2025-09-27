@@ -40,7 +40,7 @@ def test_create_archive_file(runner, fixture, tmp_path):
             "prices": [
                 {
                     "date": "2022-11-01",
-                    "price": "5.00",
+                    "price": "1.90",
                 }
             ],
         }
@@ -95,7 +95,7 @@ def test_update_archive_file(runner, fixture, tmp_path):
                 },
                 {
                     "date": "2022-11-03",
-                    "price": "5.00",
+                    "price": "1.90",
                 },
             ],
         }

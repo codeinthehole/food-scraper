@@ -57,7 +57,7 @@ def _fetch_product_prices(
         # Create a dict of Future->Product
         future_to_data = {
             executor.submit(
-                _fetch_ocado_price, product["ocado_product_id"], logger
+                fetch_ocado_price, product["ocado_product_id"], logger
             ): product
             for product in products
         }
@@ -77,6 +77,7 @@ def _fetch_product_prices(
                 )
                 missing_products.append(product)
             else:
+                logger.info(f"Fetch price of {price} for product {product['name']}")
                 product_prices.append((product, price))
 
     return product_prices, missing_products
@@ -86,7 +87,7 @@ class UnableToFetchPrice(Exception):
     pass
 
 
-def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
+def fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     """
     Fetch the price of the passed product from Ocado.
 
@@ -98,17 +99,23 @@ def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     # canonical URL.
     url = f"https://www.ocado.com/products/slug-{product_id}"
 
-    # Fetch HTML content.
+    # Fetch HTML content. Use a realistic user agent.
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers={"User-Agent": user_agent}, timeout=10)
     except requests.exceptions.RequestException as e:
         raise UnableToFetchPrice(str(e))
+
+    if response.status_code != 200:
+        raise UnableToFetchPrice(
+            f"Got status code {response.status_code} from product detail page"
+        )
 
     # Extract price from HTML content.
     try:
         return _extract_price(response.text)
-    except UnableToExtractPrice as e:
-        raise UnableToFetchPrice(str(e))
+    except UnableToExtractPrice:
+        raise UnableToFetchPrice("Unable to extract price from response")
 
 
 class UnableToExtractPrice(Exception):
@@ -119,18 +126,20 @@ def _extract_price(content: str) -> int:
     """
     Return the price (in pence) from the passed HTML of a product detail page.
     """
-    # Price is in <meta itemprop="price" ...> element.
     soup = bs4.BeautifulSoup(content, "html.parser")
-    results = soup.find_all("meta", {"itemprop": "price"})
-    if len(results) == 0:
-        raise UnableToExtractPrice("No price element found in HTML")
-    elif len(results) > 1:
-        raise UnableToExtractPrice("Multiple price elements found in HTML")
+    div = soup.find("div", {"data-test": "price-container"})
+    if not div:
+        raise UnableToExtractPrice("No price-container element found in HTML")
 
+    span = div.find("span")
+    if not span:
+        raise UnableToExtractPrice("No price span element in price container div")
+
+    price_text = span.get_text(strip=True)  # type: ignore[union-attr]
     try:
-        price_in_pounds = float(results[0]["content"])
+        price_in_pounds = float(price_text.replace("£", ""))
     except ValueError as e:
-        raise UnableToExtractPrice("Couldn't cast price to an int") from e
+        raise UnableToExtractPrice("Couldn't cast price to floag") from e
 
     return int(price_in_pounds * 100)
 
