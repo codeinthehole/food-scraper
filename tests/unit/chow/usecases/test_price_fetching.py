@@ -11,12 +11,14 @@ from tests import factories
 class TestFetchOcadoPrice:
     @mock.patch.object(price_fetching.requests, "get")
     def test_extracts_correct_price(self, get, fixture):
-        get.return_value = mock.Mock(text=fixture("ocado_product.html"))
+        get.return_value = mock.Mock(
+            text=fixture("ocado_product.html"), status_code=200
+        )
 
-        price = price_fetching._fetch_ocado_price(
+        price = price_fetching.fetch_ocado_price(
             mock.sentinel.PRODUCT_ID, logger=mock.Mock()
         )
-        assert price == 500
+        assert price == 190
 
 
 class TestConvertPenceToPounds:
@@ -106,14 +108,19 @@ class TestUpdatePriceArchive:
         product_prices = [
             (price_fetching.Product(name="Sample product", ocado_product_id="123"), 120)
         ]
+        missing_products: list[price_fetching.Product] = []
 
         new_archive = price_fetching._update_price_archive(
-            price_date=price_date, product_prices=product_prices, price_archive={}
+            price_date=price_date,
+            product_prices=product_prices,
+            missing_products=missing_products,
+            price_archive={},
         )
 
         assert new_archive == {
             "123": {
                 "name": "Sample product",
+                "removed": False,
                 "prices": [{"date": "2023-04-01", "price": "1.20"}],
             }
         }

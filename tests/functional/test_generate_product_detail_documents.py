@@ -59,6 +59,7 @@ def test_creates_product_doc(runner, fixture_path, tmp_path, tmp_path_factory):
     assert lines == [
         "# Crisps",
         "![](charts/product-123.png)",
+        "**Note: This product is still available in the Ocado catalog.**",
         "## 2022-11-05",
         "🔴 Changed price from £3.00 to £4.00 (+33%)",
         "## 2022-11-01",

@@ -1,6 +1,6 @@
 from .charts import generate_product_graphs
 from .overview import generate_overview_file
-from .price_fetching import Products, update_price_archive
+from .price_fetching import Products, fetch_ocado_price, update_price_archive
 from .product_docs import generate_product_detail_documents
 from .timeline import generate_timeline_file
 
@@ -10,6 +10,7 @@ __all__ = [
     "generate_overview_file",
     "Products",
     "update_price_archive",
+    "fetch_ocado_price",
     "generate_timeline_file",
     "generate_product_detail_documents",
 ]

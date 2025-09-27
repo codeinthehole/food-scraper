@@ -1,7 +1,6 @@
----
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       # See https://github.com/pre-commit/pre-commit-hooks/blob/main/.pre-commit-hooks.yaml for list of hooks
       # List taken from suggestions in https://www.b-list.org/weblog/2022/dec/19/boring-python-code-quality/
@@ -23,25 +22,21 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
       - id: no-commit-to-branch
-
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.16.0
     hooks:
       - id: pyupgrade
         args: [--py312-plus]
-
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.9.0
     hooks:
       - id: python-check-blanket-noqa
       - id: python-check-blanket-type-ignore
       - id: python-check-mock-methods
-
   - repo: https://github.com/crate-ci/typos
     rev: v1.23.3
     hooks:
       - id: typos
-
   - repo: local
     hooks:
       - id: mypy
@@ -50,22 +45,19 @@ repos:
         types: [python]
         entry: mypy
         require_serial: true
-
       - id: ruff-lint
         name: ruff
         language: system
         types: [python]
-        entry: "ruff check"
+        entry: ruff check
         args: [--fix, --exit-non-zero-on-fix]
         require_serial: true
-
       - id: ruff-format
         name: ruff_format
         language: system
         types: [python]
-        entry: "ruff format"
+        entry: ruff format
         require_serial: true
-
       - id: pytest
         name: pytest
         language: system
@@ -73,3 +65,20 @@ repos:
         entry: pytest
         pass_filenames: false
         require_serial: true
+
+      # Run YAMLFix on modified YAML files.
+      - id: yamlfix
+        name: check yamlfix passes
+        language: system
+        types: [yaml]
+        entry: yamlfix
+        require_serial: true
+
+      # Run YAMLFix on whole codebase when rules change.
+      - id: yamlfix-scan
+        name: check yamlfix passes on whole codebase
+        language: system
+        files: ^pyproject.toml$
+        entry: yamlfix .
+        require_serial: true
+        pass_filenames: false

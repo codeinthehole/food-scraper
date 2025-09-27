@@ -27,13 +27,14 @@ def update_price_archive(
     Fetch prices for the passed products and update the price archive.
     """
     # Fetch product prices.
-    product_prices = _fetch_product_prices(products, logger)
+    product_prices, missing_products = _fetch_product_prices(products, logger)
 
     # Update archive file.
     current_archive = archive.load(archive_filepath)
     updated_archive = _update_price_archive(
         price_date=datetime.date.today(),
         product_prices=product_prices,
+        missing_products=missing_products,
         price_archive=current_archive,
     )
 
@@ -47,22 +48,23 @@ def update_price_archive(
 
 def _fetch_product_prices(
     products: Products, logger: logger.ConsoleLogger
-) -> _ProductPrices:
+) -> tuple[_ProductPrices, Products]:
     """
-    Return a list of product prices.
+    Return a list of product prices and a list of products for which prices couldn't be fetched.
     """
     # Use a thread pool to fetch prices concurrently.
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         # Create a dict of Future->Product
         future_to_data = {
             executor.submit(
-                _fetch_ocado_price, product["ocado_product_id"], logger
+                fetch_ocado_price, product["ocado_product_id"], logger
             ): product
             for product in products
         }
 
         # Loop over the completed futures and update the product data dict.
         product_prices: _ProductPrices = []
+        missing_products: Products = []
         for future in concurrent.futures.as_completed(future_to_data):
             product = future_to_data[future]
             try:
@@ -73,17 +75,19 @@ def _fetch_product_prices(
                         product["name"], e
                     )
                 )
+                missing_products.append(product)
             else:
+                logger.info(f"Fetch price of {price} for product {product['name']}")
                 product_prices.append((product, price))
 
-    return product_prices
+    return product_prices, missing_products
 
 
 class UnableToFetchPrice(Exception):
     pass
 
 
-def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
+def fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     """
     Fetch the price of the passed product from Ocado.
 
@@ -95,17 +99,23 @@ def _fetch_ocado_price(product_id: str, logger: logger.ConsoleLogger) -> int:
     # canonical URL.
     url = f"https://www.ocado.com/products/slug-{product_id}"
 
-    # Fetch HTML content.
+    # Fetch HTML content. Use a realistic user agent.
+    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     try:
-        response = requests.get(url)
+        response = requests.get(url, headers={"User-Agent": user_agent}, timeout=10)
     except requests.exceptions.RequestException as e:
         raise UnableToFetchPrice(str(e))
+
+    if response.status_code != 200:
+        raise UnableToFetchPrice(
+            f"Got status code {response.status_code} from product detail page"
+        )
 
     # Extract price from HTML content.
     try:
         return _extract_price(response.text)
-    except UnableToExtractPrice as e:
-        raise UnableToFetchPrice(str(e))
+    except UnableToExtractPrice:
+        raise UnableToFetchPrice("Unable to extract price from response")
 
 
 class UnableToExtractPrice(Exception):
@@ -116,18 +126,20 @@ def _extract_price(content: str) -> int:
     """
     Return the price (in pence) from the passed HTML of a product detail page.
     """
-    # Price is in <meta itemprop="price" ...> element.
     soup = bs4.BeautifulSoup(content, "html.parser")
-    results = soup.find_all("meta", {"itemprop": "price"})
-    if len(results) == 0:
-        raise UnableToExtractPrice("No price element found in HTML")
-    elif len(results) > 1:
-        raise UnableToExtractPrice("Multiple price elements found in HTML")
+    div = soup.find("div", {"data-test": "price-container"})
+    if not div:
+        raise UnableToExtractPrice("No price-container element found in HTML")
 
+    span = div.find("span")
+    if not span:
+        raise UnableToExtractPrice("No price span element in price container div")
+
+    price_text = span.get_text(strip=True)  # type: ignore[union-attr]
     try:
-        price_in_pounds = float(results[0]["content"])
+        price_in_pounds = float(price_text.replace("£", ""))
     except ValueError as e:
-        raise UnableToExtractPrice("Couldn't cast price to an int") from e
+        raise UnableToExtractPrice("Couldn't cast price to floag") from e
 
     return int(price_in_pounds * 100)
 
@@ -135,6 +147,7 @@ def _extract_price(content: str) -> int:
 def _update_price_archive(
     price_date: datetime.date,
     product_prices: _ProductPrices,
+    missing_products: Products,
     price_archive: archive.ArchiveProductMap,
 ) -> archive.ArchiveProductMap:
     """
@@ -155,6 +168,7 @@ def _update_price_archive(
                         "price": price_in_pounds,
                     }
                 ],
+                "removed": False,
             }
         else:
             # Known product - see if price history needs updated.
@@ -167,6 +181,13 @@ def _update_price_archive(
                         "price": price_in_pounds,
                     }
                 )
+
+    # Mark any missing products.
+    for product in missing_products:
+        product_id = product["ocado_product_id"]
+        product_data = updated_archive.get(product_id)
+        if product_data:
+            updated_archive[product_id]["removed"] = True
 
     return updated_archive
 

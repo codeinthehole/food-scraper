@@ -17,6 +17,19 @@ def cli() -> None:
 
 
 @cli.command()
+@click.argument("product_id", default="23476011")
+def fetch_price(product_id: str) -> None:
+    """
+    Fetch price of one product.
+
+    Useful for testing integration.
+    """
+    # This may raise an exception if something goes wrong.
+    price = usecases.fetch_ocado_price(product_id, logger=logger.ConsoleLogger())
+    print(f"Price: £{price / 100:.2f}")
+
+
+@cli.command()
 @click.argument("products", type=click.File("rb"))
 @click.argument("archive", type=click.Path(exists=False))
 def update_price_archive(products: TextIO, archive: str) -> None:

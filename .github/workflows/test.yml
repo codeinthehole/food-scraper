@@ -1,4 +1,3 @@
----
 name: Run tests and static analysis
 
 on:
@@ -14,35 +13,31 @@ jobs:
       - name: Check out repo
         # https://github.com/actions/checkout
         uses: actions/checkout@v4
-
       - name: Install UV
         run: |-
           curl -LsSf https://astral.sh/uv/install.sh | sh
           echo "UV_SYSTEM_PYTHON=1" >> $GITHUB_ENV
-
       - name: Install Python
         # https://github.com/actions/setup-python
         # Will install python version from .python-version
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
       - name: Install Python packages
         run: |-
           make install
-
       - name: Check Ruff formatting
         run: |-
           make ruff_format
-
       - name: Check Ruff linting
         run: |-
           make ruff_lint
-
       - name: Check code passes mypy validation
         run: |-
           make mypy
-
+      - name: Check yamlfix passes
+        run: |-
+          make yamlfix
       - name: Check tests pass
         run: |-
           make test
