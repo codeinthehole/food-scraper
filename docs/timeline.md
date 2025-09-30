@@ -1,4 +1,14 @@
 # Product price timeline
+## 2025-09-30
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
+🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
+🔴 [M&S British Mature Cheddar](./product-528017011.md) changed price from £4.00 to £4.25 (+6%)<br/>
+🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.75 to £3.90 (+4%)<br/>
+🔴 [Ocado Granny Smith Apples](./product-64863011.md) changed price from £1.75 to £1.80 (+3%)<br/>
+🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.75 to £1.80 (+3%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.29 to £2.29 (-0%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.40 to £2.29 (-5%)<br/>
+🟢 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.25 (-17%)<br/>
 ## 2025-07-16
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.35 to £1.90 (+41%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.70 (+27%)<br/>
