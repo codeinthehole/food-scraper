@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-10-01
+🔴 [Large garlic](./product-91370011.md) changed price from £0.40 to £0.50 (+25%)<br/>
+🟢 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.90 to £1.00 (-47%)<br/>
 ## 2025-09-30
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
 🔴 [Ocado Broccoli](./product-59106011.md) changed price from £0.77 to £0.82 (+6%)<br/>
