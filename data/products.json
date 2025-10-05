@@ -8,6 +8,7 @@
     {"name": "Semi skimmed milk (4 pints)", "ocado_product_id": "78914011"},
     {"name": "Large free range eggs (6 pack)", "ocado_product_id": "57293011"},
     {"name": "Blueberries (150g)", "ocado_product_id": "53687011"},
+    {"name": "Blueberries (250g)", "ocado_product_id": "59009011"},
     {"name": "Lemons (5 pack)", "ocado_product_id": "47305011"},
     {"name": "Large garlic", "ocado_product_id": "91370011"},
     {"name": "Red seedless grapes (500g)", "ocado_product_id": "96798011"},
@@ -39,5 +40,12 @@
     {"name": "MOMA Original Oat Drink Unsweetened", "ocado_product_id": "511957011"},
     {"name": "M&S British Mature Cheddar", "ocado_product_id": "528017011"},
     {"name": "Ocado Greek Feta", "ocado_product_id": "60110011"},
+    {"name": "Ocado British Chicken Breast Fillets", "ocado_product_id": "57453011"},
+    {"name": "Salt & vinegar jumbo rice cakes", "ocado_product_id": "59123011"},
+    {"name": "Ocado penne pasta", "ocado_product_id": "587564011"},
+    {"name": "Ocado chickpeas in water", "ocado_product_id": "293721011"},
+    {"name": "Ocado mixed peppers", "ocado_product_id": "44858011"},
+    {"name": "M&S wholemeal pittas", "ocado_product_id": "510734011"},
+    {"name": "Ocado Italian chopped tomatoes", "ocado_product_id": "301848011"},
     {"name": "M&S Fruit & Fibre Flakes", "ocado_product_id": "600908011"}
 ]
