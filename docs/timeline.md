@@ -1,4 +1,13 @@
 # Product price timeline
+## 2025-10-05
+🟡 [Salt & vinegar jumbo rice cakes](./product-59123011.md) added to archive - price is £2.00<br/>
+🟡 [Ocado penne pasta](./product-587564011.md) added to archive - price is £0.69<br/>
+🟡 [Ocado mixed peppers](./product-44858011.md) added to archive - price is £2.50<br/>
+🟡 [Ocado chickpeas in water](./product-293721011.md) added to archive - price is £0.49<br/>
+🟡 [Ocado Italian chopped tomatoes](./product-301848011.md) added to archive - price is £0.47<br/>
+🟡 [Ocado British Chicken Breast Fillets](./product-57453011.md) added to archive - price is £4.80<br/>
+🟡 [M&S wholemeal pittas](./product-510734011.md) added to archive - price is £0.75<br/>
+🟡 [Blueberries (250g)](./product-59009011.md) added to archive - price is £2.65<br/>
 ## 2025-10-01
 🔴 [Large garlic](./product-91370011.md) changed price from £0.40 to £0.50 (+25%)<br/>
 🟢 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.90 to £1.00 (-47%)<br/>

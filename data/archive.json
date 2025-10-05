@@ -1496,5 +1496,85 @@
                 "price": "3.50"
             }
         ]
+    },
+    "59009011": {
+        "name": "Blueberries (250g)",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "2.65"
+            }
+        ],
+        "removed": false
+    },
+    "587564011": {
+        "name": "Ocado penne pasta",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "0.69"
+            }
+        ],
+        "removed": false
+    },
+    "44858011": {
+        "name": "Ocado mixed peppers",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "2.50"
+            }
+        ],
+        "removed": false
+    },
+    "293721011": {
+        "name": "Ocado chickpeas in water",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "0.49"
+            }
+        ],
+        "removed": false
+    },
+    "59123011": {
+        "name": "Salt & vinegar jumbo rice cakes",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "2.00"
+            }
+        ],
+        "removed": false
+    },
+    "57453011": {
+        "name": "Ocado British Chicken Breast Fillets",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "4.80"
+            }
+        ],
+        "removed": false
+    },
+    "301848011": {
+        "name": "Ocado Italian chopped tomatoes",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "0.47"
+            }
+        ],
+        "removed": false
+    },
+    "510734011": {
+        "name": "M&S wholemeal pittas",
+        "prices": [
+            {
+                "date": "2025-10-05",
+                "price": "0.75"
+            }
+        ],
+        "removed": false
     }
 }
