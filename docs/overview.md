@@ -41,3 +41,11 @@
 <img align="left" style="width:48%" alt="M&S Fruit & Fibre Flakes" src="charts/product-600908011.png" />
 <img align="left" style="width:48%" alt="M&S British Mature Cheddar" src="charts/product-528017011.png" />
 <img align="left" style="width:48%" alt="Lurpak Slightly Salted Spreadable Butter (400g)" src="charts/product-613748011.png" />
+<img align="left" style="width:48%" alt="Blueberries (250g)" src="charts/product-59009011.png" />
+<img align="left" style="width:48%" alt="Ocado penne pasta" src="charts/product-587564011.png" />
+<img align="left" style="width:48%" alt="Ocado mixed peppers" src="charts/product-44858011.png" />
+<img align="left" style="width:48%" alt="Ocado chickpeas in water" src="charts/product-293721011.png" />
+<img align="left" style="width:48%" alt="Salt & vinegar jumbo rice cakes" src="charts/product-59123011.png" />
+<img align="left" style="width:48%" alt="Ocado British Chicken Breast Fillets" src="charts/product-57453011.png" />
+<img align="left" style="width:48%" alt="Ocado Italian chopped tomatoes" src="charts/product-301848011.png" />
+<img align="left" style="width:48%" alt="M&S wholemeal pittas" src="charts/product-510734011.png" />
