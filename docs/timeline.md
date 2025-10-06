@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-10-06
+🟢 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £1.90 to £1.70 (-11%)<br/>
 ## 2025-10-05
 🟡 [Salt & vinegar jumbo rice cakes](./product-59123011.md) added to archive - price is £2.00<br/>
 🟡 [Ocado penne pasta](./product-587564011.md) added to archive - price is £0.69<br/>
