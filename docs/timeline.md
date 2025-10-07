@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-10-07
+🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.29 to £2.35 (+3%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.35 to £2.35 (-0%)<br/>
 ## 2025-10-06
 🟢 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £1.90 to £1.70 (-11%)<br/>
 ## 2025-10-05
