@@ -1,4 +1,11 @@
 # Product price timeline
+## 2025-10-08
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.50 to £4.75 (+36%)<br/>
+🔴 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £2.00 to £2.50 (+25%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.25 to £1.50 (+20%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.70 to £4.25 (-25%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.40 (-30%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.00 (-47%)<br/>
 ## 2025-10-07
 🔴 [Halloumi (250g)](./product-65186011.md) changed price from £2.29 to £2.35 (+3%)<br/>
 🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.35 to £2.35 (-0%)<br/>
