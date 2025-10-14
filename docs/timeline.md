@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-10-14
+🔴 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.65 to £1.75 (+6%)<br/>
 ## 2025-10-08
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.50 to £4.75 (+36%)<br/>
 🔴 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £2.00 to £2.50 (+25%)<br/>
