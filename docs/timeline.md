@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-11-01
+🔴 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.00 to £1.90 (+90%)<br/>
+🟢 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.75 to £1.65 (-6%)<br/>
 ## 2025-10-25
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.45 (+4%)<br/>
 🔴 [Ocado Parmigiano Reggiano (200g)](./product-57272011.md) changed price from £3.90 to £4.00 (+3%)<br/>
