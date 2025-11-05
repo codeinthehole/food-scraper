@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-11-05
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.00 to £1.90 (+90%)<br/>
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.25 to £5.70 (+34%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.50 (-26%)<br/>
 ## 2025-11-01
 🔴 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.00 to £1.90 (+90%)<br/>
 🟢 [Semi skimmed milk (4 pints)](./product-78914011.md) changed price from £1.75 to £1.65 (-6%)<br/>
