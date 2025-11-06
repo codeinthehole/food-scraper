@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-11-06
+🟢 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.90 to £1.80 (-5%)<br/>
 ## 2025-11-05
 🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.00 to £1.90 (+90%)<br/>
 🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.40 to £2.00 (+43%)<br/>
