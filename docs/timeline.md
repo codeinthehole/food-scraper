@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-11-07
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.45 to £1.40 (-3%)<br/>
 ## 2025-11-06
 🟢 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.90 to £1.80 (-5%)<br/>
 ## 2025-11-05
