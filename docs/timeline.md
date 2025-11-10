@@ -1,4 +1,7 @@
 # Product price timeline
+## 2025-11-10
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.20 to £2.20 (-0%)<br/>
+🟢 [Halloumi (250g)](./product-65186011.md) changed price from £2.35 to £2.20 (-6%)<br/>
 ## 2025-11-07
 🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.45 to £1.40 (-3%)<br/>
 ## 2025-11-06
