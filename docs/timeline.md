@@ -1,4 +1,6 @@
 # Product price timeline
+## 2025-11-22
+🔴 [Ocado Greek Feta](./product-60110011.md) changed price from £2.10 to £2.15 (+2%)<br/>
 ## 2025-11-13
 🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £1.90 to £2.00 (+5%)<br/>
 ## 2025-11-10
