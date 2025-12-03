@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-12-03
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.50 to £4.75 (+36%)<br/>
+🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.60 (+7%)<br/>
+🟢 [Ocado 14 Smoked Streaky Bacon Rashers](./product-69181011.md) changed price from £2.45 to £2.29 (-7%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.70 to £4.25 (-25%)<br/>
 ## 2025-11-22
 🔴 [Ocado Greek Feta](./product-60110011.md) changed price from £2.10 to £2.15 (+2%)<br/>
 ## 2025-11-13
