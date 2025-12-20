@@ -1519,7 +1519,8 @@
                 "date": "2025-11-22",
                 "price": "2.15"
             }
-        ]
+        ],
+        "removed": true
     },
     "592687011": {
         "name": "BUDA Fresh Paneer",

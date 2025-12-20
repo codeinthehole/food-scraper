@@ -528,3 +528,6 @@
 ## 2022-10-02
 🟡 [New York bagels (5)](./product-23476011.md) added to archive - price is £1.80<br/>
 🟡 [Lurpak butter (500g)](./product-13175011.md) added to archive - price is £5.00<br/>
+## Missing products
+The following products are no longer available:<br/>
+- Ocado Greek Feta
