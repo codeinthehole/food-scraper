@@ -496,7 +496,8 @@
                 "date": "2025-11-13",
                 "price": "2.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "240875011": {
         "name": "Cucumber",
