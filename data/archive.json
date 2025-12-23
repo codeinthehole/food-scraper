@@ -1547,7 +1547,8 @@
                 "date": "2025-06-25",
                 "price": "1.20"
             }
-        ]
+        ],
+        "removed": true
     },
     "528017011": {
         "name": "M&S British Mature Cheddar",
