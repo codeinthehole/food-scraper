@@ -1,4 +1,9 @@
 # Product price timeline
+## 2025-12-31
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.25 to £5.70 (+34%)<br/>
+🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.50 (-25%)<br/>
+🟢 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £2.50 to £1.75 (-30%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.25 (-32%)<br/>
 ## 2025-12-03
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.50 to £4.75 (+36%)<br/>
 🔴 [Lemons (5 pack)](./product-47305011.md) changed price from £1.50 to £1.60 (+7%)<br/>
