@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-01-08
+🔴 [Blueberries (250g)](./product-59009011.md) changed price from £2.65 to £2.70 (+2%)<br/>
 ## 2025-12-31
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.25 to £5.70 (+34%)<br/>
 🟢 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £2.00 to £1.50 (-25%)<br/>
