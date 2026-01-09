@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-01-09
+🟢 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.50 to £1.00 (-33%)<br/>
 ## 2026-01-08
 🔴 [Blueberries (250g)](./product-59009011.md) changed price from £2.65 to £2.70 (+2%)<br/>
 ## 2025-12-31
