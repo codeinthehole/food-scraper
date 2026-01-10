@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-01-10
+🔴 [Red seedless grapes (500g)](./product-96798011.md) changed price from £2.00 to £2.10 (+5%)<br/>
 ## 2026-01-09
 🟢 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.50 to £1.00 (-33%)<br/>
 ## 2026-01-08
