@@ -1,4 +1,7 @@
 # Product price timeline
+## 2026-01-21
+🔴 [Ocado mixed peppers](./product-44858011.md) changed price from £2.50 to £2.70 (+8%)<br/>
+🟢 [Cucumber](./product-240875011.md) changed price from £1.00 to £0.99 (-1%)<br/>
 ## 2026-01-20
 🔴 [Cucumber](./product-240875011.md) changed price from £0.89 to £1.00 (+12%)<br/>
 ## 2026-01-10
@@ -546,3 +549,4 @@ The following products are no longer available:<br/>
 - M&S Fruit & Fibre Flakes
 - Ocado Greek Feta
 - Red seedless grapes (500g)
+- Smoked back bacon rashers (10 pack)
