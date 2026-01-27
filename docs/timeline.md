@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-01-27
+🔴 [Ocado mixed peppers](./product-44858011.md) changed price from £2.70 to £2.80 (+4%)<br/>
 ## 2026-01-21
 🔴 [Ocado mixed peppers](./product-44858011.md) changed price from £2.50 to £2.70 (+8%)<br/>
 🟢 [Cucumber](./product-240875011.md) changed price from £1.00 to £0.99 (-1%)<br/>
