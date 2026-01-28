@@ -1,4 +1,11 @@
 # Product price timeline
+## 2026-01-28
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.25 to £4.75 (+46%)<br/>
+🔴 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £1.75 to £2.50 (+43%)<br/>
+🔴 [MOMA Original Oat Drink Unsweetened](./product-511957011.md) changed price from £1.50 to £2.00 (+33%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.50 (-21%)<br/>
+🟢 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.80 to £1.40 (-22%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.70 to £3.95 (-31%)<br/>
 ## 2026-01-27
 🔴 [Ocado mixed peppers](./product-44858011.md) changed price from £2.70 to £2.80 (+4%)<br/>
 ## 2026-01-21
