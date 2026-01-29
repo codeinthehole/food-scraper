@@ -1,4 +1,7 @@
 # Product price timeline
+## 2026-01-29
+🔴 [Blueberries (150g)](./product-53687011.md) changed price from £1.90 to £2.00 (+5%)<br/>
+🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £2.00 to £2.10 (+5%)<br/>
 ## 2026-01-28
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.25 to £4.75 (+46%)<br/>
 🔴 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £1.75 to £2.50 (+43%)<br/>
