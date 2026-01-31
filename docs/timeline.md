@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-01-31
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.45 (+4%)<br/>
 ## 2026-01-29
 🔴 [Blueberries (150g)](./product-53687011.md) changed price from £1.90 to £2.00 (+5%)<br/>
 🔴 [Large free range eggs (6 pack)](./product-57293011.md) changed price from £2.00 to £2.10 (+5%)<br/>
