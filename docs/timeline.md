@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-02-18
+🔴 [Blueberries (250g)](./product-59009011.md) changed price from £2.70 to £2.80 (+4%)<br/>
 ## 2026-01-31
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.40 to £1.45 (+4%)<br/>
 ## 2026-01-29
