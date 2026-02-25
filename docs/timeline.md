@@ -1,4 +1,12 @@
 # Product price timeline
+## 2026-02-25
+🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.00 to £1.50 (+50%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £3.95 to £5.70 (+44%)<br/>
+🔴 [Royal Gala apples (6 pack)](./product-64861011.md) changed price from £1.40 to £1.80 (+29%)<br/>
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.50 to £1.90 (+27%)<br/>
+🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.80 to £1.55 (-14%)<br/>
+🟢 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.45 to £1.00 (-31%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.75 to £3.25 (-32%)<br/>
 ## 2026-02-18
 🔴 [Blueberries (250g)](./product-59009011.md) changed price from £2.70 to £2.80 (+4%)<br/>
 ## 2026-01-31
