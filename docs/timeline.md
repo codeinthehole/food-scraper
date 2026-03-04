@@ -572,5 +572,6 @@
 The following products are no longer available:<br/>
 - M&S Fruit & Fibre Flakes
 - Ocado Greek Feta
+- Parmigiano reggiano (320g)
 - Red seedless grapes (500g)
 - Smoked back bacon rashers (10 pack)

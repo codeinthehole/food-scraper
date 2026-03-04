@@ -928,7 +928,8 @@
                 "date": "2025-05-01",
                 "price": "6.50"
             }
-        ]
+        ],
+        "removed": true
     },
     "64862011": {
         "name": "Braeburn Apples (6 pack)",
