@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-03-07
+🟢 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.40 to £2.20 (-8%)<br/>
 ## 2026-02-25
 🔴 [Warburtons sandwich thins (6 pack)](./product-79530011.md) changed price from £1.00 to £1.50 (+50%)<br/>
 🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £3.95 to £5.70 (+44%)<br/>
