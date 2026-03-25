@@ -1,4 +1,12 @@
 # Product price timeline
+## 2026-03-25
+🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.00 to £1.45 (+45%)<br/>
+🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.25 to £4.25 (+31%)<br/>
+🔴 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.55 to £1.80 (+16%)<br/>
+🟢 [Smoked back bacon rashers (10 pack)](./product-63741011.md) changed price from £1.70 to £1.50 (-12%)<br/>
+🟢 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £2.50 to £2.00 (-20%)<br/>
+🟢 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £5.70 to £4.50 (-21%)<br/>
+🟢 [New York bagels (5)](./product-23476011.md) changed price from £1.90 to £1.35 (-29%)<br/>
 ## 2026-03-07
 🟢 [M&S Squeezed Orange Juice with Bits](./product-505309011.md) changed price from £2.40 to £2.20 (-8%)<br/>
 ## 2026-02-25
