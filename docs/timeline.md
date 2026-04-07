@@ -580,6 +580,7 @@
 🟡 [Lurpak butter (500g)](./product-13175011.md) added to archive - price is £5.00<br/>
 ## Missing products
 The following products are no longer available:<br/>
+- Lemons (5 pack)
 - M&S Fruit & Fibre Flakes
 - Ocado Greek Feta
 - Parmigiano reggiano (320g)

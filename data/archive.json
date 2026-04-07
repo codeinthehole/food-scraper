@@ -422,7 +422,8 @@
                 "date": "2025-12-03",
                 "price": "1.60"
             }
-        ]
+        ],
+        "removed": true
     },
     "91370011": {
         "name": "Large garlic",
