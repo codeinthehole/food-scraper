@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-04-20
+🟢 [Ocado chickpeas in water](./product-293721011.md) changed price from £0.49 to £0.45 (-8%)<br/>
 ## 2026-03-25
 🔴 [Helda stringless beans (180g)](./product-321394011.md) changed price from £1.00 to £1.45 (+45%)<br/>
 🔴 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £3.25 to £4.25 (+31%)<br/>
@@ -583,6 +585,7 @@ The following products are no longer available:<br/>
 - Lemons (5 pack)
 - M&S Fruit & Fibre Flakes
 - Ocado Greek Feta
+- Ocado mixed peppers
 - Parmigiano reggiano (320g)
 - Red seedless grapes (500g)
 - Smoked back bacon rashers (10 pack)
