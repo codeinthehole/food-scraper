@@ -1,4 +1,10 @@
 # Product price timeline
+## 2026-04-22
+🔴 [New York bagels (5)](./product-23476011.md) changed price from £1.35 to £1.90 (+41%)<br/>
+🔴 [Cathedral City Cheese (550g)](./product-31833011.md) changed price from £4.50 to £5.70 (+27%)<br/>
+🔴 [Salt & vinegar jumbo rice cakes](./product-59123011.md) changed price from £2.00 to £2.50 (+25%)<br/>
+🟢 [Braeburn Apples (6 pack)](./product-64862011.md) changed price from £1.80 to £1.55 (-14%)<br/>
+🟢 [Lurpak Slightly Salted Spreadable Butter (400g)](./product-613748011.md) changed price from £4.25 to £3.00 (-29%)<br/>
 ## 2026-04-20
 🟢 [Ocado chickpeas in water](./product-293721011.md) changed price from £0.49 to £0.45 (-8%)<br/>
 ## 2026-03-25
