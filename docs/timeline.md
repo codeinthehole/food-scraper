@@ -1,4 +1,6 @@
 # Product price timeline
+## 2026-05-08
+🔴 [Ocado British Chicken Breast Fillets](./product-57453011.md) changed price from £4.65 to £5.00 (+8%)<br/>
 ## 2026-05-07
 🔴 [Blueberries (150g)](./product-53687011.md) changed price from £2.00 to £2.20 (+10%)<br/>
 ## 2026-04-29
