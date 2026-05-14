@@ -594,10 +594,50 @@
 🟡 [Lurpak butter (500g)](./product-13175011.md) added to archive - price is £5.00<br/>
 ## Missing products
 The following products are no longer available:<br/>
+- Blueberries (150g)
+- Blueberries (250g)
+- Braeburn Apples (6 pack)
+- Brown onions (3 pack)
+- Cathedral City Cheese (550g)
+- Cheese and tomato pizza (465g)
+- Chicken thigh fillets (450g)
+- Cucumber
+- Fairtrade bananas (5 pack)
+- Halloumi (250g)
+- Helda stringless beans (180g)
+- Large free range eggs (6 pack)
+- Large garlic
 - Lemons (5 pack)
+- Lurpak Slightly Salted Spreadable Butter (400g)
+- M&S British Mature Cheddar
 - M&S Fruit & Fibre Flakes
+- M&S Scottish Oak Smoked Salmon Slices (100g)
+- M&S Squeezed Orange Juice with Bits
+- M&S Wholemeal Tortilla Wraps
+- M&S wholemeal pittas
+- MOMA Original Oat Drink Unsweetened
+- New York bagels (5)
+- Ocado 14 Smoked Streaky Bacon Rashers
+- Ocado British Chicken Breast Fillets
+- Ocado British Unsalted Butter
+- Ocado Broccoli
+- Ocado Carrots (1kg)
+- Ocado Granny Smith Apples
 - Ocado Greek Feta
+- Ocado Italian chopped tomatoes
+- Ocado Parmigiano Reggiano (200g)
+- Ocado chickpeas in water
 - Ocado mixed peppers
+- Ocado penne pasta
+- Onken biopot natural yoghurt (1kg)
 - Parmigiano reggiano (320g)
+- Pure set honey (340g)
+- Re onions (3 pack)
 - Red seedless grapes (500g)
+- Royal Gala apples (6 pack)
+- Runny honey (340g)
+- Salt & vinegar jumbo rice cakes
+- Semi skimmed milk (4 pints)
 - Smoked back bacon rashers (10 pack)
+- Super seeded loaf (800g)
+- Warburtons sandwich thins (6 pack)

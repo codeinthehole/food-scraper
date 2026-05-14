@@ -99,7 +99,8 @@
                 "date": "2026-04-22",
                 "price": "1.90"
             }
-        ]
+        ],
+        "removed": true
     },
     "65448011": {
         "name": "Brown onions (3 pack)",
@@ -152,7 +153,8 @@
                 "date": "2025-06-12",
                 "price": "0.95"
             }
-        ]
+        ],
+        "removed": true
     },
     "64861011": {
         "name": "Royal Gala apples (6 pack)",
@@ -201,7 +203,8 @@
                 "date": "2026-02-25",
                 "price": "1.80"
             }
-        ]
+        ],
+        "removed": true
     },
     "44855011": {
         "name": "Fairtrade bananas (5 pack)",
@@ -214,7 +217,8 @@
                 "date": "2023-04-19",
                 "price": "0.95"
             }
-        ]
+        ],
+        "removed": true
     },
     "78914011": {
         "name": "Semi skimmed milk (4 pints)",
@@ -251,7 +255,8 @@
                 "date": "2025-11-01",
                 "price": "1.65"
             }
-        ]
+        ],
+        "removed": true
     },
     "57293011": {
         "name": "Large free range eggs (6 pack)",
@@ -300,7 +305,8 @@
                 "date": "2026-01-29",
                 "price": "2.10"
             }
-        ]
+        ],
+        "removed": true
     },
     "53687011": {
         "name": "Blueberries (150g)",
@@ -341,7 +347,8 @@
                 "date": "2026-05-07",
                 "price": "2.20"
             }
-        ]
+        ],
+        "removed": true
     },
     "47305011": {
         "name": "Lemons (5 pack)",
@@ -452,7 +459,8 @@
                 "date": "2025-10-01",
                 "price": "0.50"
             }
-        ]
+        ],
+        "removed": true
     },
     "96798011": {
         "name": "Red seedless grapes (500g)",
@@ -583,7 +591,8 @@
                 "date": "2026-01-21",
                 "price": "0.99"
             }
-        ]
+        ],
+        "removed": true
     },
     "31833011": {
         "name": "Cathedral City Cheese (550g)",
@@ -772,7 +781,8 @@
                 "date": "2026-04-22",
                 "price": "5.70"
             }
-        ]
+        ],
+        "removed": true
     },
     "510737011": {
         "name": "Super seeded loaf (800g)",
@@ -797,7 +807,8 @@
                 "date": "2025-04-17",
                 "price": "1.70"
             }
-        ]
+        ],
+        "removed": true
     },
     "321394011": {
         "name": "Helda stringless beans (180g)",
@@ -866,7 +877,8 @@
                 "date": "2026-03-25",
                 "price": "1.45"
             }
-        ]
+        ],
+        "removed": true
     },
     "225627011": {
         "name": "Chicken thigh fillets (450g)",
@@ -907,7 +919,8 @@
                 "date": "2025-04-22",
                 "price": "3.79"
             }
-        ]
+        ],
+        "removed": true
     },
     "32003011": {
         "name": "Onken biopot natural yoghurt (1kg)",
@@ -924,7 +937,8 @@
                 "date": "2024-05-22",
                 "price": "2.60"
             }
-        ]
+        ],
+        "removed": true
     },
     "98385011": {
         "name": "Parmigiano reggiano (320g)",
@@ -1015,7 +1029,8 @@
                 "date": "2026-04-22",
                 "price": "1.55"
             }
-        ]
+        ],
+        "removed": true
     },
     "79530011": {
         "name": "Warburtons sandwich thins (6 pack)",
@@ -1064,7 +1079,8 @@
                 "date": "2026-02-25",
                 "price": "1.50"
             }
-        ]
+        ],
+        "removed": true
     },
     "59394011": {
         "name": "Runny honey (340g)",
@@ -1097,7 +1113,8 @@
                 "date": "2025-04-12",
                 "price": "1.20"
             }
-        ]
+        ],
+        "removed": true
     },
     "520104011": {
         "name": "Pure set honey (340g)",
@@ -1122,7 +1139,8 @@
                 "date": "2024-04-17",
                 "price": "1.45"
             }
-        ]
+        ],
+        "removed": true
     },
     "63741011": {
         "name": "Smoked back bacon rashers (10 pack)",
@@ -1241,7 +1259,8 @@
                 "date": "2025-11-10",
                 "price": "2.20"
             }
-        ]
+        ],
+        "removed": true
     },
     "506077011": {
         "name": "Fruit and fibre (500g)",
@@ -1291,7 +1310,8 @@
                 "date": "2025-04-23",
                 "price": "4.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "64863011": {
         "name": "Ocado Granny Smith Apples",
@@ -1308,7 +1328,8 @@
                 "date": "2025-09-30",
                 "price": "1.80"
             }
-        ]
+        ],
+        "removed": true
     },
     "505309011": {
         "name": "M&S Squeezed Orange Juice with Bits",
@@ -1337,7 +1358,8 @@
                 "date": "2026-03-07",
                 "price": "2.20"
             }
-        ]
+        ],
+        "removed": true
     },
     "63026011": {
         "name": "Ocado Carrots (1kg)",
@@ -1370,7 +1392,8 @@
                 "date": "2024-08-08",
                 "price": "0.69"
             }
-        ]
+        ],
+        "removed": true
     },
     "510858011": {
         "name": "M&S Wholemeal Tortilla Wraps",
@@ -1399,7 +1422,8 @@
                 "date": "2025-04-17",
                 "price": "1.50"
             }
-        ]
+        ],
+        "removed": true
     },
     "57272011": {
         "name": "Ocado Parmigiano Reggiano (200g)",
@@ -1444,7 +1468,8 @@
                 "date": "2025-10-25",
                 "price": "4.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "505092011": {
         "name": "M&S Scottish Oak Smoked Salmon Slices (100g)",
@@ -1457,7 +1482,8 @@
                 "date": "2024-09-12",
                 "price": "5.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "65453011": {
         "name": "Re onions (3 pack)",
@@ -1474,7 +1500,8 @@
                 "date": "2025-06-12",
                 "price": "0.95"
             }
-        ]
+        ],
+        "removed": true
     },
     "69181011": {
         "name": "Ocado 14 Smoked Streaky Bacon Rashers",
@@ -1491,7 +1518,8 @@
                 "date": "2025-12-03",
                 "price": "2.29"
             }
-        ]
+        ],
+        "removed": true
     },
     "511957011": {
         "name": "MOMA Original Oat Drink Unsweetened",
@@ -1564,7 +1592,8 @@
                 "date": "2026-01-28",
                 "price": "2.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "59106011": {
         "name": "Ocado Broccoli",
@@ -1593,7 +1622,8 @@
                 "date": "2025-09-30",
                 "price": "0.82"
             }
-        ]
+        ],
+        "removed": true
     },
     "556966011": {
         "name": "Ocado British Unsalted Butter",
@@ -1614,7 +1644,8 @@
                 "date": "2025-01-07",
                 "price": "2.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "60110011": {
         "name": "Ocado Greek Feta",
@@ -1680,7 +1711,8 @@
                 "date": "2025-09-30",
                 "price": "4.25"
             }
-        ]
+        ],
+        "removed": true
     },
     "613748011": {
         "name": "Lurpak Slightly Salted Spreadable Butter (400g)",
@@ -1745,7 +1777,8 @@
                 "date": "2026-04-22",
                 "price": "3.00"
             }
-        ]
+        ],
+        "removed": true
     },
     "59009011": {
         "name": "Blueberries (250g)",
@@ -1763,7 +1796,7 @@
                 "price": "2.80"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "587564011": {
         "name": "Ocado penne pasta",
@@ -1773,7 +1806,7 @@
                 "price": "0.69"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "44858011": {
         "name": "Ocado mixed peppers",
@@ -1805,7 +1838,7 @@
                 "price": "0.45"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "59123011": {
         "name": "Salt & vinegar jumbo rice cakes",
@@ -1835,7 +1868,7 @@
                 "price": "2.50"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "57453011": {
         "name": "Ocado British Chicken Breast Fillets",
@@ -1853,7 +1886,7 @@
                 "price": "5.00"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "301848011": {
         "name": "Ocado Italian chopped tomatoes",
@@ -1863,7 +1896,7 @@
                 "price": "0.47"
             }
         ],
-        "removed": false
+        "removed": true
     },
     "510734011": {
         "name": "M&S wholemeal pittas",
@@ -1873,6 +1906,6 @@
                 "price": "0.75"
             }
         ],
-        "removed": false
+        "removed": true
     }
 }
